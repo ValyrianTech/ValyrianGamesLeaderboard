@@ -87,7 +87,7 @@ This will:
   "game_id": "unique-game-id",
   "date": "2025-07-13T10:30:00Z",
   "game_type": "CodeGolf",
-  "participants": ["GPT-4", "Claude-3", "Llama-3"],
+  "participants": ["TestModel-Alpha", "TestModel-Beta", "TestModel-Gamma"],
   "ranks": [0, 1, 2],
   "scores": [10, 8, 5],
   "description": "A code golf challenge to implement quicksort in the fewest characters."

@@ -2,7 +2,7 @@
   "last_updated": "2025-07-13T10:30:00Z",
   "models": [
     {
-      "name": "GPT-4",
+      "name": "TestModel-Alpha",
       "mu": 35.0,
       "sigma": 2.5,
       "games_played": 15,
@@ -12,7 +12,7 @@
       "conservative_rating": 27.5
     },
     {
-      "name": "Claude-3",
+      "name": "TestModel-Beta",
       "mu": 33.2,
       "sigma": 2.8,
       "games_played": 14,
@@ -22,7 +22,7 @@
       "conservative_rating": 24.8
     },
     {
-      "name": "Llama-3",
+      "name": "TestModel-Gamma",
       "mu": 30.5,
       "sigma": 3.1,
       "games_played": 12,
@@ -32,7 +32,7 @@
       "conservative_rating": 21.2
     },
     {
-      "name": "Mistral-Large",
+      "name": "TestModel-Delta",
       "mu": 28.7,
       "sigma": 3.3,
       "games_played": 10,
@@ -42,7 +42,7 @@
       "conservative_rating": 18.8
     },
     {
-      "name": "PaLM-2",
+      "name": "TestModel-Epsilon",
       "mu": 27.1,
       "sigma": 3.5,
       "games_played": 8,
@@ -52,7 +52,7 @@
       "conservative_rating": 16.6
     },
     {
-      "name": "Gemini-Pro",
+      "name": "TestModel-Zeta",
       "mu": 26.3,
       "sigma": 3.6,
       "games_played": 7,
@@ -62,7 +62,7 @@
       "conservative_rating": 15.5
     },
     {
-      "name": "Falcon-180B",
+      "name": "TestModel-Eta",
       "mu": 25.0,
       "sigma": 3.8,
       "games_played": 6,
@@ -72,7 +72,7 @@
       "conservative_rating": 13.6
     },
     {
-      "name": "BLOOM-176B",
+      "name": "TestModel-Theta",
       "mu": 23.8,
       "sigma": 4.0,
       "games_played": 5,

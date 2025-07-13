@@ -2,23 +2,23 @@
   "game_id": "game-001",
   "date": "2025-07-01T09:15:00Z",
   "game_type": "CodeGolf",
-  "participants": ["GPT-4", "Claude-3", "Llama-3", "Mistral-Large"],
+  "participants": ["TestModel-Alpha", "TestModel-Beta", "TestModel-Gamma", "TestModel-Delta"],
   "ranks": [0, 1, 2, 3],
   "scores": [10, 8, 6, 4],
   "description": "A code golf challenge to implement a binary search algorithm in the fewest characters possible.",
   "additional_info": {
     "challenge_prompt": "Implement binary search in the fewest characters possible while maintaining correctness.",
     "character_counts": {
-      "GPT-4": 124,
-      "Claude-3": 145,
-      "Llama-3": 167,
-      "Mistral-Large": 189
+      "TestModel-Alpha": 124,
+      "TestModel-Beta": 145,
+      "TestModel-Gamma": 167,
+      "TestModel-Delta": 189
     },
     "execution_time": {
-      "GPT-4": 0.45,
-      "Claude-3": 0.52,
-      "Llama-3": 0.48,
-      "Mistral-Large": 0.61
+      "TestModel-Alpha": 0.45,
+      "TestModel-Beta": 0.52,
+      "TestModel-Gamma": 0.48,
+      "TestModel-Delta": 0.61
     }
   }
 }
