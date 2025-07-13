@@ -21,8 +21,8 @@
                     any type of competition.
                 </p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <a href="{{ url_for('main.leaderboard') }}" class="btn btn-primary me-md-2">View Leaderboard</a>
-                    <a href="{{ url_for('main.history') }}" class="btn btn-outline-secondary">Game History</a>
+                    <a href="{{ url_for('main.leaderboard_html') }}" class="btn btn-primary me-md-2">View Leaderboard</a>
+                    <a href="{{ url_for('main.history_html') }}" class="btn btn-outline-secondary">Game History</a>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
                         <!-- Top models will be inserted here via JavaScript -->
                     </ul>
                     <div class="text-center mt-3">
-                        <a href="{{ url_for('main.leaderboard') }}" class="btn btn-sm btn-outline-primary">View Full Leaderboard</a>
+                        <a href="{{ url_for('main.leaderboard_html') }}" class="btn btn-sm btn-outline-primary">View Full Leaderboard</a>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                         <!-- Recent games will be inserted here via JavaScript -->
                     </ul>
                     <div class="text-center mt-3">
-                        <a href="{{ url_for('main.history') }}" class="btn btn-sm btn-outline-primary">View All Games</a>
+                        <a href="{{ url_for('main.history_html') }}" class="btn btn-sm btn-outline-primary">View All Games</a>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
 {% block extra_scripts %}
 <script>
     // Fetch top models for the sidebar
-    fetch('/api/leaderboard')
+    fetch('/api/leaderboard.json')
         .then(response => response.json())
         .then(data => {
             const topModelsList = document.getElementById('top-models-list');
@@ -148,15 +148,17 @@
             const topModelsList = document.getElementById('top-models-list');
             topModelsList.innerHTML = '<li class="list-group-item text-center text-danger">Failed to load models</li>';
             
+            // Hide loading spinner and show content
             document.getElementById('top-models-loading').classList.add('d-none');
             document.getElementById('top-models-content').classList.remove('d-none');
         });
     
-    // Fetch recent games
-    fetch('/api/games')
+    // Fetch recent games for the sidebar
+    fetch('/api/games.json')
         .then(response => response.json())
-        .then(games => {
+        .then(data => {
             const recentGamesList = document.getElementById('recent-games-list');
+            const games = data || [];
             
             // Display 5 most recent games
             const recentGames = games.slice(0, 5);
@@ -165,17 +167,15 @@
                 recentGamesList.innerHTML = '<li class="list-group-item text-center">No games available yet</li>';
             } else {
                 recentGamesList.innerHTML = recentGames.map(game => {
-                    const date = new Date(game.date).toLocaleDateString();
-                    const winner = game.participants[game.ranks.indexOf(0)] || 'Unknown';
-                    
+                    const date = new Date(game.timestamp);
+                    const formattedDate = date.toLocaleDateString();
                     return `
                         <li class="list-group-item">
                             <div class="d-flex w-100 justify-content-between">
-                                <h6 class="mb-1">${game.game_type || 'Game'}</h6>
-                                <small class="text-muted">${date}</small>
+                                <h6 class="mb-1">${game.game_type}</h6>
+                                <small class="text-muted">${formattedDate}</small>
                             </div>
-                            <p class="mb-1">Winner: ${winner}</p>
-                            <small class="text-muted">${game.participants.length} participants</small>
+                            <small>${game.participants.length} participants</small>
                         </li>
                     `;
                 }).join('');
@@ -186,10 +186,11 @@
             document.getElementById('recent-games-content').classList.remove('d-none');
         })
         .catch(error => {
-            console.error('Error fetching game history:', error);
+            console.error('Error fetching games data:', error);
             const recentGamesList = document.getElementById('recent-games-list');
             recentGamesList.innerHTML = '<li class="list-group-item text-center text-danger">Failed to load games</li>';
             
+            // Hide loading spinner and show content
             document.getElementById('recent-games-loading').classList.add('d-none');
             document.getElementById('recent-games-content').classList.remove('d-none');
         });

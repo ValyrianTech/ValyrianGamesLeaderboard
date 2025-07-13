@@ -20,7 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ url_for('main.index') }}">
+            <a class="navbar-brand" href="{{ url_for('main.index_html') }}">
                 <img src="{{ url_for('static', filename='images/ValyrianTechLogoTransparent.png') }}" alt="Valyrian Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
                 Valyrian Games
             </a>
@@ -30,13 +30,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == url_for('main.index') %}active{% endif %}" href="{{ url_for('main.index') }}">Home</a>
+                        <a class="nav-link {% if request.path == url_for('main.index_html') %}active{% endif %}" href="{{ url_for('main.index_html') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == url_for('main.leaderboard') %}active{% endif %}" href="{{ url_for('main.leaderboard') }}">Leaderboard</a>
+                        <a class="nav-link {% if request.path == url_for('main.leaderboard_html') %}active{% endif %}" href="{{ url_for('main.leaderboard_html') }}">Leaderboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == url_for('main.history') %}active{% endif %}" href="{{ url_for('main.history') }}">Game History</a>
+                        <a class="nav-link {% if request.path == url_for('main.history_html') %}active{% endif %}" href="{{ url_for('main.history_html') }}">Game History</a>
                     </li>
                 </ul>
             </div>

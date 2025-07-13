@@ -28,14 +28,29 @@ app.config['FREEZER_BASE_URL'] = 'https://valyriantech.github.io/ValyrianGamesLe
 freezer = Freezer(app)
 
 @freezer.register_generator
-def main_api_leaderboard():
-    # Use the correct blueprint route name
-    yield 'main.api_leaderboard', {}
+def main_api_leaderboard_json():
+    # Use the correct blueprint route name with extension
+    yield 'main.api_leaderboard_json', {}
 
 @freezer.register_generator
-def main_api_games():
-    # Use the correct blueprint route name
-    yield 'main.api_games', {}
+def main_api_games_json():
+    # Use the correct blueprint route name with extension
+    yield 'main.api_games_json', {}
+
+@freezer.register_generator
+def main_leaderboard_html():
+    # Generate leaderboard.html
+    yield 'main.leaderboard_html', {}
+
+@freezer.register_generator
+def main_history_html():
+    # Generate history.html
+    yield 'main.history_html', {}
+
+@freezer.register_generator
+def main_index_html():
+    # Generate index.html
+    yield 'main.index_html', {}
 
 if __name__ == '__main__':
     # Clean the build directory if it exists
