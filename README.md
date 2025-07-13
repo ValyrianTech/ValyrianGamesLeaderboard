@@ -161,12 +161,37 @@ Manual deployment steps:
 
 ### 5. Common Tasks
 
-- **Add a new model**: Edit `data/leaderboard.json` to add a new model entry
-- **Modify templates**: Edit files in `app/templates/`
-- **Change styling**: Edit `app/static/css/style.css`
-- **Add JavaScript functionality**: Edit `app/static/js/main.js`
+#### Adding a New Game Result
 
-The entire system is designed to be Git-based, with all data stored as versioned JSON files, making it easy to track changes and revert if needed.
+1. Create a JSON file with the game result data (see format below)
+2. Run the update script: `python scripts/update_leaderboard.py path/to/game_result.json`
+3. The script will:
+   - Validate the game data
+   - Save the game result to the `data/games` directory
+   - Automatically update the leaderboard with new ratings
+   - Add any new models that haven't been seen before
+4. Optionally commit the changes: `python scripts/update_leaderboard.py path/to/game_result.json --commit`
+
+#### Adding a New Model
+
+New models are automatically added to the leaderboard when they first appear in a game result. You don't need to manually edit the leaderboard.json file.
+
+When a new model appears in a game result:
+1. It's automatically added to the leaderboard with default TrueSkill ratings
+2. Its ratings are updated based on its performance in the game
+3. The leaderboard is sorted by the conservative rating
+
+If you need to add metadata for a model (like a description or link), you can edit the model entry in `data/leaderboard.json` after it has been automatically added.
+
+#### Generating the Static Site
+
+To generate the static site for GitHub Pages:
+
+```
+python scripts/freeze.py
+```
+
+The static site will be generated in the `build` directory.
 
 ## Project Structure
 
