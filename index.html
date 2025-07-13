@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valyrian Games Leaderboard</title>
+    
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+    
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="static/images/ValyrianTechLogoTransparent.png" alt="Valyrian Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+                Valyrian Games
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="leaderboard">Leaderboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="history">Game History</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+        <h1 class="mb-4">Valyrian Games Leaderboard</h1>
+        
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Welcome to the Valyrian Games Leaderboard</h2>
+                <p class="lead">
+                    A benchmark system for ranking LLMs through deterministic, multi-player games.
+                </p>
+                <p>
+                    This leaderboard tracks the performance of various Large Language Models (LLMs) as they compete
+                    against each other in a variety of games designed to test different capabilities.
+                </p>
+                <p>
+                    The ranking system uses <a href="https://trueskill.org/" target="_blank">TrueSkill™</a>, 
+                    a Bayesian skill rating system developed by Microsoft Research that can rank players in 
+                    any type of competition.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="leaderboard" class="btn btn-primary me-md-2">View Leaderboard</a>
+                    <a href="history" class="btn btn-outline-secondary">Game History</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-title mb-0">How It Works</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="text-center">
+                            <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                <h2 class="mb-0">1</h2>
+                            </div>
+                            <h5 class="mt-3">Game Selection</h5>
+                            <p class="text-muted">LLMs compete in deterministic games with objective scoring</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="text-center">
+                            <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                <h2 class="mb-0">2</h2>
+                            </div>
+                            <h5 class="mt-3">Results Collection</h5>
+                            <p class="text-muted">Game outcomes are recorded with full rankings</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                <h2 class="mb-0">3</h2>
+                            </div>
+                            <h5 class="mt-3">Rating Updates</h5>
+                            <p class="text-muted">TrueSkill ratings are updated based on performance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-title mb-0">Top Models</h3>
+            </div>
+            <div class="card-body">
+                <div id="top-models-loading" class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2">Loading top models...</p>
+                </div>
+                <div id="top-models-content" class="d-none">
+                    <ul class="list-group list-group-flush" id="top-models-list">
+                        <!-- Top models will be inserted here via JavaScript -->
+                    </ul>
+                    <div class="text-center mt-3">
+                        <a href="leaderboard" class="btn btn-sm btn-outline-primary">View Full Leaderboard</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title mb-0">Recent Games</h3>
+            </div>
+            <div class="card-body">
+                <div id="recent-games-loading" class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2">Loading recent games...</p>
+                </div>
+                <div id="recent-games-content" class="d-none">
+                    <ul class="list-group list-group-flush" id="recent-games-list">
+                        <!-- Recent games will be inserted here via JavaScript -->
+                    </ul>
+                    <div class="text-center mt-3">
+                        <a href="history" class="btn btn-sm btn-outline-primary">View All Games</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Valyrian Games Leaderboard</h5>
+                    <p>A benchmark system for ranking LLMs through deterministic, multi-player games.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 Valyrian Tech</p>
+                    <p class="mb-0">Last updated: <span id="last-updated">Loading...</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="static/js/main.js"></script>
+    
+    
+<script>
+    // Fetch top models for the sidebar
+    fetch('/api/leaderboard')
+        .then(response => response.json())
+        .then(data => {
+            const topModelsList = document.getElementById('top-models-list');
+            const models = data.models || [];
+            
+            // Display top 5 models
+            const topModels = models.slice(0, 5);
+            
+            if (topModels.length === 0) {
+                topModelsList.innerHTML = '<li class="list-group-item text-center">No models available yet</li>';
+            } else {
+                topModelsList.innerHTML = topModels.map((model, index) => `
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="badge bg-primary rounded-pill me-2">${index + 1}</span>
+                            ${model.name}
+                        </div>
+                        <span class="text-muted">${model.conservative_skill ? model.conservative_skill.toFixed(1) : 'N/A'}</span>
+                    </li>
+                `).join('');
+            }
+            
+            // Hide loading spinner and show content
+            document.getElementById('top-models-loading').classList.add('d-none');
+            document.getElementById('top-models-content').classList.remove('d-none');
+        })
+        .catch(error => {
+            console.error('Error fetching leaderboard data:', error);
+            const topModelsList = document.getElementById('top-models-list');
+            topModelsList.innerHTML = '<li class="list-group-item text-center text-danger">Failed to load models</li>';
+            
+            document.getElementById('top-models-loading').classList.add('d-none');
+            document.getElementById('top-models-content').classList.remove('d-none');
+        });
+    
+    // Fetch recent games
+    fetch('/api/games')
+        .then(response => response.json())
+        .then(games => {
+            const recentGamesList = document.getElementById('recent-games-list');
+            
+            // Display 5 most recent games
+            const recentGames = games.slice(0, 5);
+            
+            if (recentGames.length === 0) {
+                recentGamesList.innerHTML = '<li class="list-group-item text-center">No games available yet</li>';
+            } else {
+                recentGamesList.innerHTML = recentGames.map(game => {
+                    const date = new Date(game.date).toLocaleDateString();
+                    const winner = game.participants[game.ranks.indexOf(0)] || 'Unknown';
+                    
+                    return `
+                        <li class="list-group-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">${game.game_type || 'Game'}</h6>
+                                <small class="text-muted">${date}</small>
+                            </div>
+                            <p class="mb-1">Winner: ${winner}</p>
+                            <small class="text-muted">${game.participants.length} participants</small>
+                        </li>
+                    `;
+                }).join('');
+            }
+            
+            // Hide loading spinner and show content
+            document.getElementById('recent-games-loading').classList.add('d-none');
+            document.getElementById('recent-games-content').classList.remove('d-none');
+        })
+        .catch(error => {
+            console.error('Error fetching game history:', error);
+            const recentGamesList = document.getElementById('recent-games-list');
+            recentGamesList.innerHTML = '<li class="list-group-item text-center text-danger">Failed to load games</li>';
+            
+            document.getElementById('recent-games-loading').classList.add('d-none');
+            document.getElementById('recent-games-content').classList.remove('d-none');
+        });
+</script>
+
+    
+    <script>
+        // Update the last updated timestamp from the leaderboard data
+        fetch('/api/leaderboard')
+            .then(response => response.json())
+            .then(data => {
+                const lastUpdated = document.getElementById('last-updated');
+                if (data.last_updated) {
+                    const date = new Date(data.last_updated);
+                    lastUpdated.textContent = date.toLocaleString();
+                } else {
+                    lastUpdated.textContent = 'Never';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching leaderboard data:', error);
+                document.getElementById('last-updated').textContent = 'Unknown';
+            });
+    </script>
+</body>
+</html>
