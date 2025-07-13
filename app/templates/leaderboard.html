@@ -105,7 +105,7 @@
                                     <div class="rating-bar-fill" style="width: {{ ((model.mu - 3 * model.sigma) / 50) * 100 }}%;"></div>
                                 </div>
                                 <small class="d-block text-muted mt-1">
-                                    Conservative: {{ "%.1f"|format(model.conservative_skill) }}
+                                    Conservative: {{ "%.1f"|format(model.conservative_rating) }}
                                 </small>
                             </td>
                             <td class="model-games">{{ model.games_played }}</td>
@@ -190,17 +190,7 @@
                 responsive: true,
                 scales: {
                     y: {
-                        beginAtZero: false,
-                        title: {
-                            display: true,
-                            text: 'Rating'
-                        }
-                    }
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Model Ratings and Uncertainty'
+                        beginAtZero: true
                     }
                 }
             }
@@ -225,16 +215,9 @@
                 scales: {
                     y: {
                         beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Number of Games'
+                        ticks: {
+                            stepSize: 1
                         }
-                    }
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Games Played by Each Model'
                     }
                 }
             }
