@@ -41,3 +41,7 @@ build/
 
 # Logs
 *.log
+
+# Backup files created by clear_test_data.py
+data/games_backup_*/
+data/*_backup_*.json
