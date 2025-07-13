@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="/ValyrianGamesLeaderboard/static/css/style.css">
     
     
 <style>
@@ -66,8 +66,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="static/images/ValyrianTechLogoTransparent.png" alt="Valyrian Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+            <a class="navbar-brand" href="/ValyrianGamesLeaderboard/">
+                <img src="/ValyrianGamesLeaderboard/static/images/ValyrianTechLogoTransparent.png" alt="Valyrian Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
                 Valyrian Games
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,13 +76,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link " href="index.html">Home</a>
+                        <a class="nav-link " href="/ValyrianGamesLeaderboard/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="leaderboard">Leaderboard</a>
+                        <a class="nav-link " href="/ValyrianGamesLeaderboard/leaderboard">Leaderboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="history">Game History</a>
+                        <a class="nav-link " href="/ValyrianGamesLeaderboard/history">Game History</a>
                     </li>
                 </ul>
             </div>
@@ -187,7 +187,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JS -->
-    <script src="static/js/main.js"></script>
+    <script src="/ValyrianGamesLeaderboard/static/js/main.js"></script>
     
     
 <script>
