@@ -104,6 +104,70 @@ python scripts/freeze.py
 
 The static site will be generated in the `build` directory.
 
+## Day-to-Day Workflow
+
+### 1. Local Development
+
+To work on the project locally:
+
+```bash
+# Start the development server
+./run_dev.sh
+```
+
+This script:
+- Activates the Python virtual environment
+- Installs dependencies if needed
+- Runs the Flask development server at http://localhost:5000
+
+You can then view and test the site in your browser while making changes to the code.
+
+### 2. Adding New Game Results
+
+When new LLM competitions are completed:
+
+1. Create a JSON file with the game results in the format shown in `data/sample_new_game.json`
+2. Run the update script:
+
+```bash
+python scripts/update_leaderboard.py --game-file path/to/new_game.json --commit
+```
+
+This script:
+- Processes the new game results
+- Updates the leaderboard ratings using TrueSkill
+- Saves the game JSON to the data/games directory
+- Updates the leaderboard.json file
+- Optionally commits changes to Git (with the `--commit` flag)
+
+### 3. Generating the Static Site
+
+To build the static site for deployment:
+
+```bash
+python scripts/freeze.py
+```
+
+This generates all static files in the `build` directory, ready for hosting.
+
+### 4. Deployment
+
+The site is automatically deployed to GitHub Pages when changes are pushed to the main branch, thanks to the GitHub Actions workflow in `.github/workflows/deploy.yml`.
+
+Manual deployment steps:
+1. Commit your changes: `git add . && git commit -m "Your message"`
+2. Push to GitHub: `git push origin main`
+3. The GitHub Actions workflow will build and deploy the site
+
+### 5. Common Tasks
+
+- **Add a new model**: Edit `data/leaderboard.json` to add a new model entry
+- **Modify templates**: Edit files in `app/templates/`
+- **Change styling**: Edit `app/static/css/style.css`
+- **Add JavaScript functionality**: Edit `app/static/js/main.js`
+
+The entire system is designed to be Git-based, with all data stored as versioned JSON files, making it easy to track changes and revert if needed.
+
 ## Project Structure
 
 ```
