@@ -1,0 +1,367 @@
+{% extends "base.html" %}
+
+{% block title %}Game History - Valyrian Games{% endblock %}
+
+{% block page_title %}Game History{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-6">
+        <p class="lead">
+            A record of all games played in the Valyrian Games competitions.
+            Each game contributes to the TrueSkill ratings on the leaderboard.
+        </p>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="game-type-filter" class="form-label">Game Type</label>
+                            <select class="form-select" id="game-type-filter">
+                                <option value="all" selected>All Game Types</option>
+                                <!-- Game types will be populated via JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="model-filter" class="form-label">Model</label>
+                            <select class="form-select" id="model-filter">
+                                <option value="all" selected>All Models</option>
+                                <!-- Models will be populated via JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="apply-filters">Apply Filters</button>
+                <button class="btn btn-outline-secondary" id="reset-filters">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 100px;">Game ID</th>
+                        <th style="width: 120px;">Date</th>
+                        <th style="width: 150px;">Game Type</th>
+                        <th>Participants</th>
+                        <th style="width: 150px;">Winner</th>
+                        <th style="width: 100px;">Details</th>
+                    </tr>
+                </thead>
+                <tbody id="games-table-body">
+                    {% if games %}
+                        {% for game in games %}
+                        <tr data-game-type="{{ game.game_type }}" data-participants="{{ game.participants|join(',') }}">
+                            <td>{{ game.game_id }}</td>
+                            <td>{{ game.date|default('N/A') }}</td>
+                            <td>{{ game.game_type|default('Unknown') }}</td>
+                            <td>
+                                <ul class="list-unstyled mb-0">
+                                    {% for participant in game.participants %}
+                                    <li>
+                                        {{ participant }}
+                                        {% if loop.index0 == game.ranks.index(0) %}
+                                        <span class="badge bg-success ms-2">Winner</span>
+                                        {% endif %}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>
+                                {% set winner_index = game.ranks.index(0) if game.ranks else None %}
+                                {% if winner_index is not none and winner_index < game.participants|length %}
+                                    {{ game.participants[winner_index] }}
+                                {% else %}
+                                    Unknown
+                                {% endif %}
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary view-game-details" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#gameDetailsModal"
+                                        data-game-id="{{ game.game_id }}">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="6" class="text-center py-4">
+                                <p class="mb-0">No games available yet.</p>
+                            </td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Game Details Modal -->
+<div class="modal fade" id="gameDetailsModal" tabindex="-1" aria-labelledby="gameDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="gameDetailsModalLabel">Game Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="game-details-loading" class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2">Loading game details...</p>
+                </div>
+                <div id="game-details-content" class="d-none">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h6>Game Information</h6>
+                            <table class="table table-sm">
+                                <tr>
+                                    <th>Game ID:</th>
+                                    <td id="detail-game-id"></td>
+                                </tr>
+                                <tr>
+                                    <th>Date:</th>
+                                    <td id="detail-date"></td>
+                                </tr>
+                                <tr>
+                                    <th>Game Type:</th>
+                                    <td id="detail-game-type"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Results</h6>
+                            <table class="table table-sm" id="detail-results-table">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Model</th>
+                                        <th>Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Results will be populated via JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h6>Game Description</h6>
+                        <div class="card">
+                            <div class="card-body" id="detail-description">
+                                <!-- Game description will be populated via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h6>Additional Information</h6>
+                        <div class="card">
+                            <div class="card-body">
+                                <pre id="detail-additional-info" class="mb-0" style="max-height: 200px; overflow-y: auto;"></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // Get all games data
+    const gamesData = {{ games|tojson }};
+    
+    // Populate filter dropdowns
+    function populateFilters() {
+        const gameTypeFilter = document.getElementById('game-type-filter');
+        const modelFilter = document.getElementById('model-filter');
+        
+        // Extract unique game types and models
+        const gameTypes = new Set();
+        const models = new Set();
+        
+        gamesData.forEach(game => {
+            if (game.game_type) {
+                gameTypes.add(game.game_type);
+            }
+            
+            if (game.participants) {
+                game.participants.forEach(model => {
+                    models.add(model);
+                });
+            }
+        });
+        
+        // Add game types to filter
+        gameTypes.forEach(type => {
+            const option = document.createElement('option');
+            option.value = type;
+            option.textContent = type;
+            gameTypeFilter.appendChild(option);
+        });
+        
+        // Add models to filter
+        Array.from(models).sort().forEach(model => {
+            const option = document.createElement('option');
+            option.value = model;
+            option.textContent = model;
+            modelFilter.appendChild(option);
+        });
+    }
+    
+    // Apply filters to the games table
+    function applyFilters() {
+        const gameTypeFilter = document.getElementById('game-type-filter').value;
+        const modelFilter = document.getElementById('model-filter').value;
+        const tableRows = document.querySelectorAll('#games-table-body tr');
+        
+        tableRows.forEach(row => {
+            const gameType = row.getAttribute('data-game-type');
+            const participants = row.getAttribute('data-participants')?.split(',') || [];
+            
+            const gameTypeMatch = gameTypeFilter === 'all' || gameType === gameTypeFilter;
+            const modelMatch = modelFilter === 'all' || participants.includes(modelFilter);
+            
+            if (gameTypeMatch && modelMatch) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+    
+    // Reset filters
+    function resetFilters() {
+        document.getElementById('game-type-filter').value = 'all';
+        document.getElementById('model-filter').value = 'all';
+        
+        const tableRows = document.querySelectorAll('#games-table-body tr');
+        tableRows.forEach(row => {
+            row.style.display = '';
+        });
+    }
+    
+    // Show game details in modal
+    function showGameDetails(gameId) {
+        // Show loading spinner
+        document.getElementById('game-details-loading').classList.remove('d-none');
+        document.getElementById('game-details-content').classList.add('d-none');
+        
+        // Find the game in our data
+        const game = gamesData.find(g => g.game_id === gameId);
+        
+        if (!game) {
+            document.getElementById('game-details-loading').innerHTML = 
+                '<div class="alert alert-danger">Game not found</div>';
+            return;
+        }
+        
+        // Populate game details
+        document.getElementById('detail-game-id').textContent = game.game_id;
+        document.getElementById('detail-date').textContent = new Date(game.date).toLocaleString();
+        document.getElementById('detail-game-type').textContent = game.game_type || 'Unknown';
+        
+        // Populate results table
+        const resultsTableBody = document.querySelector('#detail-results-table tbody');
+        resultsTableBody.innerHTML = '';
+        
+        if (game.participants && game.ranks) {
+            // Create a sorted array of [participant, rank, score]
+            const results = game.participants.map((participant, index) => {
+                return {
+                    participant,
+                    rank: game.ranks[index],
+                    score: game.scores ? game.scores[index] : null
+                };
+            });
+            
+            // Sort by rank
+            results.sort((a, b) => a.rank - b.rank);
+            
+            // Add to table
+            results.forEach((result, index) => {
+                const row = document.createElement('tr');
+                
+                const rankCell = document.createElement('td');
+                rankCell.textContent = result.rank + 1; // Convert to 1-indexed
+                row.appendChild(rankCell);
+                
+                const modelCell = document.createElement('td');
+                modelCell.textContent = result.participant;
+                row.appendChild(modelCell);
+                
+                const scoreCell = document.createElement('td');
+                scoreCell.textContent = result.score !== null ? result.score : 'N/A';
+                row.appendChild(scoreCell);
+                
+                resultsTableBody.appendChild(row);
+            });
+        } else {
+            const row = document.createElement('tr');
+            const cell = document.createElement('td');
+            cell.colSpan = 3;
+            cell.textContent = 'No results available';
+            cell.className = 'text-center';
+            row.appendChild(cell);
+            resultsTableBody.appendChild(row);
+        }
+        
+        // Populate description
+        document.getElementById('detail-description').textContent = 
+            game.description || 'No description available for this game.';
+        
+        // Populate additional info
+        const additionalInfo = document.getElementById('detail-additional-info');
+        if (game.additional_info) {
+            if (typeof game.additional_info === 'object') {
+                additionalInfo.textContent = JSON.stringify(game.additional_info, null, 2);
+            } else {
+                additionalInfo.textContent = game.additional_info;
+            }
+        } else {
+            additionalInfo.textContent = 'No additional information available.';
+        }
+        
+        // Hide loading spinner and show content
+        document.getElementById('game-details-loading').classList.add('d-none');
+        document.getElementById('game-details-content').classList.remove('d-none');
+    }
+    
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Populate filters
+        populateFilters();
+        
+        // Set up event listeners
+        document.getElementById('apply-filters').addEventListener('click', applyFilters);
+        document.getElementById('reset-filters').addEventListener('click', resetFilters);
+        
+        // Set up game details modal
+        const gameDetailsButtons = document.querySelectorAll('.view-game-details');
+        gameDetailsButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const gameId = this.getAttribute('data-game-id');
+                showGameDetails(gameId);
+            });
+        });
+    });
+</script>
+{% endblock %}

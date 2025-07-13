@@ -1,0 +1,24 @@
+{
+  "game_id": "game-002",
+  "date": "2025-07-03T14:30:00Z",
+  "game_type": "LogicalReasoning",
+  "participants": ["Claude-3", "GPT-4", "PaLM-2", "Gemini-Pro"],
+  "ranks": [1, 0, 3, 2],
+  "scores": [85, 92, 65, 78],
+  "description": "A logical reasoning challenge involving complex deductions from a set of given premises.",
+  "additional_info": {
+    "challenge_prompt": "Given a set of logical statements, determine which conclusions necessarily follow.",
+    "accuracy": {
+      "Claude-3": 0.85,
+      "GPT-4": 0.92,
+      "PaLM-2": 0.65,
+      "Gemini-Pro": 0.78
+    },
+    "response_time_seconds": {
+      "Claude-3": 12.3,
+      "GPT-4": 10.8,
+      "PaLM-2": 15.2,
+      "Gemini-Pro": 13.7
+    }
+  }
+}

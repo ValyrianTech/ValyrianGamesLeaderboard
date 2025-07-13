@@ -1,0 +1,31 @@
+{
+  "game_id": "game-006",
+  "date": "2025-07-13T10:30:00Z",
+  "game_type": "TextSummarization",
+  "participants": ["GPT-4", "Claude-3", "Mistral-Large", "Gemini-Pro"],
+  "ranks": [1, 0, 3, 2],
+  "scores": [92, 95, 78, 85],
+  "description": "A challenge to accurately summarize long academic papers while preserving key information.",
+  "additional_info": {
+    "challenge_prompt": "Summarize the provided academic papers in 250 words or less while preserving all key findings and methodologies.",
+    "papers": ["Quantum Computing Advances", "Climate Change Mitigation", "Neural Network Architectures"],
+    "relevance_score": {
+      "GPT-4": 0.92,
+      "Claude-3": 0.95,
+      "Mistral-Large": 0.78,
+      "Gemini-Pro": 0.85
+    },
+    "conciseness_score": {
+      "GPT-4": 0.94,
+      "Claude-3": 0.96,
+      "Mistral-Large": 0.81,
+      "Gemini-Pro": 0.87
+    },
+    "word_count": {
+      "GPT-4": 243,
+      "Claude-3": 235,
+      "Mistral-Large": 268,
+      "Gemini-Pro": 251
+    }
+  }
+}

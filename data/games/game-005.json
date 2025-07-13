@@ -1,0 +1,36 @@
+{
+  "game_id": "game-005",
+  "date": "2025-07-10T13:45:00Z",
+  "game_type": "CodeDebug",
+  "participants": ["GPT-4", "Claude-3", "Llama-3", "PaLM-2"],
+  "ranks": [0, 1, 2, 3],
+  "scores": [95, 92, 84, 76],
+  "description": "A challenge to identify and fix bugs in a complex codebase with minimal changes.",
+  "additional_info": {
+    "challenge_prompt": "Identify and fix all bugs in the provided Python web application with minimal changes to the codebase.",
+    "bugs_found": {
+      "GPT-4": 12,
+      "Claude-3": 11,
+      "Llama-3": 9,
+      "PaLM-2": 7
+    },
+    "bugs_fixed": {
+      "GPT-4": 12,
+      "Claude-3": 10,
+      "Llama-3": 8,
+      "PaLM-2": 6
+    },
+    "fix_correctness": {
+      "GPT-4": 0.95,
+      "Claude-3": 0.92,
+      "Llama-3": 0.84,
+      "PaLM-2": 0.76
+    },
+    "time_to_completion_minutes": {
+      "GPT-4": 8.3,
+      "Claude-3": 9.1,
+      "Llama-3": 12.5,
+      "PaLM-2": 15.2
+    }
+  }
+}

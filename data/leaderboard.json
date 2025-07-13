@@ -1,0 +1,85 @@
+{
+  "last_updated": "2025-07-13T10:30:00Z",
+  "models": [
+    {
+      "name": "GPT-4",
+      "mu": 35.0,
+      "sigma": 2.5,
+      "games_played": 15,
+      "wins": 12,
+      "losses": 3,
+      "draws": 0,
+      "conservative_rating": 27.5
+    },
+    {
+      "name": "Claude-3",
+      "mu": 33.2,
+      "sigma": 2.8,
+      "games_played": 14,
+      "wins": 10,
+      "losses": 4,
+      "draws": 0,
+      "conservative_rating": 24.8
+    },
+    {
+      "name": "Llama-3",
+      "mu": 30.5,
+      "sigma": 3.1,
+      "games_played": 12,
+      "wins": 8,
+      "losses": 4,
+      "draws": 0,
+      "conservative_rating": 21.2
+    },
+    {
+      "name": "Mistral-Large",
+      "mu": 28.7,
+      "sigma": 3.3,
+      "games_played": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "conservative_rating": 18.8
+    },
+    {
+      "name": "PaLM-2",
+      "mu": 27.1,
+      "sigma": 3.5,
+      "games_played": 8,
+      "wins": 4,
+      "losses": 4,
+      "draws": 0,
+      "conservative_rating": 16.6
+    },
+    {
+      "name": "Gemini-Pro",
+      "mu": 26.3,
+      "sigma": 3.6,
+      "games_played": 7,
+      "wins": 3,
+      "losses": 4,
+      "draws": 0,
+      "conservative_rating": 15.5
+    },
+    {
+      "name": "Falcon-180B",
+      "mu": 25.0,
+      "sigma": 3.8,
+      "games_played": 6,
+      "wins": 2,
+      "losses": 4,
+      "draws": 0,
+      "conservative_rating": 13.6
+    },
+    {
+      "name": "BLOOM-176B",
+      "mu": 23.8,
+      "sigma": 4.0,
+      "games_played": 5,
+      "wins": 1,
+      "losses": 4,
+      "draws": 0,
+      "conservative_rating": 11.8
+    }
+  ]
+}

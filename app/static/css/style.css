@@ -1,0 +1,96 @@
+/* Valyrian Games Leaderboard Custom Styles */
+
+/* Custom color scheme */
+:root {
+    --valyrian-primary: #6a0dad;
+    --valyrian-secondary: #9b59b6;
+    --valyrian-accent: #8e44ad;
+    --valyrian-light: #e8daef;
+    --valyrian-dark: #4a235a;
+}
+
+/* Custom navbar styling */
+.navbar-dark.bg-dark {
+    background-color: var(--valyrian-dark) !important;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Card styling */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: var(--valyrian-primary);
+    border-color: var(--valyrian-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--valyrian-accent);
+    border-color: var(--valyrian-accent);
+}
+
+.btn-outline-primary {
+    color: var(--valyrian-primary);
+    border-color: var(--valyrian-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--valyrian-primary);
+    border-color: var(--valyrian-primary);
+}
+
+/* Footer styling */
+footer.bg-dark {
+    background-color: var(--valyrian-dark) !important;
+}
+
+/* Leaderboard specific styles */
+.model-card {
+    transition: transform 0.2s;
+}
+
+.model-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Game history specific styles */
+.game-result-winner {
+    font-weight: bold;
+    color: var(--valyrian-primary);
+}
+
+/* Custom badge colors */
+.badge.bg-primary {
+    background-color: var(--valyrian-primary) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Animation for loading states */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.loading-pulse {
+    animation: pulse 1.5s infinite ease-in-out;
+}

@@ -1,0 +1,134 @@
+import trueskill
+import json
+from pathlib import Path
+import datetime
+
+# Path to data directory
+DATA_DIR = Path(__file__).parent.parent.parent / 'data'
+LEADERBOARD_FILE = DATA_DIR / 'leaderboard.json'
+
+class TrueSkillCalculator:
+    """
+    Calculator for TrueSkill ratings based on game results.
+    Uses the trueskill library to update ratings.
+    """
+    
+    def __init__(self, draw_probability=0.0):
+        """
+        Initialize the TrueSkill environment.
+        
+        Args:
+            draw_probability: Probability of a draw (default: 0.0)
+        """
+        self.env = trueskill.TrueSkill(draw_probability=draw_probability)
+    
+    def update_ratings_from_game(self, game_data):
+        """
+        Update ratings based on a single game result.
+        
+        Args:
+            game_data: Dictionary containing game results
+            
+        Returns:
+            Updated leaderboard data
+        """
+        # Load current leaderboard
+        leaderboard = self._load_leaderboard()
+        
+        # Extract participants and their ranks from the game
+        participants = game_data.get('participants', [])
+        ranks = game_data.get('ranks', [])
+        
+        if not participants or not ranks or len(participants) != len(ranks):
+            raise ValueError("Invalid game data: participants and ranks must be non-empty and of equal length")
+        
+        # Get current ratings for participants
+        ratings = {}
+        for llm_id in participants:
+            # Find the LLM in the leaderboard or create a new entry
+            llm_entry = next((m for m in leaderboard['models'] if m['id'] == llm_id), None)
+            
+            if llm_entry:
+                # Use existing rating
+                ratings[llm_id] = self.env.create_rating(
+                    mu=llm_entry['mu'],
+                    sigma=llm_entry['sigma']
+                )
+            else:
+                # Create new rating with default values
+                ratings[llm_id] = self.env.create_rating()
+                # Add new LLM to leaderboard
+                leaderboard['models'].append({
+                    'id': llm_id,
+                    'name': llm_id,  # Use ID as name by default
+                    'mu': ratings[llm_id].mu,
+                    'sigma': ratings[llm_id].sigma,
+                    'games_played': 0
+                })
+        
+        # Prepare teams for TrueSkill update
+        # Each LLM is its own "team" in this case
+        teams = [[ratings[llm_id]] for llm_id in participants]
+        
+        # Update ratings
+        updated_teams = self.env.rate(teams, ranks=ranks)
+        
+        # Update leaderboard with new ratings
+        for i, llm_id in enumerate(participants):
+            new_rating = updated_teams[i][0]
+            
+            # Find the LLM in the leaderboard
+            llm_entry = next(m for m in leaderboard['models'] if m['id'] == llm_id)
+            
+            # Update rating
+            llm_entry['mu'] = new_rating.mu
+            llm_entry['sigma'] = new_rating.sigma
+            llm_entry['games_played'] = llm_entry.get('games_played', 0) + 1
+            
+            # Calculate conservative skill estimate (μ - 3σ)
+            llm_entry['conservative_skill'] = new_rating.mu - 3 * new_rating.sigma
+        
+        # Sort leaderboard by conservative skill
+        leaderboard['models'].sort(key=lambda x: x.get('conservative_skill', 0), reverse=True)
+        
+        # Update last_updated timestamp
+        leaderboard['last_updated'] = datetime.datetime.now().isoformat()
+        
+        # Save updated leaderboard
+        self._save_leaderboard(leaderboard)
+        
+        return leaderboard
+    
+    def _load_leaderboard(self):
+        """Load the leaderboard from file or create a new one if it doesn't exist"""
+        if LEADERBOARD_FILE.exists():
+            with open(LEADERBOARD_FILE, 'r') as f:
+                return json.load(f)
+        else:
+            # Create empty leaderboard
+            return {
+                'last_updated': datetime.datetime.now().isoformat(),
+                'models': []
+            }
+    
+    def _save_leaderboard(self, leaderboard):
+        """Save the leaderboard to file"""
+        # Ensure data directory exists
+        DATA_DIR.mkdir(parents=True, exist_ok=True)
+        
+        with open(LEADERBOARD_FILE, 'w') as f:
+            json.dump(leaderboard, f, indent=2)
+
+
+def update_leaderboard_from_game(game_data):
+    """
+    Convenience function to update the leaderboard from a game result.
+    
+    Args:
+        game_data: Dictionary containing game results
+        
+    Returns:
+        Updated leaderboard data
+    """
+    calculator = TrueSkillCalculator()
+    return calculator.update_ratings_from_game(game_data)

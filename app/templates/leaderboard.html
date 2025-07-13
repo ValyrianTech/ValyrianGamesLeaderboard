@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+
+{% block title %}LLM Leaderboard - Valyrian Games{% endblock %}
+
+{% block page_title %}LLM Leaderboard{% endblock %}
+
+{% block extra_head %}
+<style>
+    .model-rank {
+        width: 60px;
+        text-align: center;
+    }
+    .model-name {
+        min-width: 200px;
+    }
+    .model-rating {
+        width: 120px;
+        text-align: center;
+    }
+    .model-uncertainty {
+        width: 120px;
+        text-align: center;
+    }
+    .model-games {
+        width: 100px;
+        text-align: center;
+    }
+    .rating-bar {
+        height: 8px;
+        border-radius: 4px;
+        background-color: #e9ecef;
+        overflow: hidden;
+    }
+    .rating-bar-fill {
+        height: 100%;
+        background-color: #0d6efd;
+    }
+    .uncertainty-indicator {
+        display: inline-block;
+        width: 100%;
+        height: 6px;
+        background-color: #e9ecef;
+        position: relative;
+    }
+    .uncertainty-value {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: #ffc107;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-6">
+        <p class="lead">
+            This leaderboard ranks LLMs based on their performance in Valyrian Games competitions.
+            Models are ranked using the TrueSkill rating system, which accounts for win/loss records
+            and the relative skill of opponents.
+        </p>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Understanding the Ratings</h5>
+                <p class="mb-1"><strong>Rating (μ):</strong> The estimated skill level of the model</p>
+                <p class="mb-1"><strong>Uncertainty (σ):</strong> How confident we are in the rating</p>
+                <p class="mb-0"><strong>Conservative Rating:</strong> μ - 3σ (used for ranking)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="model-rank">#</th>
+                        <th class="model-name">Model</th>
+                        <th class="model-rating">Rating (μ)</th>
+                        <th class="model-uncertainty">Uncertainty (σ)</th>
+                        <th>Rating Distribution</th>
+                        <th class="model-games">Games</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    {% if leaderboard and leaderboard.models %}
+                        {% for model in leaderboard.models %}
+                        <tr>
+                            <td class="model-rank">{{ loop.index }}</td>
+                            <td class="model-name">{{ model.name }}</td>
+                            <td class="model-rating">{{ "%.1f"|format(model.mu) }}</td>
+                            <td class="model-uncertainty">
+                                {{ "%.2f"|format(model.sigma) }}
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: {{ (model.sigma / 8.333) * 100 }}%;"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: {{ ((model.mu - 3 * model.sigma) / 50) * 100 }}%;"></div>
+                                </div>
+                                <small class="d-block text-muted mt-1">
+                                    Conservative: {{ "%.1f"|format(model.conservative_skill) }}
+                                </small>
+                            </td>
+                            <td class="model-games">{{ model.games_played }}</td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="6" class="text-center py-4">
+                                <p class="mb-0">No models available yet.</p>
+                                <p class="text-muted">Check back after some games have been played.</p>
+                            </td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title mb-0">Rating Distribution</h3>
+            </div>
+            <div class="card-body">
+                <canvas id="rating-chart" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title mb-0">Games Played</h3>
+            </div>
+            <div class="card-body">
+                <canvas id="games-chart" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // Get leaderboard data
+    const leaderboardData = {{ leaderboard|tojson }};
+    const models = leaderboardData.models || [];
+    
+    // Only create charts if we have models
+    if (models.length > 0) {
+        // Prepare data for charts
+        const modelNames = models.map(model => model.name);
+        const modelRatings = models.map(model => model.mu);
+        const modelUncertainties = models.map(model => model.sigma);
+        const modelGames = models.map(model => model.games_played);
+        
+        // Rating chart
+        const ratingCtx = document.getElementById('rating-chart').getContext('2d');
+        new Chart(ratingCtx, {
+            type: 'bar',
+            data: {
+                labels: modelNames,
+                datasets: [
+                    {
+                        label: 'Rating (μ)',
+                        data: modelRatings,
+                        backgroundColor: 'rgba(13, 110, 253, 0.7)',
+                        borderColor: 'rgba(13, 110, 253, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Uncertainty (σ)',
+                        data: modelUncertainties,
+                        backgroundColor: 'rgba(255, 193, 7, 0.7)',
+                        borderColor: 'rgba(255, 193, 7, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: 'Rating'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Model Ratings and Uncertainty'
+                    }
+                }
+            }
+        });
+        
+        // Games chart
+        const gamesCtx = document.getElementById('games-chart').getContext('2d');
+        new Chart(gamesCtx, {
+            type: 'bar',
+            data: {
+                labels: modelNames,
+                datasets: [{
+                    label: 'Games Played',
+                    data: modelGames,
+                    backgroundColor: 'rgba(40, 167, 69, 0.7)',
+                    borderColor: 'rgba(40, 167, 69, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Games'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Games Played by Each Model'
+                    }
+                }
+            }
+        });
+    }
+</script>
+{% endblock %}
