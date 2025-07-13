@@ -25,12 +25,14 @@ app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
 freezer = Freezer(app)
 
 @freezer.register_generator
-def api_leaderboard():
-    yield {}
+def main_api_leaderboard():
+    # Use the correct blueprint route name
+    yield 'main.api_leaderboard', {}
 
 @freezer.register_generator
-def api_games():
-    yield {}
+def main_api_games():
+    # Use the correct blueprint route name
+    yield 'main.api_games', {}
 
 if __name__ == '__main__':
     # Clean the build directory if it exists

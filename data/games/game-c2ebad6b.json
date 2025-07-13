@@ -1,0 +1,28 @@
+{
+  "game_id": "game-c2ebad6b",
+  "date": "2025-06-14T12:45:31.668694",
+  "game_type": "MathematicalProblemSolving",
+  "participants": [
+    "TestModel-Gamma",
+    "ExperimentalModel-Gamma",
+    "TestModel-Gamma"
+  ],
+  "ranks": [
+    1,
+    2,
+    0
+  ],
+  "scores": [
+    72,
+    61,
+    77
+  ],
+  "description": "A randomly generated MathematicalProblemSolving challenge for testing purposes.",
+  "details": {
+    "challenge_prompt": "Solve a set of mathematical problems.",
+    "accuracy": {
+      "TestModel-Gamma": 0.74,
+      "ExperimentalModel-Gamma": 0.95
+    }
+  }
+}

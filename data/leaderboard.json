@@ -1,75 +1,155 @@
 {
-  "last_updated": "2025-07-13T10:30:00Z",
+  "last_updated": "2025-07-13T12:47:33.796114",
   "models": [
     {
       "name": "TestModel-Alpha",
-      "mu": 35.0,
-      "sigma": 2.5,
-      "games_played": 15,
-      "wins": 12,
-      "losses": 3,
+      "mu": 33.283714046415625,
+      "sigma": 2.160785461550879,
+      "games_played": 18,
+      "wins": 18,
+      "losses": 7,
       "draws": 0,
-      "conservative_rating": 27.5
-    },
-    {
-      "name": "TestModel-Beta",
-      "mu": 33.2,
-      "sigma": 2.8,
-      "games_played": 14,
-      "wins": 10,
-      "losses": 4,
-      "draws": 0,
-      "conservative_rating": 24.8
+      "conservative_rating": 26.80135766176299
     },
     {
       "name": "TestModel-Gamma",
-      "mu": 30.5,
-      "sigma": 3.1,
-      "games_played": 12,
-      "wins": 8,
-      "losses": 4,
+      "mu": 31.857665071167187,
+      "sigma": 2.220189787137639,
+      "games_played": 19,
+      "wins": 19,
+      "losses": 13,
       "draws": 0,
-      "conservative_rating": 21.2
+      "conservative_rating": 25.19709570975427
+    },
+    {
+      "name": "TestModel-Beta",
+      "mu": 31.36402893836391,
+      "sigma": 2.4714451901152157,
+      "games_played": 16,
+      "wins": 12,
+      "losses": 7,
+      "draws": 0,
+      "conservative_rating": 23.94969336801826
+    },
+    {
+      "name": "ExperimentalModel-Gamma",
+      "mu": 31.055148523819213,
+      "sigma": 3.033154584868317,
+      "games_played": 4,
+      "wins": 7,
+      "losses": 5,
+      "draws": 0,
+      "conservative_rating": 21.955684769214262
+    },
+    {
+      "name": "Prototype-Epsilon",
+      "mu": 32.157215889038106,
+      "sigma": 3.9795508285781307,
+      "games_played": 2,
+      "wins": 7,
+      "losses": 2,
+      "draws": 0,
+      "conservative_rating": 20.218563403303712
     },
     {
       "name": "TestModel-Delta",
-      "mu": 28.7,
-      "sigma": 3.3,
-      "games_played": 10,
-      "wins": 6,
-      "losses": 4,
+      "mu": 27.358007541357193,
+      "sigma": 2.5002552072572506,
+      "games_played": 13,
+      "wins": 8,
+      "losses": 11,
       "draws": 0,
-      "conservative_rating": 18.8
+      "conservative_rating": 19.85724191958544
     },
     {
-      "name": "TestModel-Epsilon",
-      "mu": 27.1,
-      "sigma": 3.5,
-      "games_played": 8,
-      "wins": 4,
-      "losses": 4,
+      "name": "ExperimentalModel-Chi-2",
+      "mu": 30.653083618715822,
+      "sigma": 3.628050609595169,
+      "games_played": 3,
+      "wins": 8,
+      "losses": 3,
       "draws": 0,
-      "conservative_rating": 16.6
+      "conservative_rating": 19.768931789930313
+    },
+    {
+      "name": "ExperimentalModel-Delta",
+      "mu": 29.06670014223389,
+      "sigma": 3.333771185610067,
+      "games_played": 3,
+      "wins": 7,
+      "losses": 5,
+      "draws": 0,
+      "conservative_rating": 19.06538658540369
     },
     {
       "name": "TestModel-Zeta",
-      "mu": 26.3,
-      "sigma": 3.6,
-      "games_played": 7,
-      "wins": 3,
-      "losses": 4,
+      "mu": 26.650621322440475,
+      "sigma": 2.868290517619721,
+      "games_played": 9,
+      "wins": 5,
+      "losses": 8,
       "draws": 0,
-      "conservative_rating": 15.5
+      "conservative_rating": 18.045749769581313
+    },
+    {
+      "name": "ExperimentalModel-Theta",
+      "mu": 29.98721492932324,
+      "sigma": 4.542161134131495,
+      "games_played": 1,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "conservative_rating": 16.360731526928753
     },
     {
       "name": "TestModel-Eta",
-      "mu": 25.0,
-      "sigma": 3.8,
-      "games_played": 6,
-      "wins": 2,
-      "losses": 4,
+      "mu": 25.473963521576525,
+      "sigma": 3.1596558229252167,
+      "games_played": 8,
+      "wins": 8,
+      "losses": 8,
       "draws": 0,
-      "conservative_rating": 13.6
+      "conservative_rating": 15.994996052800875
+    },
+    {
+      "name": "TestModel-Epsilon",
+      "mu": 24.979723372126788,
+      "sigma": 3.202866185476131,
+      "games_played": 9,
+      "wins": 4,
+      "losses": 7,
+      "draws": 0,
+      "conservative_rating": 15.371124815698394
+    },
+    {
+      "name": "Prototype-Beta",
+      "mu": 27.753188399652228,
+      "sigma": 4.57747306935029,
+      "games_played": 1,
+      "wins": 3,
+      "losses": 2,
+      "draws": 0,
+      "conservative_rating": 14.020769191601357
+    },
+    {
+      "name": "Prototype-Xi",
+      "mu": 27.580320739260717,
+      "sigma": 4.602176355383894,
+      "games_played": 1,
+      "wins": 1,
+      "losses": 3,
+      "draws": 0,
+      "conservative_rating": 13.773791673109034
+    },
+    {
+      "name": "Prototype-Upsilon",
+      "mu": 27.39598230603721,
+      "sigma": 4.9108101669805055,
+      "games_played": 1,
+      "wins": 1,
+      "losses": 2,
+      "draws": 0,
+      "conservative_rating": 12.663551805095695
     },
     {
       "name": "TestModel-Theta",
@@ -80,6 +160,26 @@
       "losses": 4,
       "draws": 0,
       "conservative_rating": 11.8
+    },
+    {
+      "name": "Prototype-Pi",
+      "mu": 19.866800884167844,
+      "sigma": 6.373705743341084,
+      "games_played": 1,
+      "wins": 0,
+      "losses": 2,
+      "draws": 0,
+      "conservative_rating": 0.7456836541445924
+    },
+    {
+      "name": "ExperimentalModel-Chi",
+      "mu": 18.326117391048225,
+      "sigma": 6.010178605648831,
+      "games_played": 1,
+      "wins": 0,
+      "losses": 5,
+      "draws": 0,
+      "conservative_rating": 0.2955815741017318
     }
   ]
 }
