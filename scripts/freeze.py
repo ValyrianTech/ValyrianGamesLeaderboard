@@ -20,8 +20,11 @@ app = create_app()
 
 # Configure Frozen-Flask
 app.config['FREEZER_DESTINATION'] = Path(__file__).parent.parent / 'build'
-app.config['FREEZER_RELATIVE_URLS'] = True
+app.config['FREEZER_RELATIVE_URLS'] = False  # Use absolute URLs instead of relative
 app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
+app.config['FREEZER_DEFAULT_MIMETYPE'] = 'text/html'  # Set default MIME type for all files
+app.config['FREEZER_BASE_URL'] = 'https://valyriantech.github.io/ValyrianGamesLeaderboard/'
+
 freezer = Freezer(app)
 
 @freezer.register_generator
@@ -44,9 +47,82 @@ if __name__ == '__main__':
     build_dir.mkdir(parents=True, exist_ok=True)
     (build_dir / '.nojekyll').touch()
     
+    # Create a _config.yml file to set correct MIME types for GitHub Pages
+    with open(build_dir / '_config.yml', 'w') as f:
+        f.write("""
+# GitHub Pages configuration
+include:
+  - ".nojekyll"
+  - ".htaccess"
+defaults:
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "default"
+      
+# Set proper MIME types
+webrick:
+  headers:
+    Content-Type: text/html; charset=utf-8
+""")
+    
+    # Create an .htaccess file to set correct MIME types
+    with open(build_dir / '.htaccess', 'w') as f:
+        f.write("""
+# Set default MIME type for HTML files
+AddType text/html .html
+
+# Ensure HTML files are served with the right content type
+<FilesMatch "\\.(html)$">
+    ForceType text/html
+    Header set Content-Type "text/html; charset=UTF-8"
+</FilesMatch>
+
+# Ensure JSON files are served with the right content type
+<FilesMatch "\\.(json)$">
+    ForceType application/json
+    Header set Content-Type "application/json; charset=UTF-8"
+</FilesMatch>
+
+# Ensure JavaScript files are served with the right content type
+<FilesMatch "\\.(js)$">
+    ForceType application/javascript
+    Header set Content-Type "application/javascript; charset=UTF-8"
+</FilesMatch>
+
+# Ensure CSS files are served with the right content type
+<FilesMatch "\\.(css)$">
+    ForceType text/css
+    Header set Content-Type "text/css; charset=UTF-8"
+</FilesMatch>
+""")
+    
+    # Create a MIME types file for GitHub Pages
+    with open(build_dir / 'mime.types', 'w') as f:
+        f.write("""
+text/html                             html htm
+application/json                      json
+application/javascript                js
+text/css                              css
+""")
+    
     # Freeze the app
     print(f"Freezing app to {build_dir}...")
     freezer.freeze()
     
-    print("Static site generation complete!")
-    print(f"Files generated: {sum(1 for _ in build_dir.glob('**/*'))}")
+    # Count the number of files generated
+    file_count = sum(1 for _ in build_dir.rglob('*') if _.is_file())
+    print(f"Static site generation complete!")
+    print(f"Files generated: {file_count}")
+    
+    # Create a .github-pages-mime.json file in the root of the build directory
+    with open(build_dir / '.github-pages-mime.json', 'w') as f:
+        f.write("""
+{
+  "*.html": "text/html",
+  "*.json": "application/json",
+  "*.js": "application/javascript",
+  "*.css": "text/css"
+}
+""")
