@@ -164,13 +164,34 @@ Manual deployment steps:
 #### Adding a New Game Result
 
 1. Create a JSON file with the game result data (see format below)
-2. Run the update script: `python scripts/update_leaderboard.py path/to/game_result.json`
+2. Run the update script: `python scripts/update_leaderboard.py --game-file path/to/game_result.json`
 3. The script will:
    - Validate the game data
    - Save the game result to the `data/games` directory
    - Automatically update the leaderboard with new ratings
    - Add any new models that haven't been seen before
-4. Optionally commit the changes: `python scripts/update_leaderboard.py path/to/game_result.json --commit`
+4. Optionally commit the changes: `python scripts/update_leaderboard.py --game-file path/to/game_result.json --commit`
+
+#### Recalculating the Leaderboard
+
+If game files have been deleted, modified, or you need to rebuild the leaderboard from scratch:
+
+1. Run the update script with the recalculate flag:
+```bash
+python scripts/update_leaderboard.py --recalculate
+```
+
+2. This will:
+   - Delete the existing leaderboard.json file
+   - Load all game files from the data/games directory
+   - Process each game in chronological order
+   - Rebuild the leaderboard from scratch
+   - Skip any invalid game files
+
+3. Optionally commit the changes:
+```bash
+python scripts/update_leaderboard.py --recalculate --commit
+```
 
 #### Adding a New Model
 

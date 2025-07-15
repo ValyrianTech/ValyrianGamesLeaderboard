@@ -6,6 +6,9 @@ This script:
 2. Updates the leaderboard using TrueSkill
 3. Saves the game result to the games directory
 4. Optionally commits the changes to the Git repository
+
+Additional features:
+- Can recalculate the entire leaderboard from all game files (--recalculate)
 """
 
 import os
@@ -25,6 +28,7 @@ from app.utils.trueskill_calculator import update_leaderboard_from_game
 # Path to data directory
 DATA_DIR = Path(__file__).parent.parent / 'data'
 GAMES_DIR = DATA_DIR / 'games'
+LEADERBOARD_FILE = DATA_DIR / 'leaderboard.json'
 
 def ensure_data_dirs():
     """Ensure data directories exist"""
@@ -106,9 +110,76 @@ def commit_changes(game_id, commit_message=None):
         print(f"Error committing changes: {e}")
         return False
 
+def load_all_games():
+    """
+    Load all game files from the games directory
+    
+    Returns:
+        List of game data dictionaries, sorted by date (oldest first)
+    """
+    games = []
+    
+    # Create games directory if it doesn't exist
+    if not GAMES_DIR.exists():
+        GAMES_DIR.mkdir(parents=True, exist_ok=True)
+        return games
+    
+    # Read all game files
+    for game_file in GAMES_DIR.glob('*.json'):
+        try:
+            with open(game_file, 'r') as f:
+                game_data = json.load(f)
+                games.append(game_data)
+        except (json.JSONDecodeError, IOError) as e:
+            print(f"Warning: Could not load game file {game_file}: {e}")
+    
+    # Sort games by date (oldest first)
+    games.sort(key=lambda x: x.get('date', ''))
+    
+    return games
+
+def recalculate_leaderboard():
+    """
+    Recalculate the entire leaderboard from all game files
+    
+    Returns:
+        Updated leaderboard data or None if an error occurred
+    """
+    # Load all games
+    games = load_all_games()
+    
+    if not games:
+        print("No game files found. Nothing to recalculate.")
+        return None
+    
+    print(f"Recalculating leaderboard from {len(games)} game files...")
+    
+    # Delete existing leaderboard file if it exists
+    if LEADERBOARD_FILE.exists():
+        LEADERBOARD_FILE.unlink()
+    
+    # Process each game in chronological order
+    leaderboard = None
+    for i, game_data in enumerate(games):
+        try:
+            if not validate_game_data(game_data):
+                print(f"Skipping invalid game: {game_data.get('game_id', 'unknown')}")
+                continue
+                
+            leaderboard = update_leaderboard_from_game(game_data)
+            print(f"Processed game {i+1}/{len(games)}: {game_data.get('game_id', 'unknown')}")
+        except Exception as e:
+            print(f"Error processing game {game_data.get('game_id', 'unknown')}: {e}")
+    
+    if leaderboard:
+        print(f"Leaderboard recalculation complete. {len(leaderboard['models'])} models updated.")
+    
+    return leaderboard
+
 def main():
     parser = argparse.ArgumentParser(description='Update leaderboard with new game results')
-    parser.add_argument('game_file', help='Path to JSON file containing game results')
+    parser.add_argument('--game-file', dest='game_file', help='Path to JSON file containing game results')
+    parser.add_argument('--recalculate', action='store_true', help='Recalculate entire leaderboard from all game files')
     parser.add_argument('--commit', action='store_true', help='Commit changes to Git repository')
     parser.add_argument('--message', help='Custom commit message (only used with --commit)')
     
@@ -116,6 +187,26 @@ def main():
     
     # Ensure data directories exist
     ensure_data_dirs()
+    
+    # Check if we need to recalculate the entire leaderboard
+    if args.recalculate:
+        updated_leaderboard = recalculate_leaderboard()
+        if not updated_leaderboard:
+            return 1
+            
+        # Commit changes if requested
+        if args.commit:
+            commit_message = args.message or "Recalculate leaderboard from all game files"
+            if not commit_changes("recalculate", commit_message):
+                return 1
+                
+        return 0
+    
+    # Otherwise, process a single game file
+    if not args.game_file:
+        print("Error: Either --game-file or --recalculate must be specified")
+        parser.print_help()
+        return 1
     
     # Load game data
     try:
