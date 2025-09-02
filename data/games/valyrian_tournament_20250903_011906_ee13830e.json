@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250903_011906_ee13830e",
+  "date": "2025-09-03T01:19:06.376321Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Anthropic:claude-sonnet-4-20250514",
+    "OpenAI:o3-mini-2025-01-31",
+    "OpenAI:o1-2024-12-17",
+    "Anthropic:claude-opus-4-20250514",
+    "Groq:openai/gpt-oss-120b",
+    "OpenAI:o4-mini-2025-04-16",
+    "Mistral:devstral-medium-2507"
+  ],
+  "ranks": [
+    1,
+    5,
+    4,
+    1,
+    3,
+    0,
+    6
+  ],
+  "scores": [
+    10,
+    4,
+    7,
+    10,
+    8,
+    13,
+    -5
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.02)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250903_011906.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.02,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.6938775510204082
+    },
+    "performance_metrics": {
+      "Anthropic:claude-sonnet-4-20250514": {
+        "total_tokens": 35769,
+        "total_cost": 1.031166,
+        "total_time": 534.985367,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 66.85977263374383,
+        "tokens_per_dollar": 34687.91639755384,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:o3-mini-2025-01-31": {
+        "total_tokens": 24567,
+        "total_cost": 0.1297538,
+        "total_time": 228.37700999999998,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 107.57212383155381,
+        "tokens_per_dollar": 189335.49537662865,
+        "success_rate": 0.5714285714285714
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 38905,
+        "total_cost": 2.9805,
+        "total_time": 319.591076,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 121.73368695689113,
+        "tokens_per_dollar": 13053.178996812614,
+        "success_rate": 0.7142857142857143
+      },
+      "Anthropic:claude-opus-4-20250514": {
+        "total_tokens": 14867,
+        "total_cost": 2.2225949999999997,
+        "total_time": 241.200114,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 61.6376159755878,
+        "tokens_per_dollar": 6689.027915567164,
+        "success_rate": 0.8571428571428571
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 24595,
+        "total_cost": 0.0234324,
+        "total_time": 92.92352100000001,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 264.6800264918932,
+        "tokens_per_dollar": 1049615.0629043547,
+        "success_rate": 0.7142857142857143
+      },
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 25073,
+        "total_cost": 0.14902800000000002,
+        "total_time": 320.148442,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 78.31679530709695,
+        "tokens_per_dollar": 168243.5515473602,
+        "success_rate": 1.0
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 2640,
+        "total_cost": 0.0161852,
+        "total_time": 34.825177,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 75.80722418151673,
+        "tokens_per_dollar": 163111.9788448706,
+        "success_rate": 0.14285714285714285
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Anthropic:claude-sonnet-4-20250514": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-sonnet-4-20250514"
+        },
+        "challenge_2_OpenAI:o3-mini-2025-01-31": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o3-mini-2025-01-31"
+        },
+        "challenge_3_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        },
+        "challenge_4_Anthropic:claude-opus-4-20250514": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-20250514"
+        },
+        "challenge_5_Groq:openai/gpt-oss-120b": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        },
+        "challenge_6_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_7_Mistral:devstral-medium-2507": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Anthropic:claude-sonnet-4-20250514",
+        "expected_answer": 4348,
+        "prompt_preview": "You are given a mysterious mathematical puzzle. Find a 4-digit number N that satisfies ALL of the fo..."
+      },
+      {
+        "creator": "OpenAI:o3-mini-2025-01-31",
+        "expected_answer": 1607,
+        "prompt_preview": "Challenge Prompt:\n\nConsider the sequence defined by a(n) = n³ - n + 1 for n = 1 to 10. Some terms in..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 775,
+        "prompt_preview": "Compute the 20th Fibonacci number. Find all of its unique prime factors and sum them. Multiply that ..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-20250514",
+        "expected_answer": 82,
+        "prompt_preview": "**The Quantum Maze Challenge**\n\nYou are trapped in a 7x7 quantum maze. Each cell contains a value fr..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 100891344545564193334812497256,
+        "prompt_preview": "Let C(a, b) denote the binomial coefficient (\"a choose b\"). Define the sum\n\n    S = \\sum_{k=0}^{n} C..."
+      },
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 72,
+        "prompt_preview": "Consider all 3×3 grids filled with the numbers 1 through 9 exactly once each. We label the rows R1, ..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 3,
+        "prompt_preview": "You are given a sequence of integers. Your task is to find the longest subsequence where the sum of ..."
+      }
+    ]
+  }
+}
