@@ -1,7 +1,7 @@
 {
   "game_id": "valyrian_tournament_20250902_180254_cdae4dd0",
   "date": "2025-09-02T18:02:54.593465Z",
-  "game_type": "ValyrianGamesTournament",
+  "game_type": "CodingChallenge",
   "participants": [
     "DeepSeek:deepseek-chat",
     "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"

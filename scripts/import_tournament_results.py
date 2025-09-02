@@ -321,7 +321,7 @@ def convert_tournament_to_game_format(tournament_data: Dict[str, Any], tournamen
     game_data = {
         'game_id': game_id,
         'date': timestamp,
-        'game_type': 'ValyrianGamesTournament',
+        'game_type': 'CodingChallenge',
         'participants': participants,
         'ranks': ranks,
         'scores': scores,

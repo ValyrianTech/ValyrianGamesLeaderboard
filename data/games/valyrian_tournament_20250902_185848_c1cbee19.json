@@ -1,7 +1,7 @@
 {
   "game_id": "valyrian_tournament_20250902_185848_c1cbee19",
   "date": "2025-09-02T18:58:48.266374Z",
-  "game_type": "ValyrianGamesTournament",
+  "game_type": "CodingChallenge",
   "participants": [
     "Anthropic:claude-opus-4-20250514",
     "Anthropic:claude-opus-4-1-20250805",
