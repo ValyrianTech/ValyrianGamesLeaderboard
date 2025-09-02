@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-09-02T21:59:33.348409",
+  "last_updated": "2025-09-02T23:08:23.751807",
   "models": [
     {
       "name": "OpenAI:gpt-5-mini",
@@ -33,13 +33,33 @@
     },
     {
       "name": "Anthropic:claude-opus-4-20250514",
-      "mu": 30.265023706447884,
-      "sigma": 3.5366176093565875,
-      "games_played": 2,
-      "wins": 7,
-      "losses": 1,
+      "mu": 28.59094525988012,
+      "sigma": 2.9674734679143464,
+      "games_played": 3,
+      "wins": 10,
+      "losses": 3,
       "draws": 0,
-      "conservative_rating": 19.655170878378122
+      "conservative_rating": 19.68852485613708
+    },
+    {
+      "name": "OpenAI:o4-mini-2025-04-16",
+      "mu": 30.105199350535948,
+      "sigma": 3.5114358122348546,
+      "games_played": 2,
+      "wins": 8,
+      "losses": 1,
+      "draws": 3,
+      "conservative_rating": 19.57089191383138
+    },
+    {
+      "name": "Groq:openai/gpt-oss-120b",
+      "mu": 28.76291006155101,
+      "sigma": 3.561133726171259,
+      "games_played": 2,
+      "wins": 6,
+      "losses": 4,
+      "draws": 4,
+      "conservative_rating": 18.079508883037235
     },
     {
       "name": "Mistral:codestral-2501",
@@ -52,16 +72,6 @@
       "conservative_rating": 17.331225280841
     },
     {
-      "name": "OpenAI:o4-mini-2025-04-16",
-      "mu": 29.461744531995254,
-      "sigma": 4.406651214424469,
-      "games_played": 1,
-      "wins": 3,
-      "losses": 1,
-      "draws": 3,
-      "conservative_rating": 16.241790888721845
-    },
-    {
       "name": "OpenAI:gpt-4o-2024-08-06",
       "mu": 26.948247578525464,
       "sigma": 3.854014726187499,
@@ -72,24 +82,14 @@
       "conservative_rating": 15.386203399962968
     },
     {
-      "name": "Groq:openai/gpt-oss-120b",
-      "mu": 26.512232617681494,
-      "sigma": 4.513560822596253,
-      "games_played": 1,
-      "wins": 1,
-      "losses": 4,
-      "draws": 2,
-      "conservative_rating": 12.971550149892735
-    },
-    {
       "name": "OpenAI:o3-mini-2025-01-31",
-      "mu": 21.739019511586346,
-      "sigma": 3.5863015864852894,
-      "games_played": 3,
-      "wins": 4,
-      "losses": 14,
-      "draws": 0,
-      "conservative_rating": 10.980114752130477
+      "mu": 23.66720434095248,
+      "sigma": 2.995700517203581,
+      "games_played": 4,
+      "wins": 7,
+      "losses": 16,
+      "draws": 2,
+      "conservative_rating": 14.680102789341737
     },
     {
       "name": "Anthropic:claude-opus-4-1-20250805",
@@ -102,6 +102,26 @@
       "conservative_rating": 10.527068472603002
     },
     {
+      "name": "Mistral:magistral-medium-2506",
+      "mu": 22.465273287753472,
+      "sigma": 4.846031831225009,
+      "games_played": 1,
+      "wins": 2,
+      "losses": 4,
+      "draws": 0,
+      "conservative_rating": 7.927177794078446
+    },
+    {
+      "name": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "mu": 17.536337310263477,
+      "sigma": 3.6156822600067025,
+      "games_played": 3,
+      "wins": 3,
+      "losses": 15,
+      "draws": 0,
+      "conservative_rating": 6.689290530243369
+    },
+    {
       "name": "OpenAI:o1-2024-12-17",
       "mu": 21.74180713323033,
       "sigma": 5.199015746499025,
@@ -110,16 +130,6 @@
       "losses": 4,
       "draws": 2,
       "conservative_rating": 6.144759893733255
-    },
-    {
-      "name": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
-      "mu": 18.566111925641245,
-      "sigma": 4.229910411727142,
-      "games_played": 2,
-      "wins": 2,
-      "losses": 10,
-      "draws": 0,
-      "conservative_rating": 5.876380690459818
     },
     {
       "name": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
@@ -133,13 +143,13 @@
     },
     {
       "name": "Mistral:devstral-medium-2507",
-      "mu": 11.29023218001286,
-      "sigma": 4.59844815482809,
-      "games_played": 3,
+      "mu": 9.902549391683296,
+      "sigma": 4.153873708038108,
+      "games_played": 4,
       "wins": 0,
-      "losses": 18,
+      "losses": 24,
       "draws": 0,
-      "conservative_rating": -2.5051122844714104
+      "conservative_rating": -2.5590717324310273
     },
     {
       "name": "DeepSeek:deepseek-chat",
