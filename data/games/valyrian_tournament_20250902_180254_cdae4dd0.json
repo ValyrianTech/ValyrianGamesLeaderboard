@@ -1,0 +1,94 @@
+{
+  "game_id": "valyrian_tournament_20250902_180254_cdae4dd0",
+  "date": "2025-09-02T18:02:54.593465Z",
+  "game_type": "ValyrianGamesTournament",
+  "participants": [
+    "DeepSeek:deepseek-chat",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+  ],
+  "ranks": [
+    0,
+    0
+  ],
+  "scores": [
+    3,
+    3
+  ],
+  "description": "Valyrian Games coding challenge tournament with 2 contenders solving 2 peer-created challenges (temperature: 0.58)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250902_180254.json",
+      "num_contenders": 2,
+      "num_challenges": 2,
+      "temperature": 0.58,
+      "seed": null,
+      "total_attempts": 4,
+      "overall_success_rate": 1.0
+    },
+    "performance_metrics": {
+      "DeepSeek:deepseek-chat": {
+        "total_tokens": 1780,
+        "total_cost": 0.0053748500000000005,
+        "total_time": 113.693381,
+        "total_attempts": 2,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 1,
+        "tokens_per_second": 15.656144485667111,
+        "tokens_per_dollar": 331172.0327078895,
+        "success_rate": 1.0
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 2286,
+        "total_cost": 0.031032,
+        "total_time": 74.965353,
+        "total_attempts": 2,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 1,
+        "tokens_per_second": 30.494087048452904,
+        "tokens_per_dollar": 73665.89327146171,
+        "success_rate": 1.0
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 2,
+      "success_rates": {
+        "challenge_1_DeepSeek:deepseek-chat": {
+          "success_rate": 1.0,
+          "successful_attempts": 2,
+          "total_attempts": 2,
+          "creator": "DeepSeek:deepseek-chat"
+        },
+        "challenge_2_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 1.0,
+          "successful_attempts": 2,
+          "total_attempts": 2,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "DeepSeek:deepseek-chat",
+        "expected_answer": 23,
+        "prompt_preview": "You are given a mysterious sequence of operations. Your task is to find the final integer password.\n..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 69120,
+        "prompt_preview": "Consider the least common multiple (LCM) of all integers from 1 to 15. Let's call this number N. Now..."
+      }
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "game_id": "valyrian_tournament_20250902_201244_30490f4a",
+  "date": "2025-09-02T20:12:44.899832Z",
+  "game_type": "ValyrianGamesTournament",
+  "participants": [
+    "OpenAI:gpt-5-mini",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "OpenAI:gpt-4o-2024-08-06",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "OpenAI:o3-mini-2025-01-31",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "Mistral:devstral-medium-2507"
+  ],
+  "ranks": [
+    0,
+    5,
+    3,
+    0,
+    4,
+    0,
+    6
+  ],
+  "scores": [
+    10,
+    -2,
+    7,
+    10,
+    4,
+    10,
+    -5
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.1)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250902_201244.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.1,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.6122448979591837
+    },
+    "performance_metrics": {
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 27700,
+        "total_cost": 0.065264,
+        "total_time": 439.57237599999996,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 63.01578878104934,
+        "tokens_per_dollar": 424430.0073547438,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+        "total_tokens": 24258,
+        "total_cost": 0.08914815,
+        "total_time": 729.90804,
+        "total_attempts": 7,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 1,
+        "tokens_per_second": 33.23432360054562,
+        "tokens_per_dollar": 272108.84353741497,
+        "success_rate": 0.2857142857142857
+      },
+      "OpenAI:gpt-4o-2024-08-06": {
+        "total_tokens": 5794,
+        "total_cost": 0.17774500000000001,
+        "total_time": 105.66674900000001,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 54.832764846394575,
+        "tokens_per_dollar": 32597.26011983459,
+        "success_rate": 0.7142857142857143
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 5599,
+        "total_cost": 0.013071200000000002,
+        "total_time": 115.873524,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 48.319925093501084,
+        "tokens_per_dollar": 428346.28802252276,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:o3-mini-2025-01-31": {
+        "total_tokens": 8553,
+        "total_cost": 0.0504889,
+        "total_time": 96.549927,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 88.58629173277366,
+        "tokens_per_dollar": 169403.57187421393,
+        "success_rate": 0.5714285714285714
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 4165,
+        "total_cost": 0.11661999999999999,
+        "total_time": 79.611454,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 52.316592534536554,
+        "tokens_per_dollar": 35714.28571428572,
+        "success_rate": 0.8571428571428571
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1298,
+        "total_cost": 0.007382800000000001,
+        "total_time": 21.414056000000002,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 60.61439271476641,
+        "tokens_per_dollar": 175814.05428834585,
+        "success_rate": 0.14285714285714285
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 1,
+      "flagged_challenges": [
+        {
+          "challenge_number": 3,
+          "creator": "OpenAI:gpt-4o-2024-08-06",
+          "success_rate": 0.14285714285714285,
+          "reason": "Very low success rate - possible quality issue"
+        }
+      ],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_OpenAI:gpt-5-mini": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        },
+        "challenge_2_Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+        },
+        "challenge_3_OpenAI:gpt-4o-2024-08-06": {
+          "success_rate": 0.14285714285714285,
+          "successful_attempts": 1,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4o-2024-08-06"
+        },
+        "challenge_4_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_5_OpenAI:o3-mini-2025-01-31": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:o3-mini-2025-01-31"
+        },
+        "challenge_6_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_7_Mistral:devstral-medium-2507": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 681,
+        "prompt_preview": "For a positive integer n define a(n) = sum_{p prime, p <= n} p * v_p(n!), where v_p(n!) is the expon..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "expected_answer": 8105,
+        "prompt_preview": "Find the smallest positive integer n such that n! (n factorial) ends with exactly 2023 trailing zero..."
+      },
+      {
+        "creator": "OpenAI:gpt-4o-2024-08-06",
+        "expected_answer": 9,
+        "prompt_preview": "You are given a sequence of integers from 1 to N. However, one integer is missing from this sequence..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 4044,
+        "prompt_preview": "You are given a sequence of integers where the first term is 2024. Each subsequent term is generated..."
+      },
+      {
+        "creator": "OpenAI:o3-mini-2025-01-31",
+        "expected_answer": 7,
+        "prompt_preview": "Challenge: Consider the series S defined by:\n- S[0] = 1\n- For each n >= 1, S[n] = S[n-1] + (sum of t..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 2,
+        "prompt_preview": "Consider the following sequence defined recursively:\n\n- a₁ = 1\n- For n > 1, define aₙ as follows:\n  ..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 5,
+        "prompt_preview": "You are given a sequence of numbers. Your task is to find the smallest positive integer that is not ..."
+      }
+    ]
+  }
+}

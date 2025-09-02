@@ -1,4 +1,75 @@
 {
-  "last_updated": "2025-07-13T13:09:47.243460",
-  "models": []
+  "last_updated": "2025-09-02T20:51:21.525199",
+  "models": [
+    {
+      "name": "OpenAI:gpt-5-mini",
+      "mu": 29.70315761561456,
+      "sigma": 5.025794476766089,
+      "games_played": 1,
+      "wins": 4,
+      "losses": 0,
+      "draws": 0,
+      "conservative_rating": 14.625774185316294
+    },
+    {
+      "name": "OpenAI:gpt-4.1-2025-04-14",
+      "mu": 29.70315631377536,
+      "sigma": 5.025796219409282,
+      "games_played": 1,
+      "wins": 4,
+      "losses": 0,
+      "draws": 3,
+      "conservative_rating": 14.625767655547515
+    },
+    {
+      "name": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+      "mu": 29.703155805029393,
+      "sigma": 5.02579634840252,
+      "games_played": 1,
+      "wins": 4,
+      "losses": 0,
+      "draws": 3,
+      "conservative_rating": 14.625766759821833
+    },
+    {
+      "name": "OpenAI:gpt-4o-2024-08-06",
+      "mu": 26.517590027590064,
+      "sigma": 5.059143085674028,
+      "games_played": 1,
+      "wins": 3,
+      "losses": 3,
+      "draws": 0,
+      "conservative_rating": 11.34016077056798
+    },
+    {
+      "name": "OpenAI:o3-mini-2025-01-31",
+      "mu": 23.533742795454557,
+      "sigma": 5.143531753509327,
+      "games_played": 1,
+      "wins": 2,
+      "losses": 4,
+      "draws": 0,
+      "conservative_rating": 8.103147534926576
+    },
+    {
+      "name": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "mu": 20.253257373455984,
+      "sigma": 5.361444305324774,
+      "games_played": 1,
+      "wins": 1,
+      "losses": 5,
+      "draws": 0,
+      "conservative_rating": 4.168924457481662
+    },
+    {
+      "name": "Mistral:devstral-medium-2507",
+      "mu": 15.585940073335362,
+      "sigma": 6.04113811598699,
+      "games_played": 1,
+      "wins": 0,
+      "losses": 6,
+      "draws": 0,
+      "conservative_rating": -2.537474274625609
+    }
+  ]
 }

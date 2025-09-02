@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250902_185848_c1cbee19",
+  "date": "2025-09-02T18:58:48.266374Z",
+  "game_type": "ValyrianGamesTournament",
+  "participants": [
+    "Anthropic:claude-opus-4-20250514",
+    "Anthropic:claude-opus-4-1-20250805",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "Mistral:devstral-medium-2507",
+    "OpenAI:gpt-5-mini",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "OpenAI:o1-2024-12-17"
+  ],
+  "ranks": [
+    0,
+    3,
+    4,
+    6,
+    0,
+    0,
+    4
+  ],
+  "scores": [
+    13,
+    10,
+    7,
+    -5,
+    13,
+    13,
+    7
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.62)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250902_185848.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.62,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.7755102040816326
+    },
+    "performance_metrics": {
+      "Anthropic:claude-opus-4-20250514": {
+        "total_tokens": 14378,
+        "total_cost": 2.35302,
+        "total_time": 271.342948,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 52.98829435582015,
+        "tokens_per_dollar": 6110.445300082448,
+        "success_rate": 1.0
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 13565,
+        "total_cost": 2.0505,
+        "total_time": 293.04866,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 46.28924083802328,
+        "tokens_per_dollar": 6615.459643989271,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 7728,
+        "total_cost": 0.118806,
+        "total_time": 195.851397,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 39.45848800864055,
+        "tokens_per_dollar": 65047.219837381956,
+        "success_rate": 0.7142857142857143
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1723,
+        "total_cost": 0.0084604,
+        "total_time": 21.690710999999997,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 79.43492493169082,
+        "tokens_per_dollar": 203654.67353789418,
+        "success_rate": 0.14285714285714285
+      },
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 26991,
+        "total_cost": 0.063391,
+        "total_time": 405.04768800000005,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 66.63659810841828,
+        "tokens_per_dollar": 425785.9948573141,
+        "success_rate": 1.0
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 5667,
+        "total_cost": 0.13486,
+        "total_time": 98.30604799999999,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 57.646504109289396,
+        "tokens_per_dollar": 42021.355479756785,
+        "success_rate": 1.0
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 30496,
+        "total_cost": 2.49267,
+        "total_time": 417.68553799999995,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 73.01186472968092,
+        "tokens_per_dollar": 12234.270882226689,
+        "success_rate": 0.7142857142857143
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Anthropic:claude-opus-4-20250514": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-20250514"
+        },
+        "challenge_2_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.42857142857142855,
+          "successful_attempts": 3,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_3_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_4_Mistral:devstral-medium-2507": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_5_OpenAI:gpt-5-mini": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        },
+        "challenge_6_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_7_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Anthropic:claude-opus-4-20250514",
+        "expected_answer": 4211,
+        "prompt_preview": "**The Harmonic Prime Cipher**\n\nYou've discovered an ancient mathematical cipher that encodes message..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 593010001,
+        "prompt_preview": "**The Recursive Sequence Cipher**\n\nYou've discovered an ancient mathematical cipher based on a recur..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 2971215073,
+        "prompt_preview": "Find the 7th Fibonacci number that satisfies all of the following conditions: 1) It is a prime numbe..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 6,
+        "prompt_preview": "You are given a list of integers. Your task is to find the maximum sum of a contiguous subarray with..."
+      },
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 2400,
+        "prompt_preview": "Consider all 4-digit numbers from 0000 to 9999 (treat numbers with leading zeros as 4-digit, e.g., 0..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 47,
+        "prompt_preview": "You are given the following puzzle:\n\nLet S be the set of all 5-digit numbers (from 10000 to 99999, i..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 1437,
+        "prompt_preview": "You are given the phrase 'Sic Parvis Magna'. Follow these steps to determine a single integer passwo..."
+      }
+    ]
+  }
+}
