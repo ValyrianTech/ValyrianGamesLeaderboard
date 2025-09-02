@@ -1,0 +1,236 @@
+{
+  "game_id": "valyrian_tournament_20250903_000207_cd491f02",
+  "date": "2025-09-03T00:02:07.277023Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "OpenAI:o4-mini-2025-04-16",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "Mistral:pixtral-large-2411",
+    "Anthropic:claude-opus-4-1-20250805",
+    "OpenAI:o1-2024-12-17",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "DeepSeek:deepseek-chat"
+  ],
+  "ranks": [
+    0,
+    4,
+    0,
+    0,
+    4,
+    4,
+    0
+  ],
+  "scores": [
+    10,
+    7,
+    10,
+    10,
+    7,
+    7,
+    10
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.27)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250903_000207.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.27,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.7959183673469388
+    },
+    "performance_metrics": {
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 22597,
+        "total_cost": 0.1424071,
+        "total_time": 250.327733,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 90.26966261065449,
+        "tokens_per_dollar": 158678.88609486463,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 6193,
+        "total_cost": 0.10558599999999999,
+        "total_time": 128.435305,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 48.21882892713962,
+        "tokens_per_dollar": 58653.60938003145,
+        "success_rate": 0.7142857142857143
+      },
+      "Mistral:pixtral-large-2411": {
+        "total_tokens": 9731,
+        "total_cost": 0.17872,
+        "total_time": 217.200314,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 44.80196101373961,
+        "tokens_per_dollar": 54448.29901521934,
+        "success_rate": 0.8571428571428571
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 13425,
+        "total_cost": 2.133585,
+        "total_time": 291.972302,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 45.980388920590144,
+        "tokens_per_dollar": 6292.2264639093355,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 24074,
+        "total_cost": 1.9707150000000002,
+        "total_time": 228.290445,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 105.4533841747078,
+        "tokens_per_dollar": 12215.870889499494,
+        "success_rate": 0.7142857142857143
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 4801,
+        "total_cost": 0.0118534,
+        "total_time": 90.11149400000001,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 53.27844192662037,
+        "tokens_per_dollar": 405031.46776452323,
+        "success_rate": 0.7142857142857143
+      },
+      "DeepSeek:deepseek-chat": {
+        "total_tokens": 7925,
+        "total_cost": 0.02258713,
+        "total_time": 450.863648,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 17.577376298033236,
+        "tokens_per_dollar": 350863.5227228957,
+        "success_rate": 0.8571428571428571
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 1,
+      "flagged_challenges": [
+        {
+          "challenge_number": 3,
+          "creator": "Mistral:pixtral-large-2411",
+          "success_rate": 0.0,
+          "reason": "Very low success rate - possible quality issue"
+        }
+      ],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_2_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_3_Mistral:pixtral-large-2411": {
+          "success_rate": 0.0,
+          "successful_attempts": 0,
+          "total_attempts": 7,
+          "creator": "Mistral:pixtral-large-2411"
+        },
+        "challenge_4_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_5_OpenAI:o1-2024-12-17": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        },
+        "challenge_6_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_7_DeepSeek:deepseek-chat": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "DeepSeek:deepseek-chat"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 837799,
+        "prompt_preview": "The Collatz sequence is defined for a positive integer n as follows: if n is even, the next term is ..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 4,
+        "prompt_preview": "You are investigating a mysterious encryption algorithm used by a secret organization. To unlock the..."
+      },
+      {
+        "creator": "Mistral:pixtral-large-2411",
+        "expected_answer": 3990,
+        "prompt_preview": "**Title:** The Hidden Sequence\n\n**Description:**\nYou are given a string of characters that represent..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 75447,
+        "prompt_preview": "## The Recursive Harmony Challenge\n\nYou've discovered an ancient mathematical sequence called the 'R..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 745,
+        "prompt_preview": "Compute the sum of the cubes of all integers from 1 to 49 inclusive that do not contain the digit '6..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 910,
+        "prompt_preview": "Consider a sequence defined by f(1) = 7, and for n > 1: f(n) = f(n-1) + gcd(n, f(n-1)), where gcd(a,..."
+      },
+      {
+        "creator": "DeepSeek:deepseek-chat",
+        "expected_answer": 7363203,
+        "prompt_preview": "You are given a mysterious function f(n) that operates on positive integers. Through experimentation..."
+      }
+    ]
+  }
+}

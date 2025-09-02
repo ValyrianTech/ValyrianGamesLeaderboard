@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-09-02T23:08:23.751807",
+  "last_updated": "2025-09-03T00:12:59.269096",
   "models": [
     {
       "name": "OpenAI:gpt-5-mini",
@@ -22,14 +22,14 @@
       "conservative_rating": 21.675747537998802
     },
     {
-      "name": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
-      "mu": 29.20098524775286,
-      "sigma": 3.087108968739263,
+      "name": "OpenAI:o4-mini-2025-04-16",
+      "mu": 29.564253337918196,
+      "sigma": 2.9736753323361467,
       "games_played": 3,
-      "wins": 9,
-      "losses": 4,
-      "draws": 6,
-      "conservative_rating": 19.939658341535072
+      "wins": 11,
+      "losses": 1,
+      "draws": 3,
+      "conservative_rating": 20.643227340909753
     },
     {
       "name": "Anthropic:claude-opus-4-20250514",
@@ -42,14 +42,14 @@
       "conservative_rating": 19.68852485613708
     },
     {
-      "name": "OpenAI:o4-mini-2025-04-16",
-      "mu": 30.105199350535948,
-      "sigma": 3.5114358122348546,
-      "games_played": 2,
-      "wins": 8,
-      "losses": 1,
-      "draws": 3,
-      "conservative_rating": 19.57089191383138
+      "name": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+      "mu": 27.292889502995095,
+      "sigma": 2.7033706790522576,
+      "games_played": 4,
+      "wins": 9,
+      "losses": 8,
+      "draws": 9,
+      "conservative_rating": 19.18277746583832
     },
     {
       "name": "Groq:openai/gpt-oss-120b",
@@ -72,6 +72,16 @@
       "conservative_rating": 17.331225280841
     },
     {
+      "name": "Anthropic:claude-opus-4-1-20250805",
+      "mu": 27.583747434361037,
+      "sigma": 3.709513046130746,
+      "games_played": 2,
+      "wins": 6,
+      "losses": 3,
+      "draws": 4,
+      "conservative_rating": 16.4552082959688
+    },
+    {
       "name": "OpenAI:gpt-4o-2024-08-06",
       "mu": 26.948247578525464,
       "sigma": 3.854014726187499,
@@ -92,14 +102,44 @@
       "conservative_rating": 14.680102789341737
     },
     {
-      "name": "Anthropic:claude-opus-4-1-20250805",
-      "mu": 25.770142606112785,
-      "sigma": 5.081024711169928,
+      "name": "Mistral:pixtral-large-2411",
+      "mu": 28.04247676708668,
+      "sigma": 4.46507735247203,
       "games_played": 1,
       "wins": 3,
-      "losses": 3,
-      "draws": 0,
-      "conservative_rating": 10.527068472603002
+      "losses": 0,
+      "draws": 4,
+      "conservative_rating": 14.647244709670588
+    },
+    {
+      "name": "DeepSeek:deepseek-chat",
+      "mu": 28.19891435329087,
+      "sigma": 4.613995107532352,
+      "games_played": 2,
+      "wins": 3,
+      "losses": 0,
+      "draws": 4,
+      "conservative_rating": 14.356929030693815
+    },
+    {
+      "name": "OpenAI:o1-2024-12-17",
+      "mu": 23.00702908868743,
+      "sigma": 3.7379378562262655,
+      "games_played": 2,
+      "wins": 1,
+      "losses": 8,
+      "draws": 5,
+      "conservative_rating": 11.793215520008632
+    },
+    {
+      "name": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+      "mu": 22.981175548771137,
+      "sigma": 3.8051136152528904,
+      "games_played": 3,
+      "wins": 1,
+      "losses": 8,
+      "draws": 2,
+      "conservative_rating": 11.565834703012467
     },
     {
       "name": "Mistral:magistral-medium-2506",
@@ -122,26 +162,6 @@
       "conservative_rating": 6.689290530243369
     },
     {
-      "name": "OpenAI:o1-2024-12-17",
-      "mu": 21.74180713323033,
-      "sigma": 5.199015746499025,
-      "games_played": 1,
-      "wins": 1,
-      "losses": 4,
-      "draws": 2,
-      "conservative_rating": 6.144759893733255
-    },
-    {
-      "name": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
-      "mu": 21.57427985441291,
-      "sigma": 5.397218655038269,
-      "games_played": 2,
-      "wins": 1,
-      "losses": 4,
-      "draws": 2,
-      "conservative_rating": 5.382623889298106
-    },
-    {
       "name": "Mistral:devstral-medium-2507",
       "mu": 9.902549391683296,
       "sigma": 4.153873708038108,
@@ -150,16 +170,6 @@
       "losses": 24,
       "draws": 0,
       "conservative_rating": -2.5590717324310273
-    },
-    {
-      "name": "DeepSeek:deepseek-chat",
-      "mu": 25.0,
-      "sigma": 9.587753226618391,
-      "games_played": 1,
-      "wins": 0,
-      "losses": 0,
-      "draws": 0,
-      "conservative_rating": -3.7632596798551745
     }
   ]
 }
