@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250903_110614_bf59334c",
+  "date": "2025-09-03T11:06:14.824572Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "OpenAI:gpt-4.1-2025-04-14",
+    "OpenAI:o1-2024-12-17",
+    "Groq:openai/gpt-oss-120b",
+    "Mistral:magistral-medium-2506",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "OpenAI:o4-mini-2025-04-16",
+    "DeepSeek:deepseek-chat"
+  ],
+  "ranks": [
+    0,
+    0,
+    0,
+    6,
+    5,
+    4,
+    0
+  ],
+  "scores": [
+    13,
+    13,
+    13,
+    1,
+    4,
+    10,
+    13
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.59)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250903_110614.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.59,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.8367346938775511
+    },
+    "performance_metrics": {
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 4855,
+        "total_cost": 0.125504,
+        "total_time": 80.35938999999999,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 60.41608827543366,
+        "tokens_per_dollar": 38684.02600713921,
+        "success_rate": 1.0
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 24809,
+        "total_cost": 1.99044,
+        "total_time": 190.092627,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 130.51005918288456,
+        "tokens_per_dollar": 12464.078294246498,
+        "success_rate": 1.0
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 36747,
+        "total_cost": 0.031502249999999996,
+        "total_time": 120.82235500000002,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 304.140736207302,
+        "tokens_per_dollar": 1166488.1079922863,
+        "success_rate": 1.0
+      },
+      "Mistral:magistral-medium-2506": {
+        "total_tokens": 50541,
+        "total_cost": 0.44603699999999996,
+        "total_time": 542.682532,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 93.13179809517067,
+        "tokens_per_dollar": 113311.22754390333,
+        "success_rate": 0.42857142857142855
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+        "total_tokens": 32104,
+        "total_cost": 0.12217290000000001,
+        "total_time": 731.305474,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 43.8995756785488,
+        "tokens_per_dollar": 262775.13261942705,
+        "success_rate": 0.5714285714285714
+      },
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 18238,
+        "total_cost": 0.1127687,
+        "total_time": 221.50720599999997,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 82.33592183903941,
+        "tokens_per_dollar": 161729.27416916218,
+        "success_rate": 0.8571428571428571
+      },
+      "DeepSeek:deepseek-chat": {
+        "total_tokens": 6601,
+        "total_cost": 0.01962548,
+        "total_time": 461.589191,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 14.300594833469573,
+        "tokens_per_dollar": 336348.4612860424,
+        "success_rate": 1.0
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_2_OpenAI:o1-2024-12-17": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        },
+        "challenge_3_Groq:openai/gpt-oss-120b": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        },
+        "challenge_4_Mistral:magistral-medium-2506": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Mistral:magistral-medium-2506"
+        },
+        "challenge_5_Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+        },
+        "challenge_6_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_7_DeepSeek:deepseek-chat": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "DeepSeek:deepseek-chat"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 2263,
+        "prompt_preview": "Consider the following Python function:\n\ndef mysterious_transform(n):\n    s = str(n)\n    if len(s) =..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 349525,
+        "prompt_preview": "Consider the sequence defined by a(0)=0, a(1)=1, and for n ≥ 2, a(n) = a(n-1) + 2*a(n-2). Determine ..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 14833,
+        "prompt_preview": "Write a program that reads a single integer **N** (1 ≤ N ≤ 12) from standard input and prints the nu..."
+      },
+      {
+        "creator": "Mistral:magistral-medium-2506",
+        "expected_answer": 346320,
+        "prompt_preview": "You are given the following mathematical expression where numbers are represented as Roman numerals:..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "expected_answer": 512,
+        "prompt_preview": "Consider all pairs of non-negative integers (a, b) such that a + b = 2023 and a XOR b = 2023. How ma..."
+      },
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 119,
+        "prompt_preview": "Define the integer sequence {a_n} as follows:\n- a_1 = 1\n- For each n > 1, a_n is the smallest intege..."
+      },
+      {
+        "creator": "DeepSeek:deepseek-chat",
+        "expected_answer": 100,
+        "prompt_preview": "Coding Challenge: The Cryptographic Sequence\n\nYou are given a mysterious sequence generator and a tr..."
+      }
+    ]
+  }
+}
