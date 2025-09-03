@@ -154,11 +154,12 @@
         });
     
     // Fetch recent games for the sidebar
-    fetch('/api/games.json')
+    fetch('/api/games.json?per_page=5')
         .then(response => response.json())
         .then(data => {
             const recentGamesList = document.getElementById('recent-games-list');
-            const games = data || [];
+            // Handle new pagination format
+            const games = data.games || data || [];
             
             // Display 5 most recent games
             const recentGames = games.slice(0, 5);

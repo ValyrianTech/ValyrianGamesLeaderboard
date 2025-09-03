@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, jsonify, redirect, url_for
+from flask import Blueprint, render_template, jsonify, redirect, url_for, request
 import json
 import os
 from app.models import get_leaderboard_data, get_game_history
@@ -31,11 +31,34 @@ def leaderboard_html():
 
 @main_bp.route('/history')
 def history():
-    """Game history page showing all past games"""
-    games = get_game_history()
+    """Game history page showing past games with pagination"""
+    # Get pagination parameters from URL
+    page = request.args.get('page', 1, type=int)
+    per_page = request.args.get('per_page', 20, type=int)
+    
+    # Ensure per_page is within reasonable bounds
+    per_page = max(5, min(per_page, 100))
+    
+    # Get paginated game history
+    pagination_data = get_game_history(page=page, per_page=per_page)
+    
+    # Ensure pagination_data is a dict (not a list for backwards compatibility)
+    if isinstance(pagination_data, list):
+        # Handle backwards compatibility case
+        pagination_data = {
+            'games': pagination_data,
+            'total': len(pagination_data),
+            'page': 1,
+            'per_page': len(pagination_data),
+            'total_pages': 1,
+            'has_prev': False,
+            'has_next': False
+        }
+    
     return render_template('game_history.html', 
                           title="Game History", 
-                          games=games)
+                          games=pagination_data['games'],
+                          pagination=pagination_data)
 
 @main_bp.route('/history.html')
 def history_html():
@@ -55,9 +78,31 @@ def api_leaderboard_json():
 
 @main_bp.route('/api/games')
 def api_games():
-    """API endpoint for game history data"""
-    games = get_game_history()
-    return jsonify(games)
+    """API endpoint for game history data with pagination support"""
+    # Get pagination parameters from URL
+    page = request.args.get('page', 1, type=int)
+    per_page = request.args.get('per_page', 20, type=int)
+    
+    # Ensure per_page is within reasonable bounds
+    per_page = max(5, min(per_page, 100))
+    
+    # Get paginated game history
+    pagination_data = get_game_history(page=page, per_page=per_page)
+    
+    # Ensure pagination_data is a dict (not a list for backwards compatibility)
+    if isinstance(pagination_data, list):
+        # Handle backwards compatibility case
+        pagination_data = {
+            'games': pagination_data,
+            'total': len(pagination_data),
+            'page': 1,
+            'per_page': len(pagination_data),
+            'total_pages': 1,
+            'has_prev': False,
+            'has_next': False
+        }
+    
+    return jsonify(pagination_data)
 
 @main_bp.route('/api/games.json')
 def api_games_json():
