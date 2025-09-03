@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250903_131456_24c448b9",
+  "date": "2025-09-03T13:14:56.986535Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "Mistral:pixtral-large-2411",
+    "Mistral:magistral-medium-2506",
+    "OpenAI:gpt-4o-2024-08-06",
+    "OpenAI:o3-mini-2025-01-31",
+    "Groq:openai/gpt-oss-120b",
+    "Mistral:devstral-medium-2507"
+  ],
+  "ranks": [
+    0,
+    3,
+    6,
+    4,
+    2,
+    0,
+    5
+  ],
+  "scores": [
+    13,
+    8,
+    -1,
+    7,
+    10,
+    13,
+    1
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.7)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250903_131456.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.7,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.7142857142857143
+    },
+    "performance_metrics": {
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 6104,
+        "total_cost": 0.121496,
+        "total_time": 143.528191,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 42.52823056900369,
+        "tokens_per_dollar": 50240.33713044051,
+        "success_rate": 1.0
+      },
+      "Mistral:pixtral-large-2411": {
+        "total_tokens": 20203,
+        "total_cost": 0.42934399999999995,
+        "total_time": 491.59484399999997,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 41.09685088560449,
+        "tokens_per_dollar": 47055.50793769099,
+        "success_rate": 0.7142857142857143
+      },
+      "Mistral:magistral-medium-2506": {
+        "total_tokens": 72760,
+        "total_cost": 0.705086,
+        "total_time": 632.279355,
+        "total_attempts": 7,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 115.07571680875141,
+        "tokens_per_dollar": 103193.0856661457,
+        "success_rate": 0.2857142857142857
+      },
+      "OpenAI:gpt-4o-2024-08-06": {
+        "total_tokens": 8160,
+        "total_cost": 0.28981,
+        "total_time": 126.095496,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 64.71285857823185,
+        "tokens_per_dollar": 28156.378316828264,
+        "success_rate": 0.7142857142857143
+      },
+      "OpenAI:o3-mini-2025-01-31": {
+        "total_tokens": 12431,
+        "total_cost": 0.06786779999999999,
+        "total_time": 122.35895699999999,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 101.59452405270177,
+        "tokens_per_dollar": 183164.91767819203,
+        "success_rate": 0.8571428571428571
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 12087,
+        "total_cost": 0.0137337,
+        "total_time": 40.678348,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 297.13596038855854,
+        "tokens_per_dollar": 880097.8614648639,
+        "success_rate": 1.0
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 2193,
+        "total_cost": 0.0121372,
+        "total_time": 24.859283,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 88.21654268950556,
+        "tokens_per_dollar": 180684.17756978545,
+        "success_rate": 0.42857142857142855
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_2_Mistral:pixtral-large-2411": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:pixtral-large-2411"
+        },
+        "challenge_3_Mistral:magistral-medium-2506": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Mistral:magistral-medium-2506"
+        },
+        "challenge_4_OpenAI:gpt-4o-2024-08-06": {
+          "success_rate": 0.42857142857142855,
+          "successful_attempts": 3,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4o-2024-08-06"
+        },
+        "challenge_5_OpenAI:o3-mini-2025-01-31": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o3-mini-2025-01-31"
+        },
+        "challenge_6_Groq:openai/gpt-oss-120b": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        },
+        "challenge_7_Mistral:devstral-medium-2507": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 4567,
+        "prompt_preview": "Find the last 4 digits of 2023 raised to the power of 2023 (2023^2023). In other words, compute 2023..."
+      },
+      {
+        "creator": "Mistral:pixtral-large-2411",
+        "expected_answer": 3,
+        "prompt_preview": "You are given a sequence of integers representing the heights of buildings in a city. The sequence i..."
+      },
+      {
+        "creator": "Mistral:magistral-medium-2506",
+        "expected_answer": 566,
+        "prompt_preview": "Consider a 5x5 grid where the value of the cell at position (i, j) is given by (F(...) mod 100), whe..."
+      },
+      {
+        "creator": "OpenAI:gpt-4o-2024-08-06",
+        "expected_answer": 100967717855888389973004846476977145423449281581,
+        "prompt_preview": "You are given a sequence defined as follows:\n\n- The sequence starts with two numbers: `a1 = 1` and `..."
+      },
+      {
+        "creator": "OpenAI:o3-mini-2025-01-31",
+        "expected_answer": 126,
+        "prompt_preview": "Challenge: Consider the Fibonacci sequence defined as follows: F(0)=0, F(1)=1, and for n >= 2, F(n) ..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 30241488,
+        "prompt_preview": "Consider the function f defined on non‑negative integers by the recurrence:\n\n- f(0) = 1\n- f(1) = 1\n-..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 54321,
+        "prompt_preview": "You are given a string of digits. Your task is to find the largest possible number that can be forme..."
+      }
+    ]
+  }
+}
