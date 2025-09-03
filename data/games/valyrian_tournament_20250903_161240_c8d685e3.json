@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250903_161240_c8d685e3",
+  "date": "2025-09-03T16:12:40.689114Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Mistral:devstral-medium-2507",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "Anthropic:claude-opus-4-20250514",
+    "OpenAI:o4-mini-2025-04-16",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "Mistral:codestral-2501",
+    "OpenAI:o1-2024-12-17"
+  ],
+  "ranks": [
+    6,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "scores": [
+    1,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.31)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250903_161240.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.31,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.9183673469387755
+    },
+    "performance_metrics": {
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1373,
+        "total_cost": 0.007578799999999999,
+        "total_time": 29.848924,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 45.99830801271094,
+        "tokens_per_dollar": 181163.24484087192,
+        "success_rate": 0.42857142857142855
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 4426,
+        "total_cost": 0.012010400000000001,
+        "total_time": 83.148518,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 53.2300527593288,
+        "tokens_per_dollar": 368513.95457270363,
+        "success_rate": 1.0
+      },
+      "Anthropic:claude-opus-4-20250514": {
+        "total_tokens": 10223,
+        "total_cost": 1.9291349999999998,
+        "total_time": 183.14551000000003,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 55.819004244220885,
+        "tokens_per_dollar": 5299.266251454668,
+        "success_rate": 1.0
+      },
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 19387,
+        "total_cost": 0.12040710000000002,
+        "total_time": 232.887036,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 83.24636842387397,
+        "tokens_per_dollar": 161012.09978481333,
+        "success_rate": 1.0
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 5963,
+        "total_cost": 0.111132,
+        "total_time": 171.909201,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 34.68691591440763,
+        "tokens_per_dollar": 53656.912500449915,
+        "success_rate": 1.0
+      },
+      "Mistral:codestral-2501": {
+        "total_tokens": 5697,
+        "total_cost": 0.012247800000000001,
+        "total_time": 58.901669999999996,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 96.72051743184872,
+        "tokens_per_dollar": 465144.760691716,
+        "success_rate": 1.0
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 20658,
+        "total_cost": 1.840665,
+        "total_time": 353.92438200000004,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 58.36840028726814,
+        "tokens_per_dollar": 11223.117731906676,
+        "success_rate": 1.0
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Mistral:devstral-medium-2507": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_2_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_3_Anthropic:claude-opus-4-20250514": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-20250514"
+        },
+        "challenge_4_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_5_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_6_Mistral:codestral-2501": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Mistral:codestral-2501"
+        },
+        "challenge_7_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 112,
+        "prompt_preview": "You are given a sequence of numbers. The sequence is generated by the following rules:\n1. Start with..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 69999,
+        "prompt_preview": "Create a sequence where each term is the smallest positive integer not yet used such that the sum of..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-20250514",
+        "expected_answer": 4211,
+        "prompt_preview": "**The Harmonic Prime Cipher**\n\nYou've discovered an ancient mathematical cipher that encodes message..."
+      },
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 1366,
+        "prompt_preview": "Given the number 2 raised to the power of 1000, compute the sum of its decimal digits. Output the re..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 3301,
+        "prompt_preview": "Find the 100th prime number that satisfies all of the following conditions: 1) The sum of its digits..."
+      },
+      {
+        "creator": "Mistral:codestral-2501",
+        "expected_answer": 1,
+        "prompt_preview": "Consider a sequence of numbers where each number is defined by the following rules:\n- The first numb..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 110,
+        "prompt_preview": "You are given a polynomial F(n) = n^3 - 15*n^2 + 71*n - 105. Find all integer n in the range 1..100 ..."
+      }
+    ]
+  }
+}
