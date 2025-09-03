@@ -49,10 +49,9 @@
                 <thead>
                     <tr>
                         <th style="width: 100px;">Game ID</th>
-                        <th style="width: 120px;">Date</th>
+                        <th style="width: 130px;">Date</th>
                         <th style="width: 150px;">Game Type</th>
-                        <th>Participants</th>
-                        <th style="width: 150px;">Winner</th>
+                        <th style="width: 400px;">Participants</th>
                         <th style="width: 100px;">Details</th>
                     </tr>
                 </thead>
@@ -63,25 +62,8 @@
                             <td>{{ game.game_id }}</td>
                             <td>{{ game.date|default('N/A') }}</td>
                             <td>{{ game.game_type|default('Unknown') }}</td>
-                            <td>
-                                <ul class="list-unstyled mb-0">
-                                    {% for participant in game.participants %}
-                                    <li>
-                                        {{ participant }}
-                                        {% if loop.index0 == game.ranks.index(0) %}
-                                        <span class="badge bg-success ms-2">Winner</span>
-                                        {% endif %}
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </td>
-                            <td>
-                                {% set winner_index = game.ranks.index(0) if game.ranks else None %}
-                                {% if winner_index is not none and winner_index < game.participants|length %}
-                                    {{ game.participants[winner_index] }}
-                                {% else %}
-                                    Unknown
-                                {% endif %}
+                            <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 400px;" title="{{ game.participants|join(', ') }}">
+                                {{ game.participants|join(', ') }}
                             </td>
                             <td>
                                 <button class="btn btn-sm btn-outline-primary view-game-details" 
@@ -95,7 +77,7 @@
                         {% endfor %}
                     {% else %}
                         <tr>
-                            <td colspan="6" class="text-center py-4">
+                            <td colspan="5" class="text-center py-4">
                                 <p class="mb-0">No games available yet.</p>
                             </td>
                         </tr>
