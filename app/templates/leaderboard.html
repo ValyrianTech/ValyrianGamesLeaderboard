@@ -25,6 +25,14 @@
         width: 100px;
         text-align: center;
     }
+    .model-cost {
+        width: 100px;
+        text-align: center;
+    }
+    .model-speed {
+        width: 120px;
+        text-align: center;
+    }
     .rating-bar {
         height: 8px;
         border-radius: 4px;
@@ -84,6 +92,8 @@
                         <th class="model-rating">Rating (μ)</th>
                         <th class="model-uncertainty">Uncertainty (σ)</th>
                         <th>Rating Distribution</th>
+                        <th class="model-cost">Avg Cost</th>
+                        <th class="model-speed">Speed (tok/s)</th>
                         <th class="model-games">Games</th>
                     </tr>
                 </thead>
@@ -108,12 +118,26 @@
                                     Conservative: {{ "%.1f"|format(model.conservative_rating) }}
                                 </small>
                             </td>
+                            <td class="model-cost">
+                                {% if model.avg_total_cost > 0 %}
+                                    ${{ "%.3f"|format(model.avg_total_cost) }}
+                                {% else %}
+                                    <span class="text-muted">N/A</span>
+                                {% endif %}
+                            </td>
+                            <td class="model-speed">
+                                {% if model.avg_tokens_per_second > 0 %}
+                                    {{ "%.1f"|format(model.avg_tokens_per_second) }}
+                                {% else %}
+                                    <span class="text-muted">N/A</span>
+                                {% endif %}
+                            </td>
                             <td class="model-games">{{ model.games_played }}</td>
                         </tr>
                         {% endfor %}
                     {% else %}
                         <tr>
-                            <td colspan="6" class="text-center py-4">
+                            <td colspan="8" class="text-center py-4">
                                 <p class="mb-0">No models available yet.</p>
                                 <p class="text-muted">Check back after some games have been played.</p>
                             </td>

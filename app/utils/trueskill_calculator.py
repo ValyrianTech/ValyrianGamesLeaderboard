@@ -66,7 +66,9 @@ class TrueSkillCalculator:
                     'wins': 0,
                     'losses': 0,
                     'draws': 0,
-                    'conservative_rating': ratings[model_name].mu - 3 * ratings[model_name].sigma
+                    'conservative_rating': ratings[model_name].mu - 3 * ratings[model_name].sigma,
+                    'avg_total_cost': 0.0,
+                    'avg_tokens_per_second': 0.0
                 })
         
         # Prepare teams for TrueSkill update
@@ -100,6 +102,9 @@ class TrueSkillCalculator:
             
             # Calculate conservative rating (μ - 3σ)
             model_entry['conservative_rating'] = new_rating.mu - 3 * new_rating.sigma
+            
+            # Update performance metrics if available
+            self._update_performance_metrics(model_entry, model_name, game_data)
         
         # Sort leaderboard by actual rating (mu)
         leaderboard['models'].sort(key=lambda x: x.get('mu', 0), reverse=True)
@@ -131,6 +136,43 @@ class TrueSkillCalculator:
         
         with open(LEADERBOARD_FILE, 'w') as f:
             json.dump(leaderboard, f, indent=2)
+    
+    def _update_performance_metrics(self, model_entry, model_name, game_data):
+        """
+        Update the running average of performance metrics for a model.
+        
+        Args:
+            model_entry: The model's entry in the leaderboard
+            model_name: Name of the model
+            game_data: The game data containing performance metrics
+        """
+        # Check if performance metrics exist in the game data
+        performance_metrics = game_data.get('additional_info', {}).get('performance_metrics', {})
+        model_metrics = performance_metrics.get(model_name, {})
+        
+        if not model_metrics:
+            # No performance metrics available for this model in this game
+            return
+        
+        # Get current averages (initialize if not present)
+        current_avg_cost = model_entry.get('avg_total_cost', 0.0)
+        current_avg_speed = model_entry.get('avg_tokens_per_second', 0.0)
+        games_played = model_entry.get('games_played', 0)
+        
+        # Get new metrics from this game
+        new_cost = model_metrics.get('total_cost', 0.0)
+        new_speed = model_metrics.get('tokens_per_second', 0.0)
+        
+        # Calculate running averages
+        # Note: games_played will be incremented after this method is called
+        if games_played == 0:
+            # First game for this model
+            model_entry['avg_total_cost'] = new_cost
+            model_entry['avg_tokens_per_second'] = new_speed
+        else:
+            # Update running average: new_avg = (old_avg * old_count + new_value) / new_count
+            model_entry['avg_total_cost'] = (current_avg_cost * games_played + new_cost) / (games_played + 1)
+            model_entry['avg_tokens_per_second'] = (current_avg_speed * games_played + new_speed) / (games_played + 1)
 
 
 def update_leaderboard_from_game(game_data):
