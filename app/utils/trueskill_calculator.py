@@ -101,8 +101,8 @@ class TrueSkillCalculator:
             # Calculate conservative rating (μ - 3σ)
             model_entry['conservative_rating'] = new_rating.mu - 3 * new_rating.sigma
         
-        # Sort leaderboard by conservative rating
-        leaderboard['models'].sort(key=lambda x: x.get('conservative_rating', 0), reverse=True)
+        # Sort leaderboard by actual rating (mu)
+        leaderboard['models'].sort(key=lambda x: x.get('mu', 0), reverse=True)
         
         # Update last_updated timestamp
         leaderboard['last_updated'] = datetime.datetime.now().isoformat()
