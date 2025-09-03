@@ -167,8 +167,8 @@
                 recentGamesList.innerHTML = '<li class="list-group-item text-center">No games available yet</li>';
             } else {
                 recentGamesList.innerHTML = recentGames.map(game => {
-                    const date = new Date(game.timestamp);
-                    const formattedDate = date.toLocaleDateString();
+                    const date = new Date(game.date);
+                    const formattedDate = date.toLocaleString();
                     return `
                         <li class="list-group-item">
                             <div class="d-flex w-100 justify-content-between">
