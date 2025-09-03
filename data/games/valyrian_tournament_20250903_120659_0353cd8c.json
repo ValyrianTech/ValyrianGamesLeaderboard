@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250903_120659_0353cd8c",
+  "date": "2025-09-03T12:06:59.339589Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Anthropic:claude-sonnet-4-20250514",
+    "Mistral:pixtral-large-2411",
+    "Mistral:codestral-2501",
+    "Mistral:devstral-medium-2507",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+  ],
+  "ranks": [
+    3,
+    4,
+    0,
+    6,
+    4,
+    0,
+    0
+  ],
+  "scores": [
+    11,
+    2,
+    13,
+    1,
+    2,
+    13,
+    13
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.39)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250903_120659.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.39,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.7346938775510204
+    },
+    "performance_metrics": {
+      "Anthropic:claude-sonnet-4-20250514": {
+        "total_tokens": 26912,
+        "total_cost": 0.8244750000000001,
+        "total_time": 383.245433,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 70.22131950623923,
+        "tokens_per_dollar": 32641.37784650838,
+        "success_rate": 0.8571428571428571
+      },
+      "Mistral:pixtral-large-2411": {
+        "total_tokens": 14986,
+        "total_cost": 0.3104699999999999,
+        "total_time": 328.06279099999995,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 45.68027954136378,
+        "tokens_per_dollar": 48268.753824846215,
+        "success_rate": 0.42857142857142855
+      },
+      "Mistral:codestral-2501": {
+        "total_tokens": 5905,
+        "total_cost": 0.012512800000000001,
+        "total_time": 52.216012,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 113.0879164038801,
+        "tokens_per_dollar": 471916.7572405856,
+        "success_rate": 1.0
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1411,
+        "total_cost": 0.0076712,
+        "total_time": 22.173165000000004,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 63.63548009497064,
+        "tokens_per_dollar": 183934.71686307227,
+        "success_rate": 0.42857142857142855
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 1631,
+        "total_cost": 0.004826200000000001,
+        "total_time": 65.367846,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 24.951105165680385,
+        "tokens_per_dollar": 337947.03907836386,
+        "success_rate": 0.42857142857142855
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 6931,
+        "total_cost": 0.14973799999999998,
+        "total_time": 147.824543,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 46.886666174236034,
+        "tokens_per_dollar": 46287.51552712071,
+        "success_rate": 1.0
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 6476,
+        "total_cost": 0.11949599999999999,
+        "total_time": 137.62695300000001,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 47.05473643669201,
+        "tokens_per_dollar": 54194.28265381268,
+        "success_rate": 1.0
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Anthropic:claude-sonnet-4-20250514": {
+          "success_rate": 0.42857142857142855,
+          "successful_attempts": 3,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-sonnet-4-20250514"
+        },
+        "challenge_2_Mistral:pixtral-large-2411": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Mistral:pixtral-large-2411"
+        },
+        "challenge_3_Mistral:codestral-2501": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Mistral:codestral-2501"
+        },
+        "challenge_4_Mistral:devstral-medium-2507": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_5_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_6_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_7_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Anthropic:claude-sonnet-4-20250514",
+        "expected_answer": 73,
+        "prompt_preview": "You are given a mysterious mathematical sequence where each term f(n) follows a hidden pattern based..."
+      },
+      {
+        "creator": "Mistral:pixtral-large-2411",
+        "expected_answer": 5768,
+        "prompt_preview": "You are given a staircase with 15 steps. You can take 1, 2, or 3 steps at a time. How many distinct ..."
+      },
+      {
+        "creator": "Mistral:codestral-2501",
+        "expected_answer": 5,
+        "prompt_preview": "Given an integer `n`, find the number of distinct ways to partition `n` into a sum of positive integ..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 6,
+        "prompt_preview": "You are given a list of integers. Your task is to find the maximum sum of a contiguous subarray with..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 72,
+        "prompt_preview": "You are given a sequence defined by the following recurrence:\n- a(0) = 0\n- a(1) = 1\n- a(2) = 1\n- For..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 6783,
+        "prompt_preview": "You are given the following Python function:\n\ndef mystery_sequence(n):\n    if n == 1:\n        return..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 3606,
+        "prompt_preview": "Define a sequence where S(1) = 1, S(2) = 2, and for n > 2: S(n) = S(n-1) + S(n-2) + (sum of digits o..."
+      }
+    ]
+  }
+}
