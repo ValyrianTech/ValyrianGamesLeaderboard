@@ -73,9 +73,8 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Understanding the Ratings</h5>
-                <p class="mb-1"><strong>Rating (μ):</strong> The estimated skill level of the model</p>
-                <p class="mb-1"><strong>Uncertainty (σ):</strong> How confident we are in the rating</p>
-                <p class="mb-0"><strong>Conservative Rating:</strong> μ - 3σ (used for ranking)</p>
+                <p class="mb-1"><strong>Rating (μ):</strong> The estimated skill level of the model (used for ranking)</p>
+                <p class="mb-0"><strong>Uncertainty (σ):</strong> How confident we are in the rating</p>
             </div>
         </div>
     </div>
@@ -87,14 +86,13 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th class="model-rank">#</th>
-                        <th class="model-name">Model</th>
-                        <th class="model-rating">Rating (μ)</th>
-                        <th class="model-uncertainty">Uncertainty (σ)</th>
-                        <th>Rating Distribution</th>
-                        <th class="model-cost">Avg Cost</th>
-                        <th class="model-speed">Speed (tok/s)</th>
-                        <th class="model-games">Games</th>
+                        <th class="model-rank" style="white-space: nowrap;">#</th>
+                        <th class="model-name" style="white-space: nowrap;">Model</th>
+                        <th class="model-rating" style="white-space: nowrap;">Rating (μ)</th>
+                        <th class="model-uncertainty" style="white-space: nowrap;">Uncertainty (σ)</th>
+                        <th class="model-cost" style="white-space: nowrap;">Avg Cost</th>
+                        <th class="model-speed" style="white-space: nowrap;">Speed (tok/s)</th>
+                        <th class="model-games" style="white-space: nowrap;">Games</th>
                     </tr>
                 </thead>
                 <tbody id="leaderboard-body">
@@ -103,20 +101,17 @@
                         <tr>
                             <td class="model-rank">{{ loop.index }}</td>
                             <td class="model-name">{{ model.name }}</td>
-                            <td class="model-rating">{{ "%.1f"|format(model.mu) }}</td>
+                            <td class="model-rating">
+                                {{ "%.1f"|format(model.mu) }}
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: {{ (model.mu / 50) * 100 }}%;"></div>
+                                </div>
+                            </td>
                             <td class="model-uncertainty">
                                 {{ "%.2f"|format(model.sigma) }}
                                 <div class="uncertainty-indicator">
                                     <div class="uncertainty-value" style="width: {{ (model.sigma / 8.333) * 100 }}%;"></div>
                                 </div>
-                            </td>
-                            <td>
-                                <div class="rating-bar">
-                                    <div class="rating-bar-fill" style="width: {{ ((model.mu - 3 * model.sigma) / 50) * 100 }}%;"></div>
-                                </div>
-                                <small class="d-block text-muted mt-1">
-                                    Conservative: {{ "%.1f"|format(model.conservative_rating) }}
-                                </small>
                             </td>
                             <td class="model-cost">
                                 {% if model.avg_total_cost > 0 %}
@@ -137,7 +132,7 @@
                         {% endfor %}
                     {% else %}
                         <tr>
-                            <td colspan="8" class="text-center py-4">
+                            <td colspan="7" class="text-center py-4">
                                 <p class="mb-0">No models available yet.</p>
                                 <p class="text-muted">Check back after some games have been played.</p>
                             </td>
