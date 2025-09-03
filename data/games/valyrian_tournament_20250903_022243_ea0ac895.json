@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250903_022243_ea0ac895",
+  "date": "2025-09-03T02:22:43.889790Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "OpenAI:o4-mini-2025-04-16",
+    "Anthropic:claude-opus-4-1-20250805",
+    "Mistral:codestral-2501",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "Groq:openai/gpt-oss-120b"
+  ],
+  "ranks": [
+    6,
+    0,
+    0,
+    0,
+    4,
+    0,
+    4
+  ],
+  "scores": [
+    -1,
+    13,
+    13,
+    13,
+    10,
+    13,
+    10
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.99)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250903_022243.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.99,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.8571428571428571
+    },
+    "performance_metrics": {
+      "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+        "total_tokens": 37313,
+        "total_cost": 0.1569125,
+        "total_time": 898.8066530000001,
+        "total_attempts": 7,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 41.5139339205581,
+        "tokens_per_dollar": 237794.94941448257,
+        "success_rate": 0.2857142857142857
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 7975,
+        "total_cost": 0.15449,
+        "total_time": 148.16601400000002,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 53.82475903009714,
+        "tokens_per_dollar": 51621.46417243835,
+        "success_rate": 1.0
+      },
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 27276,
+        "total_cost": 0.1675421,
+        "total_time": 289.716604,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 94.14717563098316,
+        "tokens_per_dollar": 162800.87213900266,
+        "success_rate": 1.0
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 14572,
+        "total_cost": 2.232615,
+        "total_time": 351.679622,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 41.43544035087709,
+        "tokens_per_dollar": 6526.875435307924,
+        "success_rate": 1.0
+      },
+      "Mistral:codestral-2501": {
+        "total_tokens": 8092,
+        "total_cost": 0.014623200000000001,
+        "total_time": 44.27228399999999,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 182.77801073014442,
+        "tokens_per_dollar": 553367.2520378577,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 7734,
+        "total_cost": 0.017106600000000003,
+        "total_time": 131.98245000000003,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 58.59870005443904,
+        "tokens_per_dollar": 452106.2046227771,
+        "success_rate": 1.0
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 25751,
+        "total_cost": 0.0212913,
+        "total_time": 92.708941,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 277.76177488641576,
+        "tokens_per_dollar": 1209461.141405175,
+        "success_rate": 0.8571428571428571
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+        },
+        "challenge_2_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_3_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_4_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_5_Mistral:codestral-2501": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:codestral-2501"
+        },
+        "challenge_6_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_7_Groq:openai/gpt-oss-120b": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "expected_answer": 9376,
+        "prompt_preview": "Find the smallest positive integer N greater than 1000 such that the decimal representation of N² en..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 31,
+        "prompt_preview": "Consider the following process:\n\n1. Start with the string S = \"3141592653589793238462643383279502884..."
+      },
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 72,
+        "prompt_preview": "Consider all 3×3 grids filled with the numbers 1 through 9 exactly once each. We label the rows R1, ..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 64092,
+        "prompt_preview": "# The Fibonacci Cipher Matrix Challenge\n\nA secret message has been encoded in a special 7x7 matrix u..."
+      },
+      {
+        "creator": "Mistral:codestral-2501",
+        "expected_answer": 4282638612786133075550,
+        "prompt_preview": "The Fibonacci sequence is defined as follows:\n- F(0) = 0\n- F(1) = 1\n- F(n) = F(n-1) + F(n-2) for n >..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": -55,
+        "prompt_preview": "Consider the following recursive string construction process:\n\n- Let S(0) = '0'\n- For each n >= 1:\n ..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 8095,
+        "prompt_preview": "Find the smallest positive integer n such that n! (the factorial of n) ends with exactly **2020** tr..."
+      }
+    ]
+  }
+}
