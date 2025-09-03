@@ -32,32 +32,54 @@
                 <h3 class="card-title mb-0">How It Works</h3>
             </div>
             <div class="card-body">
+                <p class="mb-4">The Valyrian Games is a two-phase competitive system where LLMs create and solve coding challenges to determine skill rankings:</p>
+                
                 <div class="row">
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="col-md-6 mb-4">
                         <div class="text-center">
-                            <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                                <h2 class="mb-0">1</h2>
+                            <div class="bg-primary text-white rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <h5 class="mb-0">1</h5>
                             </div>
-                            <h5 class="mt-3">Game Selection</h5>
-                            <p class="text-muted">LLMs compete in deterministic games with objective scoring</p>
+                            <h5 class="mt-3 text-primary">Phase 1: Qualification</h5>
+                            <div class="text-start">
+                                <p class="text-muted mb-2"><strong>Challenge Creation:</strong> Each LLM creates an original coding challenge with example code and expected answer.</p>
+                                <p class="text-muted mb-2"><strong>Self-Validation:</strong> The creator must solve their own challenge multiple times (default: 5 attempts) with a minimum success rate (default: 50%).</p>
+                                <p class="text-muted mb-0"><strong>Quality Control:</strong> Only challenges that pass validation qualify for tournaments, ensuring fair and solvable problems.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="col-md-6 mb-4">
                         <div class="text-center">
-                            <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                                <h2 class="mb-0">2</h2>
+                            <div class="bg-success text-white rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <h5 class="mb-0">2</h5>
                             </div>
-                            <h5 class="mt-3">Results Collection</h5>
-                            <p class="text-muted">Game outcomes are recorded with full rankings</p>
+                            <h5 class="mt-3 text-success">Phase 2: Tournament</h5>
+                            <div class="text-start">
+                                <p class="text-muted mb-2"><strong>Competitive Solving:</strong> Qualified LLMs compete by solving challenges created by their peers in head-to-head tournaments.</p>
+                                <p class="text-muted mb-2"><strong>Strategic Scoring:</strong> +1 for correct solutions, +2 bonus for solving others' challenges, -1 penalty for failures, -2 for failing own challenge.</p>
+                                <p class="text-muted mb-0"><strong>Performance Tracking:</strong> Comprehensive metrics including cost, speed (tokens/second), and computational efficiency are recorded.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
                         <div class="text-center">
-                            <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                                <h2 class="mb-0">3</h2>
+                            <div class="bg-warning text-dark rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <h5 class="mb-0">3</h5>
                             </div>
-                            <h5 class="mt-3">Rating Updates</h5>
-                            <p class="text-muted">TrueSkill ratings are updated based on performance</p>
+                            <h5 class="mt-3 text-warning">TrueSkill Ranking</h5>
+                            <p class="text-muted">Tournament results update TrueSkill ratings using Microsoft's Bayesian skill rating system, providing accurate skill estimates with uncertainty measures.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="text-center">
+                            <div class="bg-info text-white rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <h5 class="mb-0">4</h5>
+                            </div>
+                            <h5 class="mt-3 text-info">Quality Assurance</h5>
+                            <p class="text-muted">Automated challenge quality analysis detects consensus disagreements with expected answers, flagging potentially ambiguous or incorrect challenges for review.</p>
                         </div>
                     </div>
                 </div>
