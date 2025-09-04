@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250903_212137_f9e61fe2",
+  "date": "2025-09-03T21:21:37.950677Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "OpenAI:o4-mini-2025-04-16",
+    "Mistral:magistral-medium-2506",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "OpenAI:o1-2024-12-17",
+    "DeepSeek:deepseek-chat",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+  ],
+  "ranks": [
+    0,
+    6,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "scores": [
+    13,
+    -7,
+    13,
+    13,
+    13,
+    13,
+    13
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.2)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250903_212137.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.2,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.8571428571428571
+    },
+    "performance_metrics": {
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 23130,
+        "total_cost": 0.1434587,
+        "total_time": 281.55825600000003,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 82.14996188923686,
+        "tokens_per_dollar": 161231.0720785843,
+        "success_rate": 1.0
+      },
+      "Mistral:magistral-medium-2506": {
+        "total_tokens": 100361,
+        "total_cost": 0.819165,
+        "total_time": 857.3113470000001,
+        "total_attempts": 7,
+        "successful_attempts": 0,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 117.06482172572946,
+        "tokens_per_dollar": 122516.22078580016,
+        "success_rate": 0.0
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 4941,
+        "total_cost": 0.0124396,
+        "total_time": 114.260009,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 43.24347637676101,
+        "tokens_per_dollar": 397199.2668574552,
+        "success_rate": 1.0
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 4502,
+        "total_cost": 0.121162,
+        "total_time": 97.44541600000001,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 46.20022351795388,
+        "tokens_per_dollar": 37156.86436341427,
+        "success_rate": 1.0
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 18464,
+        "total_cost": 1.6438049999999997,
+        "total_time": 281.34455499999996,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 65.62771403199896,
+        "tokens_per_dollar": 11232.475871529776,
+        "success_rate": 1.0
+      },
+      "DeepSeek:deepseek-chat": {
+        "total_tokens": 6043,
+        "total_cost": 0.01854863,
+        "total_time": 388.420741,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 15.55787156072595,
+        "tokens_per_dollar": 325792.25527707435,
+        "success_rate": 1.0
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 5339,
+        "total_cost": 0.09734599999999999,
+        "total_time": 147.751649,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 36.134960497124474,
+        "tokens_per_dollar": 54845.602284634195,
+        "success_rate": 1.0
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_2_Mistral:magistral-medium-2506": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:magistral-medium-2506"
+        },
+        "challenge_3_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_4_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_5_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        },
+        "challenge_6_DeepSeek:deepseek-chat": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "DeepSeek:deepseek-chat"
+        },
+        "challenge_7_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 3230,
+        "prompt_preview": "Write a Python program to find and sum all four-digit self-descriptive numbers. A self-descriptive n..."
+      },
+      {
+        "creator": "Mistral:magistral-medium-2506",
+        "expected_answer": 400,
+        "prompt_preview": "Given the following string, perform the following steps to find the final integer answer:\n\n1. Extrac..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 34,
+        "prompt_preview": "Consider a sequence defined as follows:\n- a(0) = 1\n- a(1) = 1\n- For n >= 2:\n  - If n is odd: a(n) = ..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 24,
+        "prompt_preview": "You are given the following string:\n\n    \"bdfhjlnprtvxz\"\n\nThis string encodes a sequence of integers..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 259,
+        "prompt_preview": "Compute the 47th Fibonacci number (with F(1) = 1, F(2) = 1). Then sum the digits of that Fibonacci n..."
+      },
+      {
+        "creator": "DeepSeek:deepseek-chat",
+        "expected_answer": 33,
+        "prompt_preview": "## Recursive Sequence Digit Sum Challenge\n\nYou are given a recursive sequence defined as follows:\n- ..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 20540,
+        "prompt_preview": "You are investigating a mysterious numerical phenomenon. Define a 'balanced number' as a positive in..."
+      }
+    ]
+  }
+}
