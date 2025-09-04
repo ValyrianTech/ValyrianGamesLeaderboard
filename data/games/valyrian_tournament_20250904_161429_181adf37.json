@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250904_161429_181adf37",
+  "date": "2025-09-04T16:14:29.097307Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "Anthropic:claude-opus-4-1-20250805",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "OpenAI:o4-mini-2025-04-16",
+    "Mistral:codestral-2501",
+    "Anthropic:claude-sonnet-4-20250514"
+  ],
+  "ranks": [
+    1,
+    1,
+    6,
+    4,
+    1,
+    5,
+    0
+  ],
+  "scores": [
+    10,
+    10,
+    -4,
+    7,
+    10,
+    4,
+    11
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.72)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250904_161429.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.72,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.6938775510204082
+    },
+    "performance_metrics": {
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 11415,
+        "total_cost": 0.17032599999999998,
+        "total_time": 241.23370799999998,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 47.319257721644775,
+        "tokens_per_dollar": 67018.54091565587,
+        "success_rate": 0.8571428571428571
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 19153,
+        "total_cost": 2.665755,
+        "total_time": 412.1331339999999,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 46.47284680585765,
+        "tokens_per_dollar": 7184.831314205544,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+        "total_tokens": 39655,
+        "total_cost": 0.1628959,
+        "total_time": 871.606454,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 1,
+        "tokens_per_second": 45.4964506263282,
+        "tokens_per_dollar": 243437.68013805134,
+        "success_rate": 0.14285714285714285
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 3290,
+        "total_cost": 0.0091482,
+        "total_time": 120.53285299999999,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 27.295462756531617,
+        "tokens_per_dollar": 359633.5891213572,
+        "success_rate": 0.7142857142857143
+      },
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 21814,
+        "total_cost": 0.1345223,
+        "total_time": 262.353524,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 83.14734891840065,
+        "tokens_per_dollar": 162158.98776634058,
+        "success_rate": 0.8571428571428571
+      },
+      "Mistral:codestral-2501": {
+        "total_tokens": 9241,
+        "total_cost": 0.0177584,
+        "total_time": 106.05127600000002,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 87.13709394689413,
+        "tokens_per_dollar": 520373.4570682043,
+        "success_rate": 0.5714285714285714
+      },
+      "Anthropic:claude-sonnet-4-20250514": {
+        "total_tokens": 38438,
+        "total_cost": 1.073472,
+        "total_time": 537.8369009999999,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 71.4677626777416,
+        "tokens_per_dollar": 35807.17522208311,
+        "success_rate": 0.8571428571428571
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_2_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.2857142857142857,
+          "successful_attempts": 2,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_3_Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+        },
+        "challenge_4_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_5_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_6_Mistral:codestral-2501": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:codestral-2501"
+        },
+        "challenge_7_Anthropic:claude-sonnet-4-20250514": {
+          "success_rate": 0.2857142857142857,
+          "successful_attempts": 2,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-sonnet-4-20250514"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 4567,
+        "prompt_preview": "Find the last 4 digits of 2023 raised to the power of 2023 (2023^2023). In other words, compute 2023..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 309,
+        "prompt_preview": "**The Recursive Matrix Cipher**\n\nYou've intercepted an encrypted message that can only be decoded by..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "expected_answer": 465,
+        "prompt_preview": "How many positive integers less than 1,000,000 have digits that are strictly increasing from left to..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 7,
+        "prompt_preview": "You are given a string initially composed of 17 'a's, followed by 11 'b's, and 5 'c's. A transformat..."
+      },
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 249,
+        "prompt_preview": "A Lychrel number is a natural number that cannot form a palindrome through the iterative process of ..."
+      },
+      {
+        "creator": "Mistral:codestral-2501",
+        "expected_answer": 16,
+        "prompt_preview": "Given a positive integer `n`, find the sum of all positive divisors of `n` that are less than `n`. F..."
+      },
+      {
+        "creator": "Anthropic:claude-sonnet-4-20250514",
+        "expected_answer": 86,
+        "prompt_preview": "**Hidden Pattern Sequence Challenge**\n\nYou are given the first 15 terms of a mysterious sequence:\n\n[..."
+      }
+    ]
+  }
+}
