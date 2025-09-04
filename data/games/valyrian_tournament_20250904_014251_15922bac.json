@@ -1,0 +1,236 @@
+{
+  "game_id": "valyrian_tournament_20250904_014251_15922bac",
+  "date": "2025-09-04T01:42:51.534762Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Mistral:codestral-2501",
+    "OpenAI:gpt-4o-2024-08-06",
+    "Anthropic:claude-opus-4-1-20250805",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "OpenAI:o3-mini-2025-01-31",
+    "OpenAI:o1-2024-12-17",
+    "Mistral:devstral-medium-2507"
+  ],
+  "ranks": [
+    0,
+    3,
+    0,
+    0,
+    5,
+    3,
+    6
+  ],
+  "scores": [
+    10,
+    7,
+    10,
+    10,
+    4,
+    7,
+    -2
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.76)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250904_014251.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.76,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.6938775510204082
+    },
+    "performance_metrics": {
+      "Mistral:codestral-2501": {
+        "total_tokens": 13184,
+        "total_cost": 0.019838400000000003,
+        "total_time": 71.034729,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 185.5993566189293,
+        "tokens_per_dollar": 664569.7233647874,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:gpt-4o-2024-08-06": {
+        "total_tokens": 8043,
+        "total_cost": 0.22054250000000003,
+        "total_time": 116.32696599999998,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 69.14132016475011,
+        "tokens_per_dollar": 36469.16127277055,
+        "success_rate": 0.7142857142857143
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 13795,
+        "total_cost": 2.1238650000000003,
+        "total_time": 312.00582099999997,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 44.213918688395246,
+        "tokens_per_dollar": 6495.233924943439,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 5851,
+        "total_cost": 0.13455799999999998,
+        "total_time": 91.931623,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 63.64512894545547,
+        "tokens_per_dollar": 43483.107656178014,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:o3-mini-2025-01-31": {
+        "total_tokens": 12842,
+        "total_cost": 0.0737671,
+        "total_time": 112.926571,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 113.71991450975698,
+        "tokens_per_dollar": 174088.4486444499,
+        "success_rate": 0.5714285714285714
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 33686,
+        "total_cost": 3.32154,
+        "total_time": 283.781854,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 118.7038548278707,
+        "tokens_per_dollar": 10141.681268327342,
+        "success_rate": 0.7142857142857143
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1686,
+        "total_cost": 0.008283599999999999,
+        "total_time": 18.276793000000005,
+        "total_attempts": 7,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 1,
+        "tokens_per_second": 92.24813127773562,
+        "tokens_per_dollar": 203534.69506011883,
+        "success_rate": 0.2857142857142857
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 1,
+      "flagged_challenges": [
+        {
+          "challenge_number": 7,
+          "creator": "Mistral:devstral-medium-2507",
+          "success_rate": 0.14285714285714285,
+          "reason": "Very low success rate - possible quality issue"
+        }
+      ],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Mistral:codestral-2501": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Mistral:codestral-2501"
+        },
+        "challenge_2_OpenAI:gpt-4o-2024-08-06": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4o-2024-08-06"
+        },
+        "challenge_3_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_4_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_5_OpenAI:o3-mini-2025-01-31": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o3-mini-2025-01-31"
+        },
+        "challenge_6_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        },
+        "challenge_7_Mistral:devstral-medium-2507": {
+          "success_rate": 0.14285714285714285,
+          "successful_attempts": 1,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Mistral:codestral-2501",
+        "expected_answer": 7919,
+        "prompt_preview": "Find the 1000th prime number."
+      },
+      {
+        "creator": "OpenAI:gpt-4o-2024-08-06",
+        "expected_answer": 27,
+        "prompt_preview": "You are given a sequence defined as follows: The first term is 1, and each subsequent term is the su..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 64092,
+        "prompt_preview": "# The Fibonacci Cipher Matrix Challenge\n\nA secret message has been encoded in a special 7x7 matrix u..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 300,
+        "prompt_preview": "Consider the following sequence S defined as follows:\n\n- Start with the string '1'.\n- For each step ..."
+      },
+      {
+        "creator": "OpenAI:o3-mini-2025-01-31",
+        "expected_answer": 40585,
+        "prompt_preview": "A number is said to be a 'factorial sum number' if it equals the sum of the factorials of its digits..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 349525,
+        "prompt_preview": "Consider the sequence defined by a(0)=0, a(1)=1, and for n ≥ 2, a(n) = a(n-1) + 2*a(n-2). Determine ..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 9,
+        "prompt_preview": "You are given a sequence of numbers. The sequence is generated by the following rules:\n1. Start with..."
+      }
+    ]
+  }
+}
