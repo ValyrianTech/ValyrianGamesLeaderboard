@@ -1,0 +1,236 @@
+{
+  "game_id": "valyrian_tournament_20250903_195737_27ed56f4",
+  "date": "2025-09-03T19:57:37.654597Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "OpenAI:o3-mini-2025-01-31",
+    "OpenAI:o1-2024-12-17",
+    "Mistral:devstral-medium-2507",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "OpenAI:gpt-5-mini",
+    "Anthropic:claude-opus-4-1-20250805"
+  ],
+  "ranks": [
+    4,
+    3,
+    6,
+    5,
+    0,
+    0,
+    0
+  ],
+  "scores": [
+    2,
+    7,
+    -5,
+    -1,
+    10,
+    10,
+    10
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.98)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250903_195737.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.98,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.5918367346938775
+    },
+    "performance_metrics": {
+      "OpenAI:o3-mini-2025-01-31": {
+        "total_tokens": 22395,
+        "total_cost": 0.11943140000000001,
+        "total_time": 384.235588,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 58.28455431879465,
+        "tokens_per_dollar": 187513.5014744866,
+        "success_rate": 0.42857142857142855
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 21914,
+        "total_cost": 1.791645,
+        "total_time": 354.343621,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 61.843924093105095,
+        "tokens_per_dollar": 12231.21767984171,
+        "success_rate": 0.7142857142857143
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1990,
+        "total_cost": 0.009744800000000001,
+        "total_time": 31.996252,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 62.194784564142076,
+        "tokens_per_dollar": 204211.47689023888,
+        "success_rate": 0.14285714285714285
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+        "total_tokens": 36847,
+        "total_cost": 0.1466667,
+        "total_time": 1054.671464,
+        "total_attempts": 7,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 34.93694601373988,
+        "tokens_per_dollar": 251229.48835693445,
+        "success_rate": 0.2857142857142857
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 7078,
+        "total_cost": 0.10607599999999999,
+        "total_time": 182.14536199999998,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 38.85907344706367,
+        "tokens_per_dollar": 66725.74380632755,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 22870,
+        "total_cost": 0.056021,
+        "total_time": 371.12807499999997,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 61.62293165236826,
+        "tokens_per_dollar": 408239.7672301458,
+        "success_rate": 0.8571428571428571
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 13599,
+        "total_cost": 2.03871,
+        "total_time": 299.08022500000004,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 45.469405407863384,
+        "tokens_per_dollar": 6670.394514178083,
+        "success_rate": 0.8571428571428571
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 1,
+      "flagged_challenges": [
+        {
+          "challenge_number": 3,
+          "creator": "Mistral:devstral-medium-2507",
+          "success_rate": 0.14285714285714285,
+          "reason": "Very low success rate - possible quality issue"
+        }
+      ],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_OpenAI:o3-mini-2025-01-31": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:o3-mini-2025-01-31"
+        },
+        "challenge_2_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        },
+        "challenge_3_Mistral:devstral-medium-2507": {
+          "success_rate": 0.14285714285714285,
+          "successful_attempts": 1,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_4_Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+        },
+        "challenge_5_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_6_OpenAI:gpt-5-mini": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        },
+        "challenge_7_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.42857142857142855,
+          "successful_attempts": 3,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "OpenAI:o3-mini-2025-01-31",
+        "expected_answer": 9,
+        "prompt_preview": "Consider a sequence defined as follows: a₀ = 2, a₁ = 3, and for each n ≥ 2, a[n] = a[n-1] * a[n-2] +..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 50,
+        "prompt_preview": "Given the integers n in the range 1 through 99, convert n^2 into base 7, then define f(n) to be the ..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 12,
+        "prompt_preview": "You are given a list of integers. Your task is to find the smallest positive integer that cannot be ..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "expected_answer": 1772,
+        "prompt_preview": "Calculate the sum of all positive integers below 1000 that are palindromic in both base 10 and base ..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 69120,
+        "prompt_preview": "Consider the least common multiple (LCM) of all integers from 1 to 15. Let's call this number N. Now..."
+      },
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 30,
+        "prompt_preview": "Start with a1 = 1. For each n = 2, 3, ..., 10 define a_n to be the smallest integer strictly greater..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 64092,
+        "prompt_preview": "# The Fibonacci Cipher Matrix Challenge\n\nA secret message has been encoded in a special 7x7 matrix u..."
+      }
+    ]
+  }
+}
