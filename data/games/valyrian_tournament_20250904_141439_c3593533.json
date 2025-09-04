@@ -1,0 +1,236 @@
+{
+  "game_id": "valyrian_tournament_20250904_141439_c3593533",
+  "date": "2025-09-04T14:14:39.894125Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "OpenAI:gpt-4o-2024-08-06",
+    "Groq:openai/gpt-oss-120b",
+    "Mistral:magistral-medium-2506",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "Anthropic:claude-opus-4-1-20250805",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+  ],
+  "ranks": [
+    3,
+    0,
+    3,
+    6,
+    0,
+    0,
+    5
+  ],
+  "scores": [
+    7,
+    10,
+    7,
+    -7,
+    10,
+    10,
+    5
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.42)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250904_141439.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.42,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.6530612244897959
+    },
+    "performance_metrics": {
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 4008,
+        "total_cost": 0.0109298,
+        "total_time": 81.792262,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 49.00219045170802,
+        "tokens_per_dollar": 366703.87381287856,
+        "success_rate": 0.7142857142857143
+      },
+      "OpenAI:gpt-4o-2024-08-06": {
+        "total_tokens": 7893,
+        "total_cost": 0.2405525,
+        "total_time": 173.69959000000003,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 45.440521765192415,
+        "tokens_per_dollar": 32811.96412425562,
+        "success_rate": 0.8571428571428571
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 20607,
+        "total_cost": 0.019064400000000002,
+        "total_time": 87.862688,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 234.5364166413848,
+        "tokens_per_dollar": 1080915.2136967331,
+        "success_rate": 0.7142857142857143
+      },
+      "Mistral:magistral-medium-2506": {
+        "total_tokens": 116843,
+        "total_cost": 0.9768749999999999,
+        "total_time": 949.6388459999998,
+        "total_attempts": 7,
+        "successful_attempts": 0,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 123.03940649875229,
+        "tokens_per_dollar": 119608.95713371722,
+        "success_rate": 0.0
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 4622,
+        "total_cost": 0.128748,
+        "total_time": 86.57299,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 53.38847601313065,
+        "tokens_per_dollar": 35899.58678969771,
+        "success_rate": 0.8571428571428571
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 12132,
+        "total_cost": 2.1044400000000003,
+        "total_time": 302.465509,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 40.11035850041335,
+        "tokens_per_dollar": 5764.9540970519465,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+        "total_tokens": 41565,
+        "total_cost": 0.166893,
+        "total_time": 736.145451,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 56.463026353741604,
+        "tokens_per_dollar": 249051.78767234093,
+        "success_rate": 0.5714285714285714
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 1,
+      "flagged_challenges": [
+        {
+          "challenge_number": 2,
+          "creator": "OpenAI:gpt-4o-2024-08-06",
+          "success_rate": 0.14285714285714285,
+          "reason": "Very low success rate - possible quality issue"
+        }
+      ],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_2_OpenAI:gpt-4o-2024-08-06": {
+          "success_rate": 0.14285714285714285,
+          "successful_attempts": 1,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4o-2024-08-06"
+        },
+        "challenge_3_Groq:openai/gpt-oss-120b": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        },
+        "challenge_4_Mistral:magistral-medium-2506": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:magistral-medium-2506"
+        },
+        "challenge_5_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_6_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.42857142857142855,
+          "successful_attempts": 3,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_7_Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 7738686579,
+        "prompt_preview": "Consider a sequence S(n) defined as follows:\nS(1) = 1, S(2) = 1\nFor n > 2:\n- If n is odd: S(n) = S(n..."
+      },
+      {
+        "creator": "OpenAI:gpt-4o-2024-08-06",
+        "expected_answer": 18,
+        "prompt_preview": "You are given a list of positive integers. Your task is to find the smallest positive integer that c..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 670,
+        "prompt_preview": "Starting with the binary string `0`, repeatedly apply the substitution rules: replace each `0` with ..."
+      },
+      {
+        "creator": "Mistral:magistral-medium-2506",
+        "expected_answer": 1066,
+        "prompt_preview": "Decipher the encoded message and follow the instructions to find a single integer answer.\n\nThe encod..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 24,
+        "prompt_preview": "You are given the following string:\n\n    \"bdfhjlnprtvxz\"\n\nThis string encodes a sequence of integers..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 75447,
+        "prompt_preview": "## The Recursive Harmony Challenge\n\nYou've discovered an ancient mathematical sequence called the 'R..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "expected_answer": 443839,
+        "prompt_preview": "Find the sum of all numbers that can be written as the sum of the fifth powers of their digits. Note..."
+      }
+    ]
+  }
+}
