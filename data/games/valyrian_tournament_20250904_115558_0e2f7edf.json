@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250904_115558_0e2f7edf",
+  "date": "2025-09-04T11:55:58.228118Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Mistral:magistral-medium-2506",
+    "OpenAI:gpt-4o-2024-08-06",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "Anthropic:claude-opus-4-20250514",
+    "Mistral:devstral-medium-2507",
+    "Groq:openai/gpt-oss-120b"
+  ],
+  "ranks": [
+    6,
+    3,
+    3,
+    0,
+    2,
+    5,
+    0
+  ],
+  "scores": [
+    -5,
+    7,
+    7,
+    13,
+    10,
+    -2,
+    13
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.97)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250904_115558.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.97,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.673469387755102
+    },
+    "performance_metrics": {
+      "Mistral:magistral-medium-2506": {
+        "total_tokens": 49963,
+        "total_cost": 0.5148510000000001,
+        "total_time": 506.23013000000003,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 98.69621944470195,
+        "tokens_per_dollar": 97043.61067571005,
+        "success_rate": 0.14285714285714285
+      },
+      "OpenAI:gpt-4o-2024-08-06": {
+        "total_tokens": 6660,
+        "total_cost": 0.22082249999999998,
+        "total_time": 120.85663299999999,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 55.106615455686246,
+        "tokens_per_dollar": 30159.970111741335,
+        "success_rate": 0.7142857142857143
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 9249,
+        "total_cost": 0.158948,
+        "total_time": 193.072881,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 47.90419012807915,
+        "tokens_per_dollar": 58188.84163374185,
+        "success_rate": 0.7142857142857143
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 4845,
+        "total_cost": 0.012265,
+        "total_time": 159.088774,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 30.454694433687695,
+        "tokens_per_dollar": 395026.49816551164,
+        "success_rate": 1.0
+      },
+      "Anthropic:claude-opus-4-20250514": {
+        "total_tokens": 19293,
+        "total_cost": 2.835855,
+        "total_time": 293.996533,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 65.62322284256325,
+        "tokens_per_dollar": 6803.239234728151,
+        "success_rate": 0.8571428571428571
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1939,
+        "total_cost": 0.0106604,
+        "total_time": 28.945529,
+        "total_attempts": 7,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 66.98789301795107,
+        "tokens_per_dollar": 181888.1092641927,
+        "success_rate": 0.2857142857142857
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 17256,
+        "total_cost": 0.018586949999999998,
+        "total_time": 73.496596,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 234.78638384830776,
+        "tokens_per_dollar": 928393.3082081784,
+        "success_rate": 1.0
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Mistral:magistral-medium-2506": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:magistral-medium-2506"
+        },
+        "challenge_2_OpenAI:gpt-4o-2024-08-06": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4o-2024-08-06"
+        },
+        "challenge_3_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_4_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_5_Anthropic:claude-opus-4-20250514": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-20250514"
+        },
+        "challenge_6_Mistral:devstral-medium-2507": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_7_Groq:openai/gpt-oss-120b": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Mistral:magistral-medium-2506",
+        "expected_answer": 400,
+        "prompt_preview": "Given the following string, perform the following steps to find the final integer answer:\n\n1. Extrac..."
+      },
+      {
+        "creator": "OpenAI:gpt-4o-2024-08-06",
+        "expected_answer": 6,
+        "prompt_preview": "You are given a sequence of numbers where each number is the sum of the digits of the previous numbe..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 184,
+        "prompt_preview": "You are given the following obfuscated Python function that implements a secret algorithm:\n\ndef secr..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 104,
+        "prompt_preview": "Find the 2024th term in a modified look-and-say sequence defined as follows:\n\n- Start with the strin..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-20250514",
+        "expected_answer": 104,
+        "prompt_preview": "**The Quantum Cipher Challenge**\n\nYou've intercepted a mysterious message from a quantum research fa..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 5,
+        "prompt_preview": "You are given a list of integers. Your task is to find the smallest positive integer that is not pre..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 692,
+        "prompt_preview": "Consider the integer sequence defined by the recurrence relation:\n\n- a₀ = 0\n- a₁ = 1\n- For n ≥ 2, aₙ..."
+      }
+    ]
+  }
+}
