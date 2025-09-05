@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250905_155210_727a72f1",
+  "date": "2025-09-05T15:52:10.856223Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "OpenAI:o4-mini-2025-04-16",
+    "Mistral:magistral-medium-2506",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "Mistral:pixtral-large-2411",
+    "Groq:openai/gpt-oss-120b",
+    "OpenAI:gpt-5-mini",
+    "Mistral:devstral-medium-2507"
+  ],
+  "ranks": [
+    1,
+    5,
+    1,
+    4,
+    0,
+    1,
+    6
+  ],
+  "scores": [
+    10,
+    -4,
+    10,
+    1,
+    13,
+    10,
+    -5
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.77)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250905_155210.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.77,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.6122448979591837
+    },
+    "performance_metrics": {
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 18497,
+        "total_cost": 0.1124024,
+        "total_time": 229.86412300000003,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 80.46927793077128,
+        "tokens_per_dollar": 164560.54319124858,
+        "success_rate": 0.8571428571428571
+      },
+      "Mistral:magistral-medium-2506": {
+        "total_tokens": 85268,
+        "total_cost": 0.751352,
+        "total_time": 806.8019499999999,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 1,
+        "tokens_per_second": 105.68640792204333,
+        "tokens_per_dollar": 113486.08907675763,
+        "success_rate": 0.14285714285714285
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 5115,
+        "total_cost": 0.128574,
+        "total_time": 88.061191,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 58.084610733915696,
+        "tokens_per_dollar": 39782.537682579685,
+        "success_rate": 0.8571428571428571
+      },
+      "Mistral:pixtral-large-2411": {
+        "total_tokens": 10234,
+        "total_cost": 0.22392799999999996,
+        "total_time": 216.677626,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 47.23145711408154,
+        "tokens_per_dollar": 45702.18998963953,
+        "success_rate": 0.42857142857142855
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 17296,
+        "total_cost": 0.0154464,
+        "total_time": 64.74791400000001,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 267.12829698266415,
+        "tokens_per_dollar": 1119743.111663559,
+        "success_rate": 1.0
+      },
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 18920,
+        "total_cost": 0.04688125,
+        "total_time": 357.06639700000005,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 52.987343975692,
+        "tokens_per_dollar": 403572.85695240635,
+        "success_rate": 0.8571428571428571
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 2284,
+        "total_cost": 0.0110788,
+        "total_time": 28.682035,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 79.63172766506979,
+        "tokens_per_dollar": 206159.5118604903,
+        "success_rate": 0.14285714285714285
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_2_Mistral:magistral-medium-2506": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Mistral:magistral-medium-2506"
+        },
+        "challenge_3_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_4_Mistral:pixtral-large-2411": {
+          "success_rate": 0.2857142857142857,
+          "successful_attempts": 2,
+          "total_attempts": 7,
+          "creator": "Mistral:pixtral-large-2411"
+        },
+        "challenge_5_Groq:openai/gpt-oss-120b": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        },
+        "challenge_6_OpenAI:gpt-5-mini": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        },
+        "challenge_7_Mistral:devstral-medium-2507": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 7459895657,
+        "prompt_preview": "Given the substring '101', determine how many binary strings of length 40 do NOT contain '101' as a ..."
+      },
+      {
+        "creator": "Mistral:magistral-medium-2506",
+        "expected_answer": 566,
+        "prompt_preview": "Consider a 5x5 grid where the value of the cell at position (i, j) is given by (F(...) mod 100), whe..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 9983,
+        "prompt_preview": "Consider the sequence S(n) defined as follows:\n\n- S(0) = 1\n- For n >= 1, S(n) = S(n-1) + the number ..."
+      },
+      {
+        "creator": "Mistral:pixtral-large-2411",
+        "expected_answer": 4,
+        "prompt_preview": "You are given a positive integer \\( n \\). Your task is to find the number of ways to partition \\( n ..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 405,
+        "prompt_preview": "Determine the smallest positive integer \\(n\\) such that the factorial \\(n!\\) contains **at least 100..."
+      },
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 361,
+        "prompt_preview": "Consider the set of integers {1, 2, 3, ..., 15}. How many unordered partitions of this set into two ..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 3,
+        "prompt_preview": "You are given a list of integers. Your task is to find the smallest positive integer that is not pre..."
+      }
+    ]
+  }
+}
