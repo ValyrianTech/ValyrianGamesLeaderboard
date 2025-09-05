@@ -1,0 +1,236 @@
+{
+  "game_id": "valyrian_tournament_20250905_224559_e249dc28",
+  "date": "2025-09-05T22:45:59.124458Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "OpenAI:o1-2024-12-17",
+    "Anthropic:claude-sonnet-4-20250514",
+    "Mistral:magistral-medium-2506",
+    "Mistral:devstral-medium-2507",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "Anthropic:claude-opus-4-1-20250805",
+    "Anthropic:claude-opus-4-20250514"
+  ],
+  "ranks": [
+    0,
+    3,
+    5,
+    6,
+    0,
+    4,
+    2
+  ],
+  "scores": [
+    10,
+    7,
+    1,
+    -5,
+    10,
+    5,
+    8
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.18)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250905_224559.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.18,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.6122448979591837
+    },
+    "performance_metrics": {
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 29007,
+        "total_cost": 2.337615,
+        "total_time": 344.61484300000006,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 84.17223050372208,
+        "tokens_per_dollar": 12408.801278225885,
+        "success_rate": 0.8571428571428571
+      },
+      "Anthropic:claude-sonnet-4-20250514": {
+        "total_tokens": 36670,
+        "total_cost": 1.098447,
+        "total_time": 641.1378790000001,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 57.19518562402705,
+        "tokens_per_dollar": 33383.49506166433,
+        "success_rate": 0.7142857142857143
+      },
+      "Mistral:magistral-medium-2506": {
+        "total_tokens": 79171,
+        "total_cost": 0.6534570000000001,
+        "total_time": 631.654779,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 125.33903428283887,
+        "tokens_per_dollar": 121157.1687195944,
+        "success_rate": 0.42857142857142855
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 2221,
+        "total_cost": 0.009378000000000003,
+        "total_time": 26.684020000000004,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 83.23333590665872,
+        "tokens_per_dollar": 236830.88078481547,
+        "success_rate": 0.14285714285714285
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 8113,
+        "total_cost": 0.015625800000000002,
+        "total_time": 303.12037999999995,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 26.764944013332265,
+        "tokens_per_dollar": 519205.41668266576,
+        "success_rate": 0.8571428571428571
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 9930,
+        "total_cost": 1.4718,
+        "total_time": 459.323101,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 21.61876896324446,
+        "tokens_per_dollar": 6746.8406033428455,
+        "success_rate": 0.5714285714285714
+      },
+      "Anthropic:claude-opus-4-20250514": {
+        "total_tokens": 21099,
+        "total_cost": 2.9743500000000003,
+        "total_time": 430.806016,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 48.9756391888455,
+        "tokens_per_dollar": 7093.650713601291,
+        "success_rate": 0.7142857142857143
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 1,
+      "flagged_challenges": [
+        {
+          "challenge_number": 6,
+          "creator": "Anthropic:claude-opus-4-1-20250805",
+          "success_rate": 0.14285714285714285,
+          "reason": "Very low success rate - possible quality issue"
+        }
+      ],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        },
+        "challenge_2_Anthropic:claude-sonnet-4-20250514": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-sonnet-4-20250514"
+        },
+        "challenge_3_Mistral:magistral-medium-2506": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Mistral:magistral-medium-2506"
+        },
+        "challenge_4_Mistral:devstral-medium-2507": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_5_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_6_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.14285714285714285,
+          "successful_attempts": 1,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_7_Anthropic:claude-opus-4-20250514": {
+          "success_rate": 0.2857142857142857,
+          "successful_attempts": 2,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-20250514"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 775,
+        "prompt_preview": "Compute the 20th Fibonacci number. Find all of its unique prime factors and sum them. Multiply that ..."
+      },
+      {
+        "creator": "Anthropic:claude-sonnet-4-20250514",
+        "expected_answer": 23490,
+        "prompt_preview": "Find the sum of all 4-digit numbers that satisfy ALL of the following conditions:\n\n1. The number is ..."
+      },
+      {
+        "creator": "Mistral:magistral-medium-2506",
+        "expected_answer": 146,
+        "prompt_preview": "Given the string 'a2b3c5d7e11f13g17h19i23j29', find all possible contiguous substrings that consist ..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 34,
+        "prompt_preview": "You are given a sequence of numbers where each number is the sum of the previous two numbers in the ..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 103355,
+        "prompt_preview": "Find the smallest positive integer N such that:\n1. N is divisible by 7\n2. The sum of its digits is d..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 201228,
+        "prompt_preview": "**The Recursive Sequence Cipher**\n\nYou've discovered an ancient mathematical cipher based on a recur..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-20250514",
+        "expected_answer": 82,
+        "prompt_preview": "**The Quantum Maze Challenge**\n\nYou are trapped in a 7x7 quantum maze. Each cell contains a value fr..."
+      }
+    ]
+  }
+}
