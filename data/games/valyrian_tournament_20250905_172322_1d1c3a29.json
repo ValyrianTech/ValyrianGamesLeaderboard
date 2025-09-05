@@ -1,0 +1,236 @@
+{
+  "game_id": "valyrian_tournament_20250905_172322_1d1c3a29",
+  "date": "2025-09-05T17:23:22.633093Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Mistral:devstral-medium-2507",
+    "OpenAI:gpt-5-mini",
+    "Mistral:magistral-medium-2506",
+    "Anthropic:claude-opus-4-1-20250805",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "DeepSeek:deepseek-chat"
+  ],
+  "ranks": [
+    5,
+    2,
+    5,
+    0,
+    2,
+    2,
+    0
+  ],
+  "scores": [
+    -5,
+    7,
+    -5,
+    10,
+    7,
+    7,
+    10
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.41)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250905_172322.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.41,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.5918367346938775
+    },
+    "performance_metrics": {
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1925,
+        "total_cost": 0.008927599999999999,
+        "total_time": 23.727055,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 81.13101267730023,
+        "tokens_per_dollar": 215623.4598324298,
+        "success_rate": 0.14285714285714285
+      },
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 29281,
+        "total_cost": 0.069088,
+        "total_time": 494.849098,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 59.17157395727939,
+        "tokens_per_dollar": 423821.7924965262,
+        "success_rate": 0.7142857142857143
+      },
+      "Mistral:magistral-medium-2506": {
+        "total_tokens": 72307,
+        "total_cost": 0.616865,
+        "total_time": 625.592901,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 115.58155452918095,
+        "tokens_per_dollar": 117216.89510670892,
+        "success_rate": 0.14285714285714285
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 15178,
+        "total_cost": 2.257155,
+        "total_time": 334.111969,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 45.427884686166394,
+        "tokens_per_dollar": 6724.394204208395,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 6375,
+        "total_cost": 0.14313599999999999,
+        "total_time": 141.461589,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 45.06523675483385,
+        "tokens_per_dollar": 44538.06170355467,
+        "success_rate": 0.7142857142857143
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 8768,
+        "total_cost": 0.114706,
+        "total_time": 292.15776100000005,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 30.01118289648995,
+        "tokens_per_dollar": 76438.8959601067,
+        "success_rate": 0.7142857142857143
+      },
+      "DeepSeek:deepseek-chat": {
+        "total_tokens": 6375,
+        "total_cost": 0.01881825,
+        "total_time": 412.843459,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 15.441688274392643,
+        "tokens_per_dollar": 338766.8885257662,
+        "success_rate": 0.8571428571428571
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 1,
+      "flagged_challenges": [
+        {
+          "challenge_number": 1,
+          "creator": "Mistral:devstral-medium-2507",
+          "success_rate": 0.14285714285714285,
+          "reason": "Very low success rate - possible quality issue"
+        }
+      ],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Mistral:devstral-medium-2507": {
+          "success_rate": 0.14285714285714285,
+          "successful_attempts": 1,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_2_OpenAI:gpt-5-mini": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        },
+        "challenge_3_Mistral:magistral-medium-2506": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:magistral-medium-2506"
+        },
+        "challenge_4_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.2857142857142857,
+          "successful_attempts": 2,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_5_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_6_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_7_DeepSeek:deepseek-chat": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "DeepSeek:deepseek-chat"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 3,
+        "prompt_preview": "You are given a sequence of integers. Your task is to find the longest subsequence where the sum of ..."
+      },
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 2400,
+        "prompt_preview": "Kaprekar's Routine Challenge:\n\nConsider the Kaprekar routine on 4-digit numbers (allowing leading ze..."
+      },
+      {
+        "creator": "Mistral:magistral-medium-2506",
+        "expected_answer": 346320,
+        "prompt_preview": "You are given the following mathematical expression where numbers are represented as Roman numerals:..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 201228,
+        "prompt_preview": "**The Recursive Sequence Cipher**\n\nYou've discovered an ancient mathematical cipher based on a recur..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 18845,
+        "prompt_preview": "You are given the following Python function:\n\ndef mystery(n):\n    s = 0\n    for i in range(1, n+1):\n..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 2971215073,
+        "prompt_preview": "Find the 7th Fibonacci number that satisfies all of the following conditions: 1) It is a prime numbe..."
+      },
+      {
+        "creator": "DeepSeek:deepseek-chat",
+        "expected_answer": 2541,
+        "prompt_preview": "You are given a mysterious function f(n) that operates on positive integers. Through analysis, you d..."
+      }
+    ]
+  }
+}
