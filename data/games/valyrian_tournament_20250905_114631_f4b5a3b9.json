@@ -1,0 +1,236 @@
+{
+  "game_id": "valyrian_tournament_20250905_114631_f4b5a3b9",
+  "date": "2025-09-05T11:46:31.606169Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Anthropic:claude-opus-4-20250514",
+    "Anthropic:claude-opus-4-1-20250805",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "OpenAI:o1-2024-12-17",
+    "Mistral:devstral-medium-2507",
+    "Anthropic:claude-sonnet-4-20250514",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+  ],
+  "ranks": [
+    4,
+    0,
+    4,
+    0,
+    6,
+    0,
+    3
+  ],
+  "scores": [
+    7,
+    10,
+    7,
+    10,
+    -5,
+    10,
+    8
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.54)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250905_114631.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.54,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.6938775510204082
+    },
+    "performance_metrics": {
+      "Anthropic:claude-opus-4-20250514": {
+        "total_tokens": 19156,
+        "total_cost": 2.77368,
+        "total_time": 468.51784499999997,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 40.886382886867416,
+        "tokens_per_dollar": 6906.348244930921,
+        "success_rate": 0.7142857142857143
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 17374,
+        "total_cost": 2.4475199999999995,
+        "total_time": 374.51655200000005,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 46.3904730170644,
+        "tokens_per_dollar": 7098.61410734131,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 6258,
+        "total_cost": 0.137792,
+        "total_time": 100.965024,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 61.98186017367757,
+        "tokens_per_dollar": 45416.27960984673,
+        "success_rate": 0.7142857142857143
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 42120,
+        "total_cost": 3.2807850000000007,
+        "total_time": 315.948588,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 133.3128287314897,
+        "tokens_per_dollar": 12838.390811955063,
+        "success_rate": 0.8571428571428571
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 2431,
+        "total_cost": 0.0118816,
+        "total_time": 42.71474499999999,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 56.91243152686503,
+        "tokens_per_dollar": 204602.0737947751,
+        "success_rate": 0.14285714285714285
+      },
+      "Anthropic:claude-sonnet-4-20250514": {
+        "total_tokens": 47787,
+        "total_cost": 1.282776,
+        "total_time": 648.445409,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 73.69471560249723,
+        "tokens_per_dollar": 37252.80173623454,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 9109,
+        "total_cost": 0.017706600000000003,
+        "total_time": 155.90124799999998,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 58.428012070820635,
+        "tokens_per_dollar": 514440.9429252368,
+        "success_rate": 0.7142857142857143
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 1,
+      "flagged_challenges": [
+        {
+          "challenge_number": 5,
+          "creator": "Mistral:devstral-medium-2507",
+          "success_rate": 0.14285714285714285,
+          "reason": "Very low success rate - possible quality issue"
+        }
+      ],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Anthropic:claude-opus-4-20250514": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-20250514"
+        },
+        "challenge_2_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_3_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_4_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        },
+        "challenge_5_Mistral:devstral-medium-2507": {
+          "success_rate": 0.14285714285714285,
+          "successful_attempts": 1,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_6_Anthropic:claude-sonnet-4-20250514": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-sonnet-4-20250514"
+        },
+        "challenge_7_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Anthropic:claude-opus-4-20250514",
+        "expected_answer": 104,
+        "prompt_preview": "**The Quantum Cipher Challenge**\n\nYou've intercepted a mysterious message from a quantum research fa..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 75447,
+        "prompt_preview": "## The Recursive Harmony Challenge\n\nYou've discovered an ancient mathematical sequence called the 'R..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 2263,
+        "prompt_preview": "Consider the following Python function:\n\ndef mysterious_transform(n):\n    s = str(n)\n    if len(s) =..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 745,
+        "prompt_preview": "Compute the sum of the cubes of all integers from 1 to 49 inclusive that do not contain the digit '6..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 5808,
+        "prompt_preview": "Given the following sequence of numbers: 1, 11, 21, 1211, 111221, 312211, 13112221, 1113213211, 3113..."
+      },
+      {
+        "creator": "Anthropic:claude-sonnet-4-20250514",
+        "expected_answer": 73,
+        "prompt_preview": "You are given a mysterious mathematical sequence where each term f(n) follows a hidden pattern based..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 3,
+        "prompt_preview": "Consider a sequence defined by: a(1) = 1, a(2) = 1, and for n > 2, a(n) = a(n-1) + a(n-2) + gcd(n, a..."
+      }
+    ]
+  }
+}
