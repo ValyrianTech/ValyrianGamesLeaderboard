@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250905_191014_3d91fa2e",
+  "date": "2025-09-05T19:10:14.029661Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Anthropic:claude-opus-4-1-20250805",
+    "Mistral:devstral-medium-2507",
+    "Groq:openai/gpt-oss-120b",
+    "OpenAI:o4-mini-2025-04-16",
+    "OpenAI:o3-mini-2025-01-31",
+    "DeepSeek:deepseek-chat",
+    "OpenAI:gpt-5-mini"
+  ],
+  "ranks": [
+    0,
+    6,
+    4,
+    0,
+    5,
+    3,
+    0
+  ],
+  "scores": [
+    13,
+    -2,
+    7,
+    13,
+    1,
+    8,
+    13
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.1)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250905_191014.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.1,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.7346938775510204
+    },
+    "performance_metrics": {
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 12538,
+        "total_cost": 2.0481,
+        "total_time": 286.26234,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 43.79898522453215,
+        "tokens_per_dollar": 6121.771397880963,
+        "success_rate": 1.0
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1378,
+        "total_cost": 0.00775,
+        "total_time": 23.957585,
+        "total_attempts": 7,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 1,
+        "tokens_per_second": 57.5183183112989,
+        "tokens_per_dollar": 177806.4516129032,
+        "success_rate": 0.2857142857142857
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 32814,
+        "total_cost": 0.032022449999999994,
+        "total_time": 118.63891299999999,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 276.58715989752875,
+        "tokens_per_dollar": 1024718.5958600921,
+        "success_rate": 0.7142857142857143
+      },
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 19599,
+        "total_cost": 0.12206810000000001,
+        "total_time": 229.267757,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 85.48519973525977,
+        "tokens_per_dollar": 160557.9180801536,
+        "success_rate": 1.0
+      },
+      "OpenAI:o3-mini-2025-01-31": {
+        "total_tokens": 41062,
+        "total_cost": 0.21211080000000004,
+        "total_time": 382.752647,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 107.28077342336445,
+        "tokens_per_dollar": 193587.5023808311,
+        "success_rate": 0.42857142857142855
+      },
+      "DeepSeek:deepseek-chat": {
+        "total_tokens": 7560,
+        "total_cost": 0.021727709999999997,
+        "total_time": 463.815544,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 16.29958309461056,
+        "tokens_per_dollar": 347942.7882643869,
+        "success_rate": 0.7142857142857143
+      },
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 22312,
+        "total_cost": 0.054938749999999995,
+        "total_time": 343.72720999999996,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 64.91193990723052,
+        "tokens_per_dollar": 406125.00284407637,
+        "success_rate": 1.0
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_2_Mistral:devstral-medium-2507": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_3_Groq:openai/gpt-oss-120b": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        },
+        "challenge_4_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_5_OpenAI:o3-mini-2025-01-31": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o3-mini-2025-01-31"
+        },
+        "challenge_6_DeepSeek:deepseek-chat": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "DeepSeek:deepseek-chat"
+        },
+        "challenge_7_OpenAI:gpt-5-mini": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 593010001,
+        "prompt_preview": "**The Recursive Sequence Cipher**\n\nYou've discovered an ancient mathematical cipher based on a recur..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 112,
+        "prompt_preview": "You are given a sequence of numbers. The sequence is generated by the following rules:\n1. Start with..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 670,
+        "prompt_preview": "Starting with the binary string `0`, repeatedly apply the substitution rules: replace each `0` with ..."
+      },
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 628652,
+        "prompt_preview": "Write a program to compute the sum of all circular primes less than 100,000. A circular prime is a p..."
+      },
+      {
+        "creator": "OpenAI:o3-mini-2025-01-31",
+        "expected_answer": 11,
+        "prompt_preview": "Challenge: Consider the following recursive sequence: a(1) = 1, and for every n ≥ 2, define a(n) = a..."
+      },
+      {
+        "creator": "DeepSeek:deepseek-chat",
+        "expected_answer": 113543656,
+        "prompt_preview": "## Recursive Sequence Challenge\n\nYou are given a recursive sequence defined by:\n- a(1) = 1\n- a(2) = ..."
+      },
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 0,
+        "prompt_preview": "Find the number of 9-digit pandigital numbers that use each digit 1 through 9 exactly once and satis..."
+      }
+    ]
+  }
+}
