@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250905_055753_f4045147",
+  "date": "2025-09-05T05:57:53.978173Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "OpenAI:gpt-4o-2024-08-06",
+    "Anthropic:claude-opus-4-20250514",
+    "OpenAI:o1-2024-12-17",
+    "Mistral:devstral-medium-2507",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "DeepSeek:deepseek-chat"
+  ],
+  "ranks": [
+    5,
+    4,
+    0,
+    2,
+    5,
+    0,
+    2
+  ],
+  "scores": [
+    -5,
+    2,
+    13,
+    10,
+    -5,
+    13,
+    10
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.27)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250905_055753.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.27,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.6326530612244898
+    },
+    "performance_metrics": {
+      "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+        "total_tokens": 34763,
+        "total_cost": 0.12451375,
+        "total_time": 898.4207690000001,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 38.69345099701273,
+        "tokens_per_dollar": 279190.0492917449,
+        "success_rate": 0.14285714285714285
+      },
+      "OpenAI:gpt-4o-2024-08-06": {
+        "total_tokens": 11298,
+        "total_cost": 0.32085,
+        "total_time": 155.635066,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 2,
+        "tokens_per_second": 72.59289497136847,
+        "tokens_per_dollar": 35212.71622253389,
+        "success_rate": 0.42857142857142855
+      },
+      "Anthropic:claude-opus-4-20250514": {
+        "total_tokens": 15071,
+        "total_cost": 2.393085,
+        "total_time": 344.162879,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 43.79031243517695,
+        "tokens_per_dollar": 6297.728664046617,
+        "success_rate": 1.0
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 52960,
+        "total_cost": 4.02864,
+        "total_time": 377.78782,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 140.18450886002623,
+        "tokens_per_dollar": 13145.87553119663,
+        "success_rate": 0.8571428571428571
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 936,
+        "total_cost": 0.0067280000000000005,
+        "total_time": 17.039459,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 54.931321469772016,
+        "tokens_per_dollar": 139120.09512485136,
+        "success_rate": 0.14285714285714285
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 5281,
+        "total_cost": 0.012854800000000001,
+        "total_time": 107.723421,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 49.023693742514915,
+        "tokens_per_dollar": 410819.30485110614,
+        "success_rate": 1.0
+      },
+      "DeepSeek:deepseek-chat": {
+        "total_tokens": 7199,
+        "total_cost": 0.023860509999999998,
+        "total_time": 434.10685099999995,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 16.583474744562373,
+        "tokens_per_dollar": 301711.90808578697,
+        "success_rate": 0.8571428571428571
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+        },
+        "challenge_2_OpenAI:gpt-4o-2024-08-06": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4o-2024-08-06"
+        },
+        "challenge_3_Anthropic:claude-opus-4-20250514": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-20250514"
+        },
+        "challenge_4_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        },
+        "challenge_5_Mistral:devstral-medium-2507": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_6_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_7_DeepSeek:deepseek-chat": {
+          "success_rate": 0.42857142857142855,
+          "successful_attempts": 3,
+          "total_attempts": 7,
+          "creator": "DeepSeek:deepseek-chat"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "expected_answer": 40733,
+        "prompt_preview": "Find the sum of all positive integers that are equal to the sum of the factorial of their digits. Fo..."
+      },
+      {
+        "creator": "OpenAI:gpt-4o-2024-08-06",
+        "expected_answer": 70710087121,
+        "prompt_preview": "Consider a sequence defined as follows:\n- The first two terms are given as \\( a_1 = 1 \\) and \\( a_2 ..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-20250514",
+        "expected_answer": 4211,
+        "prompt_preview": "**The Harmonic Prime Cipher**\n\nYou've discovered an ancient mathematical cipher that encodes message..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 50,
+        "prompt_preview": "Given the integers n in the range 1 through 99, convert n^2 into base 7, then define f(n) to be the ..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 5,
+        "prompt_preview": "Given a list of integers, find the smallest positive integer that is not present in the list. The li..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 250,
+        "prompt_preview": "Find the smallest 3-digit positive integer n such that the decimal representation of n² contains the..."
+      },
+      {
+        "creator": "DeepSeek:deepseek-chat",
+        "expected_answer": 970220,
+        "prompt_preview": "Find the 7-digit integer password hidden in this puzzle:\n\n1. Start with the number 31415926535897932..."
+      }
+    ]
+  }
+}
