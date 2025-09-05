@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250905_030649_35494261",
+  "date": "2025-09-05T03:06:49.956652Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Anthropic:claude-sonnet-4-20250514",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "Mistral:magistral-medium-2506",
+    "Groq:openai/gpt-oss-120b",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "Anthropic:claude-opus-4-1-20250805"
+  ],
+  "ranks": [
+    0,
+    0,
+    6,
+    0,
+    4,
+    5,
+    0
+  ],
+  "scores": [
+    13,
+    13,
+    -7,
+    13,
+    10,
+    4,
+    13
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.7)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250905_030649.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.7,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.7755102040816326
+    },
+    "performance_metrics": {
+      "Anthropic:claude-sonnet-4-20250514": {
+        "total_tokens": 37220,
+        "total_cost": 1.122207,
+        "total_time": 462.853945,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 80.41413582420692,
+        "tokens_per_dollar": 33166.786519777546,
+        "success_rate": 1.0
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 6988,
+        "total_cost": 0.156292,
+        "total_time": 108.086142,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 64.65213644132103,
+        "tokens_per_dollar": 44711.181634376684,
+        "success_rate": 1.0
+      },
+      "Mistral:magistral-medium-2506": {
+        "total_tokens": 88736,
+        "total_cost": 0.745842,
+        "total_time": 804.4297949999999,
+        "total_attempts": 7,
+        "successful_attempts": 0,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 110.30919112089826,
+        "tokens_per_dollar": 118974.25996390656,
+        "success_rate": 0.0
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 25043,
+        "total_cost": 0.02284065,
+        "total_time": 106.47665500000001,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 235.19709555113278,
+        "tokens_per_dollar": 1096422.3872788209,
+        "success_rate": 1.0
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 9725,
+        "total_cost": 0.1419,
+        "total_time": 287.977191,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 33.77003562757857,
+        "tokens_per_dollar": 68534.17899929528,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+        "total_tokens": 40272,
+        "total_cost": 0.16418529999999998,
+        "total_time": 755.630353,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 53.29590035671846,
+        "tokens_per_dollar": 245283.8347891072,
+        "success_rate": 0.5714285714285714
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 20324,
+        "total_cost": 2.950259999999999,
+        "total_time": 433.20839600000005,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 46.91506486868735,
+        "tokens_per_dollar": 6888.884369513197,
+        "success_rate": 1.0
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Anthropic:claude-sonnet-4-20250514": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-sonnet-4-20250514"
+        },
+        "challenge_2_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_3_Mistral:magistral-medium-2506": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Mistral:magistral-medium-2506"
+        },
+        "challenge_4_Groq:openai/gpt-oss-120b": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        },
+        "challenge_5_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_6_Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+        },
+        "challenge_7_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Anthropic:claude-sonnet-4-20250514",
+        "expected_answer": 73,
+        "prompt_preview": "You are given a mysterious mathematical sequence where each term f(n) follows a hidden pattern based..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 108,
+        "prompt_preview": "Consider the following process:\n\n1. Let S be the set of all positive integers less than 1000 that ar..."
+      },
+      {
+        "creator": "Mistral:magistral-medium-2506",
+        "expected_answer": 400,
+        "prompt_preview": "Given the following string, perform the following steps to find the final integer answer:\n\n1. Extrac..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 666,
+        "prompt_preview": "Consider the sequence defined as follows: start with the list of prime numbers in increasing order (..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 390,
+        "prompt_preview": "How many positive integers not exceeding 2023 have exactly 8 positive divisors?\n\nFor example, the nu..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "expected_answer": 3044,
+        "prompt_preview": "Compute the sum of Euler's totient function φ(n) for all integers n from 1 to 100. Euler's totient f..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 39119,
+        "prompt_preview": "# The Quantum Maze Challenge\n\nYou've discovered an ancient quantum computer that guards its secrets ..."
+      }
+    ]
+  }
+}
