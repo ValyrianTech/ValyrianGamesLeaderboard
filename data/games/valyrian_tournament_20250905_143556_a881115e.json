@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250905_143556_a881115e",
+  "date": "2025-09-05T14:35:56.862103Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Anthropic:claude-sonnet-4-20250514",
+    "OpenAI:gpt-4o-2024-08-06",
+    "Mistral:codestral-2501",
+    "OpenAI:o1-2024-12-17",
+    "OpenAI:gpt-5-mini",
+    "OpenAI:gpt-4.1-2025-04-14",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+  ],
+  "ranks": [
+    5,
+    2,
+    4,
+    0,
+    3,
+    1,
+    6
+  ],
+  "scores": [
+    4,
+    8,
+    5,
+    13,
+    7,
+    11,
+    -2
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.38)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250905_143556.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.38,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.673469387755102
+    },
+    "performance_metrics": {
+      "Anthropic:claude-sonnet-4-20250514": {
+        "total_tokens": 44719,
+        "total_cost": 1.176498,
+        "total_time": 733.243646,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 60.9879134227097,
+        "tokens_per_dollar": 38010.26436084039,
+        "success_rate": 0.5714285714285714
+      },
+      "OpenAI:gpt-4o-2024-08-06": {
+        "total_tokens": 5542,
+        "total_cost": 0.18869750000000005,
+        "total_time": 89.79527300000001,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 61.718170844026496,
+        "tokens_per_dollar": 29369.758475867453,
+        "success_rate": 0.7142857142857143
+      },
+      "Mistral:codestral-2501": {
+        "total_tokens": 4729,
+        "total_cost": 0.010761000000000001,
+        "total_time": 47.590872,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 99.36779473172923,
+        "tokens_per_dollar": 439457.29950748064,
+        "success_rate": 0.5714285714285714
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 16128,
+        "total_cost": 1.539405,
+        "total_time": 146.75494599999996,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 109.89748856573463,
+        "tokens_per_dollar": 10476.775117659095,
+        "success_rate": 1.0
+      },
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 25555,
+        "total_cost": 0.06115574999999999,
+        "total_time": 395.99966800000004,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 64.53288238615391,
+        "tokens_per_dollar": 417867.49406229187,
+        "success_rate": 0.7142857142857143
+      },
+      "OpenAI:gpt-4.1-2025-04-14": {
+        "total_tokens": 4517,
+        "total_cost": 0.120178,
+        "total_time": 85.79753400000001,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 52.64720079250762,
+        "tokens_per_dollar": 37585.91422722961,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+        "total_tokens": 29976,
+        "total_cost": 0.10543374999999999,
+        "total_time": 674.3266610000001,
+        "total_attempts": 7,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 1,
+        "tokens_per_second": 44.45323273374178,
+        "tokens_per_dollar": 284311.2380997546,
+        "success_rate": 0.2857142857142857
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Anthropic:claude-sonnet-4-20250514": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-sonnet-4-20250514"
+        },
+        "challenge_2_OpenAI:gpt-4o-2024-08-06": {
+          "success_rate": 0.42857142857142855,
+          "successful_attempts": 3,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4o-2024-08-06"
+        },
+        "challenge_3_Mistral:codestral-2501": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:codestral-2501"
+        },
+        "challenge_4_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        },
+        "challenge_5_OpenAI:gpt-5-mini": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        },
+        "challenge_6_OpenAI:gpt-4.1-2025-04-14": {
+          "success_rate": 0.2857142857142857,
+          "successful_attempts": 2,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4.1-2025-04-14"
+        },
+        "challenge_7_Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Anthropic:claude-sonnet-4-20250514",
+        "expected_answer": 23490,
+        "prompt_preview": "Find the sum of all 4-digit numbers that satisfy ALL of the following conditions:\n\n1. The number is ..."
+      },
+      {
+        "creator": "OpenAI:gpt-4o-2024-08-06",
+        "expected_answer": 495,
+        "prompt_preview": "You are given a list of integers. Your task is to apply a series of operations to transform this lis..."
+      },
+      {
+        "creator": "Mistral:codestral-2501",
+        "expected_answer": 5,
+        "prompt_preview": "You are given a list of integers `nums` and an integer `target`. Your task is to find the number of ..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 259,
+        "prompt_preview": "Compute the 47th Fibonacci number (with F(1) = 1, F(2) = 1). Then sum the digits of that Fibonacci n..."
+      },
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 336,
+        "prompt_preview": "Consider all 9-digit strings that are permutations of the digits 1 through 9 (each digit 1..9 used e..."
+      },
+      {
+        "creator": "OpenAI:gpt-4.1-2025-04-14",
+        "expected_answer": 468,
+        "prompt_preview": "You are given the following Python function:\n\ndef f(n):\n    if n == 0:\n        return 0\n    if n % 2..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "expected_answer": 40733,
+        "prompt_preview": "Find the sum of all positive integers that are equal to the sum of the factorial of their digits. Fo..."
+      }
+    ]
+  }
+}
