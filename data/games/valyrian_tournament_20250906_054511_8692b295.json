@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250906_054511_8692b295",
+  "date": "2025-09-06T05:45:11.766004Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "OpenAI:o4-mini-2025-04-16",
+    "OpenAI:o3-mini-2025-01-31",
+    "Anthropic:claude-sonnet-4-20250514",
+    "Mistral:pixtral-large-2411",
+    "OpenAI:gpt-4o-2024-08-06",
+    "OpenAI:gpt-5-mini",
+    "Mistral:codestral-2501"
+  ],
+  "ranks": [
+    0,
+    4,
+    3,
+    6,
+    4,
+    0,
+    2
+  ],
+  "scores": [
+    13,
+    7,
+    8,
+    1,
+    7,
+    13,
+    10
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.46)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250906_054511.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.46,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.7755102040816326
+    },
+    "performance_metrics": {
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 22382,
+        "total_cost": 0.134772,
+        "total_time": 328.900573,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 68.05096079902542,
+        "tokens_per_dollar": 166073.07155789036,
+        "success_rate": 1.0
+      },
+      "OpenAI:o3-mini-2025-01-31": {
+        "total_tokens": 13699,
+        "total_cost": 0.07804390000000001,
+        "total_time": 137.989283,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 99.27582564509738,
+        "tokens_per_dollar": 175529.4135736425,
+        "success_rate": 0.7142857142857143
+      },
+      "Anthropic:claude-sonnet-4-20250514": {
+        "total_tokens": 38222,
+        "total_cost": 1.037673,
+        "total_time": 522.649339,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 73.13125100881453,
+        "tokens_per_dollar": 36834.33991247724,
+        "success_rate": 0.7142857142857143
+      },
+      "Mistral:pixtral-large-2411": {
+        "total_tokens": 8666,
+        "total_cost": 0.18096199999999996,
+        "total_time": 174.699869,
+        "total_attempts": 7,
+        "successful_attempts": 3,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 49.605074403347146,
+        "tokens_per_dollar": 47888.50697936585,
+        "success_rate": 0.42857142857142855
+      },
+      "OpenAI:gpt-4o-2024-08-06": {
+        "total_tokens": 7115,
+        "total_cost": 0.2177625,
+        "total_time": 77.063401,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 92.32657665861386,
+        "tokens_per_dollar": 32673.21049308306,
+        "success_rate": 0.7142857142857143
+      },
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 27592,
+        "total_cost": 0.06625774999999999,
+        "total_time": 403.7517200000001,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 68.33902775695914,
+        "tokens_per_dollar": 416434.30391161796,
+        "success_rate": 1.0
+      },
+      "Mistral:codestral-2501": {
+        "total_tokens": 23650,
+        "total_cost": 0.06810820000000002,
+        "total_time": 114.45750300000002,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 206.62690850419824,
+        "tokens_per_dollar": 347241.5949914987,
+        "success_rate": 0.8571428571428571
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_2_OpenAI:o3-mini-2025-01-31": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "OpenAI:o3-mini-2025-01-31"
+        },
+        "challenge_3_Anthropic:claude-sonnet-4-20250514": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-sonnet-4-20250514"
+        },
+        "challenge_4_Mistral:pixtral-large-2411": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:pixtral-large-2411"
+        },
+        "challenge_5_OpenAI:gpt-4o-2024-08-06": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4o-2024-08-06"
+        },
+        "challenge_6_OpenAI:gpt-5-mini": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        },
+        "challenge_7_Mistral:codestral-2501": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Mistral:codestral-2501"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 997651,
+        "prompt_preview": "Find the prime below one million that can be written as the sum of the most consecutive primes. For ..."
+      },
+      {
+        "creator": "OpenAI:o3-mini-2025-01-31",
+        "expected_answer": 4594488234,
+        "prompt_preview": "Define a sequence S where S0 = 1 and for each n ≥ 1, Sₙ = Sₙ₋₁ + (digit_sum(Sₙ₋₁))^(number_of_digits..."
+      },
+      {
+        "creator": "Anthropic:claude-sonnet-4-20250514",
+        "expected_answer": 4348,
+        "prompt_preview": "You are given a mysterious mathematical puzzle. Find a 4-digit number N that satisfies ALL of the fo..."
+      },
+      {
+        "creator": "Mistral:pixtral-large-2411",
+        "expected_answer": 42,
+        "prompt_preview": "You are given the following encoded string:\n\n\"7a3b5c1d9e2f4g6h8i\"\n\nThe string represents a sequence ..."
+      },
+      {
+        "creator": "OpenAI:gpt-4o-2024-08-06",
+        "expected_answer": 112,
+        "prompt_preview": "You are given a sequence of numbers generated by the following process:\n\n1. Start with the number 1...."
+      },
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 2400,
+        "prompt_preview": "Consider Kaprekar's routine on 4-digit numbers: take a 4-digit number (allow leading zeros), form th..."
+      },
+      {
+        "creator": "Mistral:codestral-2501",
+        "expected_answer": 2,
+        "prompt_preview": "Create a function that takes a list of integers and returns the number of distinct pairs (a, b) such..."
+      }
+    ]
+  }
+}
