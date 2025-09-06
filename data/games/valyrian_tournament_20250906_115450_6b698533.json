@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250906_115450_6b698533",
+  "date": "2025-09-06T11:54:50.605175Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Mistral:pixtral-large-2411",
+    "OpenAI:gpt-5-mini",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "OpenAI:o1-2024-12-17",
+    "OpenAI:o3-mini-2025-01-31",
+    "Mistral:devstral-medium-2507",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+  ],
+  "ranks": [
+    5,
+    1,
+    1,
+    1,
+    0,
+    5,
+    1
+  ],
+  "scores": [
+    4,
+    10,
+    10,
+    10,
+    13,
+    4,
+    10
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.17)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250906_115450.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.17,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.7959183673469388
+    },
+    "performance_metrics": {
+      "Mistral:pixtral-large-2411": {
+        "total_tokens": 19905,
+        "total_cost": 0.33960799999999997,
+        "total_time": 396.28161400000005,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 50.229431032851295,
+        "tokens_per_dollar": 58611.69348189678,
+        "success_rate": 0.5714285714285714
+      },
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 24548,
+        "total_cost": 0.05682874999999999,
+        "total_time": 398.604728,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 61.58481893370818,
+        "tokens_per_dollar": 431964.45461144234,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 13398,
+        "total_cost": 0.20063799999999998,
+        "total_time": 302.91755499999994,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 44.229856536376715,
+        "tokens_per_dollar": 66776.98142924072,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 31290,
+        "total_cost": 2.5163399999999996,
+        "total_time": 218.074422,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 143.48312705833973,
+        "tokens_per_dollar": 12434.72662676745,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:o3-mini-2025-01-31": {
+        "total_tokens": 9485,
+        "total_cost": 0.0577049,
+        "total_time": 69.918522,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 135.65790192189704,
+        "tokens_per_dollar": 164370.7900022355,
+        "success_rate": 1.0
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1868,
+        "total_cost": 0.008797200000000002,
+        "total_time": 20.944532,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 89.18795607369026,
+        "tokens_per_dollar": 212340.29009230205,
+        "success_rate": 0.5714285714285714
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 13637,
+        "total_cost": 0.0245514,
+        "total_time": 529.6292410000001,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 25.7482007115993,
+        "tokens_per_dollar": 555446.9398893749,
+        "success_rate": 0.8571428571428571
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Mistral:pixtral-large-2411": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Mistral:pixtral-large-2411"
+        },
+        "challenge_2_OpenAI:gpt-5-mini": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        },
+        "challenge_3_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_4_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        },
+        "challenge_5_OpenAI:o3-mini-2025-01-31": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "OpenAI:o3-mini-2025-01-31"
+        },
+        "challenge_6_Mistral:devstral-medium-2507": {
+          "success_rate": 0.2857142857142857,
+          "successful_attempts": 2,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_7_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Mistral:pixtral-large-2411",
+        "expected_answer": 3,
+        "prompt_preview": "You are given a sequence of integers representing the heights of buildings in a city. The sequence i..."
+      },
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 16695334890,
+        "prompt_preview": "Find the single integer password defined as follows.\n\nConsider all 0 to 9 pandigital 10-digit number..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 126,
+        "prompt_preview": "Consider a sequence where each term is defined as the sum of the nth prime number and the nth Fibona..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 1437,
+        "prompt_preview": "You are given the phrase 'Sic Parvis Magna'. Follow these steps to determine a single integer passwo..."
+      },
+      {
+        "creator": "OpenAI:o3-mini-2025-01-31",
+        "expected_answer": 9,
+        "prompt_preview": "Challenge: The Integer Transformation Puzzle\n\nYou are given a function f defined on positive integer..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 9,
+        "prompt_preview": "You are given a list of integers. Your task is to find the longest subarray that contains at most tw..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 2775979,
+        "prompt_preview": "You are given a function that generates a string sequence based on the following rule:\n- For each in..."
+      }
+    ]
+  }
+}
