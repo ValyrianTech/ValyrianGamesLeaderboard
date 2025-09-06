@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250906_140502_6be4c9db",
+  "date": "2025-09-06T14:05:02.970664Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "Anthropic:claude-opus-4-1-20250805",
+    "Mistral:codestral-2501",
+    "OpenAI:o4-mini-2025-04-16",
+    "Groq:openai/gpt-oss-120b",
+    "OpenAI:o1-2024-12-17"
+  ],
+  "ranks": [
+    0,
+    6,
+    0,
+    5,
+    0,
+    0,
+    0
+  ],
+  "scores": [
+    13,
+    4,
+    13,
+    10,
+    13,
+    13,
+    13
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.31)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250906_140502.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.31,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.9183673469387755
+    },
+    "performance_metrics": {
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 6159,
+        "total_cost": 0.101764,
+        "total_time": 140.922502,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 43.70487262566485,
+        "tokens_per_dollar": 60522.38512637082,
+        "success_rate": 1.0
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+        "total_tokens": 31135,
+        "total_cost": 0.11262420000000001,
+        "total_time": 756.384708,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 41.16291573678932,
+        "tokens_per_dollar": 276450.3543643373,
+        "success_rate": 0.5714285714285714
+      },
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 10523,
+        "total_cost": 1.8660899999999998,
+        "total_time": 251.09156600000003,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 41.90901418010989,
+        "tokens_per_dollar": 5639.063496401567,
+        "success_rate": 1.0
+      },
+      "Mistral:codestral-2501": {
+        "total_tokens": 8289,
+        "total_cost": 0.0153812,
+        "total_time": 54.115537999999994,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 153.17227373772022,
+        "tokens_per_dollar": 538904.6368293761,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 14608,
+        "total_cost": 0.09519180000000001,
+        "total_time": 163.32252799999998,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 89.44265178163297,
+        "tokens_per_dollar": 153458.5962236243,
+        "success_rate": 1.0
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 11707,
+        "total_cost": 0.013101749999999999,
+        "total_time": 49.971367,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 234.27415944014498,
+        "tokens_per_dollar": 893544.7554715974,
+        "success_rate": 1.0
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 18654,
+        "total_cost": 1.7195550000000002,
+        "total_time": 150.248996,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 124.15390782378338,
+        "tokens_per_dollar": 10848.155482086935,
+        "success_rate": 1.0
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_2_Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507"
+        },
+        "challenge_3_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_4_Mistral:codestral-2501": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:codestral-2501"
+        },
+        "challenge_5_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_6_Groq:openai/gpt-oss-120b": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        },
+        "challenge_7_OpenAI:o1-2024-12-17": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 1597,
+        "prompt_preview": "A prime Fibonacci number is a Fibonacci number that is also prime. The Fibonacci sequence starts wit..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "expected_answer": 443839,
+        "prompt_preview": "Find the sum of all numbers that can be written as the sum of the fifth powers of their digits. Note..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 309,
+        "prompt_preview": "**The Recursive Matrix Cipher**\n\nYou've intercepted an encrypted message that can only be decoded by..."
+      },
+      {
+        "creator": "Mistral:codestral-2501",
+        "expected_answer": 3,
+        "prompt_preview": "You are given a string consisting of lowercase English letters. Your task is to find the length of t..."
+      },
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 302,
+        "prompt_preview": "The look-and-say sequence is defined as follows: start with the string '1'. Each subsequent term is ..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 40733,
+        "prompt_preview": "Consider all positive integers n such that 1 \\u2264 n \\u2264 50000 and the sum of the factorials of ..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 745,
+        "prompt_preview": "Compute the sum of the cubes of all integers from 1 to 49 inclusive that do not contain the digit '6..."
+      }
+    ]
+  }
+}
