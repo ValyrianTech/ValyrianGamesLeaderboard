@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250906_064023_a5420789",
+  "date": "2025-09-06T06:40:23.523629Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "OpenAI:gpt-5-mini",
+    "OpenAI:o4-mini-2025-04-16",
+    "OpenAI:gpt-4o-2024-08-06",
+    "Mistral:codestral-2501",
+    "Anthropic:claude-sonnet-4-20250514",
+    "Mistral:devstral-medium-2507",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+  ],
+  "ranks": [
+    0,
+    3,
+    3,
+    3,
+    0,
+    6,
+    0
+  ],
+  "scores": [
+    13,
+    10,
+    10,
+    10,
+    13,
+    -2,
+    13
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.43)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250906_064023.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.43,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.8367346938775511
+    },
+    "performance_metrics": {
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 16051,
+        "total_cost": 0.039169249999999996,
+        "total_time": 245.87097699999998,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 65.28220693571329,
+        "tokens_per_dollar": 409785.7375364604,
+        "success_rate": 1.0
+      },
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 30132,
+        "total_cost": 0.1764983,
+        "total_time": 416.45189999999997,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 72.35409419431153,
+        "tokens_per_dollar": 170721.19108229372,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:gpt-4o-2024-08-06": {
+        "total_tokens": 5408,
+        "total_cost": 0.16400750000000003,
+        "total_time": 57.311885000000004,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 94.36088169146765,
+        "tokens_per_dollar": 32974.101794125265,
+        "success_rate": 0.8571428571428571
+      },
+      "Mistral:codestral-2501": {
+        "total_tokens": 5898,
+        "total_cost": 0.012525600000000001,
+        "total_time": 85.861479,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 68.69203825384838,
+        "tokens_per_dollar": 470875.6466756083,
+        "success_rate": 0.8571428571428571
+      },
+      "Anthropic:claude-sonnet-4-20250514": {
+        "total_tokens": 33665,
+        "total_cost": 0.9648209999999999,
+        "total_time": 454.495038,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 74.07121571259046,
+        "tokens_per_dollar": 34892.48264704023,
+        "success_rate": 1.0
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1661,
+        "total_cost": 0.0090752,
+        "total_time": 19.426015,
+        "total_attempts": 7,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 1,
+        "tokens_per_second": 85.5038977371324,
+        "tokens_per_dollar": 183026.269393512,
+        "success_rate": 0.2857142857142857
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 7248,
+        "total_cost": 0.13641599999999998,
+        "total_time": 139.199211,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 52.069260651197226,
+        "tokens_per_dollar": 53131.59746657284,
+        "success_rate": 1.0
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_OpenAI:gpt-5-mini": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        },
+        "challenge_2_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_3_OpenAI:gpt-4o-2024-08-06": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-4o-2024-08-06"
+        },
+        "challenge_4_Mistral:codestral-2501": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Mistral:codestral-2501"
+        },
+        "challenge_5_Anthropic:claude-sonnet-4-20250514": {
+          "success_rate": 0.42857142857142855,
+          "successful_attempts": 3,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-sonnet-4-20250514"
+        },
+        "challenge_6_Mistral:devstral-medium-2507": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        },
+        "challenge_7_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 4770,
+        "prompt_preview": "Find the sum of all positive integers n (1 ≤ n ≤ 1000) that are square-free (i.e., not divisible by ..."
+      },
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 111744,
+        "prompt_preview": "Define a sequence of positive integers S as follows:\n\n- S[1] = 1\n- S[2] = 1\n- For each integer n ≥ 3..."
+      },
+      {
+        "creator": "OpenAI:gpt-4o-2024-08-06",
+        "expected_answer": 70710087121,
+        "prompt_preview": "Consider a sequence defined as follows:\n- The first two terms are given as \\( a_1 = 1 \\) and \\( a_2 ..."
+      },
+      {
+        "creator": "Mistral:codestral-2501",
+        "expected_answer": 3,
+        "prompt_preview": "You are given a string `s` consisting of lowercase English letters. Your task is to find the length ..."
+      },
+      {
+        "creator": "Anthropic:claude-sonnet-4-20250514",
+        "expected_answer": 86,
+        "prompt_preview": "**Hidden Pattern Sequence Challenge**\n\nYou are given the first 15 terms of a mysterious sequence:\n\n[..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 5,
+        "prompt_preview": "You are given a sequence of numbers. Your task is to find the smallest positive integer that is not ..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 184,
+        "prompt_preview": "You are given the following obfuscated Python function that implements a secret algorithm:\n\ndef secr..."
+      }
+    ]
+  }
+}
