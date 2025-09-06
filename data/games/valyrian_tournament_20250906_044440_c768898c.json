@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250906_044440_c768898c",
+  "date": "2025-09-06T04:44:40.293575Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "OpenAI:gpt-5-mini",
+    "Groq:openai/gpt-oss-120b",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "Mistral:pixtral-large-2411",
+    "Mistral:magistral-medium-2506",
+    "OpenAI:o4-mini-2025-04-16",
+    "OpenAI:o1-2024-12-17"
+  ],
+  "ranks": [
+    0,
+    2,
+    2,
+    5,
+    6,
+    2,
+    0
+  ],
+  "scores": [
+    13,
+    10,
+    10,
+    7,
+    -7,
+    10,
+    13
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.52)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250906_044440.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.52,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.7551020408163265
+    },
+    "performance_metrics": {
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 19972,
+        "total_cost": 0.049067999999999994,
+        "total_time": 314.46168000000006,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 63.5117130964892,
+        "tokens_per_dollar": 407026.98296241957,
+        "success_rate": 1.0
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 13324,
+        "total_cost": 0.014632049999999999,
+        "total_time": 50.510493,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 263.78677396793574,
+        "tokens_per_dollar": 910603.7773244352,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 5747,
+        "total_cost": 0.101972,
+        "total_time": 114.19370900000001,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 50.32676537373875,
+        "tokens_per_dollar": 56358.608245400705,
+        "success_rate": 0.8571428571428571
+      },
+      "Mistral:pixtral-large-2411": {
+        "total_tokens": 9698,
+        "total_cost": 0.17418,
+        "total_time": 224.909929,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 43.119483622263736,
+        "tokens_per_dollar": 55678.034217476175,
+        "success_rate": 0.7142857142857143
+      },
+      "Mistral:magistral-medium-2506": {
+        "total_tokens": 107465,
+        "total_cost": 0.9114849999999999,
+        "total_time": 904.181429,
+        "total_attempts": 7,
+        "successful_attempts": 0,
+        "challenges_created": 1,
+        "own_challenges_solved": 0,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 118.85335901983008,
+        "tokens_per_dollar": 117901.00769623199,
+        "success_rate": 0.0
+      },
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 18239,
+        "total_cost": 0.1104378,
+        "total_time": 225.14870100000002,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 81.00868412294325,
+        "tokens_per_dollar": 165151.7867976363,
+        "success_rate": 0.8571428571428571
+      },
+      "OpenAI:o1-2024-12-17": {
+        "total_tokens": 19118,
+        "total_cost": 1.68732,
+        "total_time": 176.30141700000001,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 108.4392872463413,
+        "tokens_per_dollar": 11330.39376051964,
+        "success_rate": 1.0
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_OpenAI:gpt-5-mini": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        },
+        "challenge_2_Groq:openai/gpt-oss-120b": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        },
+        "challenge_3_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_4_Mistral:pixtral-large-2411": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:pixtral-large-2411"
+        },
+        "challenge_5_Mistral:magistral-medium-2506": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Mistral:magistral-medium-2506"
+        },
+        "challenge_6_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_7_OpenAI:o1-2024-12-17": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o1-2024-12-17"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 2400,
+        "prompt_preview": "Consider the Kaprekar routine for 4-digit numbers (leading zeros allowed). Given a 4-digit number n ..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 818953,
+        "prompt_preview": "Consider the infinite binary word generated by the following substitution rule:\n- Start with the str..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 14,
+        "prompt_preview": "Find the difference between the sum of the first 1000 prime numbers and the first prime number that ..."
+      },
+      {
+        "creator": "Mistral:pixtral-large-2411",
+        "expected_answer": 36,
+        "prompt_preview": "You are given a sequence of numbers represented as a string:\n\n\"1234567891011121314151617181920\"\n\nThi..."
+      },
+      {
+        "creator": "Mistral:magistral-medium-2506",
+        "expected_answer": 346320,
+        "prompt_preview": "You are given the following mathematical expression where numbers are represented as Roman numerals:..."
+      },
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 120907,
+        "prompt_preview": "Define the function f(n) = n² + n + 41. Let S be the set of all non-negative integers k (0 ≤ k ≤ 100..."
+      },
+      {
+        "creator": "OpenAI:o1-2024-12-17",
+        "expected_answer": 3758,
+        "prompt_preview": "Your challenge is to find all prime numbers between 2 and 300. For each prime, calculate the sum of ..."
+      }
+    ]
+  }
+}
