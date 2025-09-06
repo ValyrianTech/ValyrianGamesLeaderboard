@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250906_020115_d2ca71b5",
+  "date": "2025-09-06T02:01:15.872871Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Anthropic:claude-sonnet-4-20250514",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "Mistral:magistral-medium-2506",
+    "Groq:openai/gpt-oss-120b",
+    "OpenAI:gpt-5-mini",
+    "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+    "Mistral:pixtral-large-2411"
+  ],
+  "ranks": [
+    0,
+    0,
+    6,
+    0,
+    0,
+    0,
+    5
+  ],
+  "scores": [
+    13,
+    13,
+    -5,
+    13,
+    13,
+    13,
+    5
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.04)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250906_020115.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.04,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.8163265306122449
+    },
+    "performance_metrics": {
+      "Anthropic:claude-sonnet-4-20250514": {
+        "total_tokens": 30228,
+        "total_cost": 0.8686079999999999,
+        "total_time": 389.637633,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 77.57977525748906,
+        "tokens_per_dollar": 34800.508399646336,
+        "success_rate": 1.0
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 5186,
+        "total_cost": 0.0127532,
+        "total_time": 231.768421,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 22.37578345498587,
+        "tokens_per_dollar": 406643.0386099175,
+        "success_rate": 1.0
+      },
+      "Mistral:magistral-medium-2506": {
+        "total_tokens": 99266,
+        "total_cost": 0.819368,
+        "total_time": 758.504986,
+        "total_attempts": 7,
+        "successful_attempts": 1,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 0,
+        "tokens_per_second": 130.8705965447668,
+        "tokens_per_dollar": 121149.47129983109,
+        "success_rate": 0.14285714285714285
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 15145,
+        "total_cost": 0.015532800000000001,
+        "total_time": 60.729232999999994,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 249.38566242060065,
+        "tokens_per_dollar": 975033.4775442933,
+        "success_rate": 1.0
+      },
+      "OpenAI:gpt-5-mini": {
+        "total_tokens": 21094,
+        "total_cost": 0.051580999999999995,
+        "total_time": 338.992645,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 62.225538846130426,
+        "tokens_per_dollar": 408949.0316201703,
+        "success_rate": 1.0
+      },
+      "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+        "total_tokens": 7277,
+        "total_cost": 0.119656,
+        "total_time": 128.334855,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 56.70322376567145,
+        "tokens_per_dollar": 60816.005883532795,
+        "success_rate": 1.0
+      },
+      "Mistral:pixtral-large-2411": {
+        "total_tokens": 9318,
+        "total_cost": 0.17669199999999996,
+        "total_time": 184.81153400000002,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 50.41893110415933,
+        "tokens_per_dollar": 52735.834106807335,
+        "success_rate": 0.5714285714285714
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Anthropic:claude-sonnet-4-20250514": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-sonnet-4-20250514"
+        },
+        "challenge_2_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_3_Mistral:magistral-medium-2506": {
+          "success_rate": 1.0,
+          "successful_attempts": 7,
+          "total_attempts": 7,
+          "creator": "Mistral:magistral-medium-2506"
+        },
+        "challenge_4_Groq:openai/gpt-oss-120b": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        },
+        "challenge_5_OpenAI:gpt-5-mini": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "OpenAI:gpt-5-mini"
+        },
+        "challenge_6_Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"
+        },
+        "challenge_7_Mistral:pixtral-large-2411": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Mistral:pixtral-large-2411"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Anthropic:claude-sonnet-4-20250514",
+        "expected_answer": 4348,
+        "prompt_preview": "You are given a mysterious mathematical puzzle. Find a 4-digit number N that satisfies ALL of the fo..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": 34,
+        "prompt_preview": "Consider a sequence defined as follows:\n- a(0) = 1\n- a(1) = 1\n- For n >= 2:\n  - If n is odd: a(n) = ..."
+      },
+      {
+        "creator": "Mistral:magistral-medium-2506",
+        "expected_answer": 400,
+        "prompt_preview": "Given the following string, perform the following steps to find the final integer answer:\n\n1. Extrac..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 26,
+        "prompt_preview": "Starting with the string \"1\", apply the classic Look-and-Say transformation ten (10) times. The Look..."
+      },
+      {
+        "creator": "OpenAI:gpt-5-mini",
+        "expected_answer": 2400,
+        "prompt_preview": "Consider the Kaprekar routine for 4-digit numbers (leading zeros allowed). Given a 4-digit number n ..."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "expected_answer": 189,
+        "prompt_preview": "I've defined a special function that operates on positive integers. For a given number n, the functi..."
+      },
+      {
+        "creator": "Mistral:pixtral-large-2411",
+        "expected_answer": 6,
+        "prompt_preview": "You are given a sequence of integers. Your task is to find the maximum sum of a contiguous subarray ..."
+      }
+    ]
+  }
+}
