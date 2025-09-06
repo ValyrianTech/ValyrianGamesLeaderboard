@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-09-05T23:24:10.188072",
+  "last_updated": "2025-09-06T08:35:18.970067",
   "models": [
     {
       "name": "OpenAI:gpt-5-mini",
@@ -15,15 +15,15 @@
     },
     {
       "name": "OpenAI:o4-mini-2025-04-16",
-      "mu": 29.03166812164018,
-      "sigma": 1.5315196593707925,
-      "games_played": 11,
-      "wins": 34,
+      "mu": 29.25918074062158,
+      "sigma": 1.46801733487908,
+      "games_played": 12,
+      "wins": 39,
       "losses": 7,
-      "draws": 19,
-      "conservative_rating": 24.437109143527803,
-      "avg_total_cost": 0.11711975000000001,
-      "avg_tokens_per_second": 78.07175946162423
+      "draws": 21,
+      "conservative_rating": 24.85512873598434,
+      "avg_total_cost": 0.12116618461538463,
+      "avg_tokens_per_second": 79.56477863611855
     },
     {
       "name": "OpenAI:gpt-4.1-2025-04-14",
@@ -50,28 +50,28 @@
       "avg_tokens_per_second": 40.26454725235944
     },
     {
-      "name": "Anthropic:claude-opus-4-20250514",
-      "mu": 28.487550887279664,
-      "sigma": 1.3618141463093518,
-      "games_played": 14,
-      "wins": 47,
-      "losses": 14,
-      "draws": 17,
-      "conservative_rating": 24.40210844835161,
-      "avg_total_cost": 2.3731009999999997,
-      "avg_tokens_per_second": 50.867740011906605
-    },
-    {
       "name": "DeepSeek:deepseek-chat",
-      "mu": 28.325905431593522,
-      "sigma": 1.5540380209403475,
-      "games_played": 11,
-      "wins": 32,
+      "mu": 28.645719384083048,
+      "sigma": 1.4876654058955618,
+      "games_played": 12,
+      "wins": 37,
       "losses": 10,
       "draws": 25,
-      "conservative_rating": 23.66379136877248,
-      "avg_total_cost": 0.017669213333333333,
-      "avg_tokens_per_second": 14.698174561793863
+      "conservative_rating": 24.182723166396364,
+      "avg_total_cost": 0.017792864615384613,
+      "avg_tokens_per_second": 14.963889574098678
+    },
+    {
+      "name": "Anthropic:claude-opus-4-20250514",
+      "mu": 28.438230668369915,
+      "sigma": 1.313758384364209,
+      "games_played": 15,
+      "wins": 50,
+      "losses": 16,
+      "draws": 19,
+      "conservative_rating": 24.496955515277286,
+      "avg_total_cost": 2.3568009374999996,
+      "avg_tokens_per_second": 50.187911472549395
     },
     {
       "name": "OpenAI:o1-2024-12-17",
@@ -111,15 +111,15 @@
     },
     {
       "name": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
-      "mu": 27.49055295195982,
-      "sigma": 1.4026823701321918,
-      "games_played": 14,
-      "wins": 30,
-      "losses": 22,
+      "mu": 27.54035394973848,
+      "sigma": 1.3500332959252264,
+      "games_played": 15,
+      "wins": 33,
+      "losses": 24,
       "draws": 26,
-      "conservative_rating": 23.282505841563246,
-      "avg_total_cost": 0.10854266666666666,
-      "avg_tokens_per_second": 37.21588680314334
+      "conservative_rating": 23.4902540619628,
+      "avg_total_cost": 0.109010625,
+      "avg_tokens_per_second": 37.65211795773834
     },
     {
       "name": "Mistral:codestral-2501",
@@ -147,15 +147,15 @@
     },
     {
       "name": "OpenAI:gpt-4o-2024-08-06",
-      "mu": 26.316582520855388,
-      "sigma": 1.481881619290489,
-      "games_played": 12,
-      "wins": 32,
-      "losses": 29,
+      "mu": 26.162098650865847,
+      "sigma": 1.427650301736236,
+      "games_played": 13,
+      "wins": 34,
+      "losses": 33,
       "draws": 9,
-      "conservative_rating": 21.87093766298392,
-      "avg_total_cost": 0.1994455769230769,
-      "avg_tokens_per_second": 56.84221383383221
+      "conservative_rating": 21.87914774565714,
+      "avg_total_cost": 0.19859910714285714,
+      "avg_tokens_per_second": 58.41655694582727
     },
     {
       "name": "Mistral:pixtral-large-2411",
@@ -171,15 +171,15 @@
     },
     {
       "name": "OpenAI:o3-mini-2025-01-31",
-      "mu": 23.430049675738744,
-      "sigma": 1.6362672203925785,
-      "games_played": 12,
-      "wins": 26,
-      "losses": 43,
+      "mu": 23.093697592720034,
+      "sigma": 1.580716975954586,
+      "games_played": 13,
+      "wins": 27,
+      "losses": 48,
       "draws": 4,
-      "conservative_rating": 18.52124801456101,
-      "avg_total_cost": 0.0848001846153846,
-      "avg_tokens_per_second": 88.57890302658691
+      "conservative_rating": 18.351546664856276,
+      "avg_total_cost": 0.08285805,
+      "avg_tokens_per_second": 87.28716653979231
     },
     {
       "name": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507",
@@ -195,15 +195,15 @@
     },
     {
       "name": "Mistral:magistral-medium-2506",
-      "mu": 13.079039376556238,
-      "sigma": 1.867619847911923,
-      "games_played": 15,
+      "mu": 12.967007385199965,
+      "sigma": 1.8410087582794294,
+      "games_played": 16,
       "wins": 4,
-      "losses": 83,
+      "losses": 89,
       "draws": 2,
-      "conservative_rating": 7.47617983282047,
-      "avg_total_cost": 0.6554231250000001,
-      "avg_tokens_per_second": 107.23223183827994
+      "conservative_rating": 7.443981110361676,
+      "avg_total_cost": 0.6625445882352943,
+      "avg_tokens_per_second": 108.32082228826043
     },
     {
       "name": "Mistral:devstral-medium-2507",
