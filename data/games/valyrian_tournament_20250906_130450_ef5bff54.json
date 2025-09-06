@@ -1,0 +1,229 @@
+{
+  "game_id": "valyrian_tournament_20250906_130450_ef5bff54",
+  "date": "2025-09-06T13:04:50.289706Z",
+  "game_type": "CodingChallenge",
+  "participants": [
+    "Anthropic:claude-opus-4-1-20250805",
+    "OpenAI:o4-mini-2025-04-16",
+    "Anthropic:claude-opus-4-20250514",
+    "Groq:openai/gpt-oss-120b",
+    "Mistral:codestral-2501",
+    "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+    "Mistral:devstral-medium-2507"
+  ],
+  "ranks": [
+    3,
+    2,
+    3,
+    0,
+    1,
+    5,
+    6
+  ],
+  "scores": [
+    7,
+    8,
+    7,
+    13,
+    10,
+    4,
+    -2
+  ],
+  "description": "Valyrian Games coding challenge tournament with 7 contenders solving 7 peer-created challenges (temperature: 0.9)",
+  "additional_info": {
+    "tournament_details": {
+      "source_file": "tournament_results_20250906_130450.json",
+      "num_contenders": 7,
+      "num_challenges": 7,
+      "temperature": 0.9,
+      "seed": null,
+      "total_attempts": 49,
+      "overall_success_rate": 0.6938775510204082
+    },
+    "performance_metrics": {
+      "Anthropic:claude-opus-4-1-20250805": {
+        "total_tokens": 15996,
+        "total_cost": 2.276355,
+        "total_time": 362.385231,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 44.140871734367124,
+        "tokens_per_dollar": 7027.0234651449355,
+        "success_rate": 0.7142857142857143
+      },
+      "OpenAI:o4-mini-2025-04-16": {
+        "total_tokens": 23729,
+        "total_cost": 0.13370500000000002,
+        "total_time": 259.14128,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 91.56781196727901,
+        "tokens_per_dollar": 177472.79458509403,
+        "success_rate": 0.7142857142857143
+      },
+      "Anthropic:claude-opus-4-20250514": {
+        "total_tokens": 17769,
+        "total_cost": 2.594085,
+        "total_time": 375.826776,
+        "total_attempts": 7,
+        "successful_attempts": 5,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 4,
+        "tokens_per_second": 47.27976060971238,
+        "tokens_per_dollar": 6849.8140962998505,
+        "success_rate": 0.7142857142857143
+      },
+      "Groq:openai/gpt-oss-120b": {
+        "total_tokens": 14589,
+        "total_cost": 0.014996549999999999,
+        "total_time": 57.080047,
+        "total_attempts": 7,
+        "successful_attempts": 7,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 6,
+        "tokens_per_second": 255.58843705927572,
+        "tokens_per_dollar": 972823.7494623763,
+        "success_rate": 1.0
+      },
+      "Mistral:codestral-2501": {
+        "total_tokens": 6534,
+        "total_cost": 0.014689999999999998,
+        "total_time": 44.738064,
+        "total_attempts": 7,
+        "successful_attempts": 6,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 5,
+        "tokens_per_second": 146.05012858848787,
+        "tokens_per_dollar": 444792.37576582714,
+        "success_rate": 0.8571428571428571
+      },
+      "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+        "total_tokens": 5469,
+        "total_cost": 0.0112396,
+        "total_time": 198.00406400000003,
+        "total_attempts": 7,
+        "successful_attempts": 4,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 3,
+        "tokens_per_second": 27.620645200494465,
+        "tokens_per_dollar": 486583.1524253532,
+        "success_rate": 0.5714285714285714
+      },
+      "Mistral:devstral-medium-2507": {
+        "total_tokens": 1727,
+        "total_cost": 0.008499600000000001,
+        "total_time": 18.027293,
+        "total_attempts": 7,
+        "successful_attempts": 2,
+        "challenges_created": 1,
+        "own_challenges_solved": 1,
+        "others_challenges_solved": 1,
+        "tokens_per_second": 95.79918626717833,
+        "tokens_per_dollar": 203186.03228387216,
+        "success_rate": 0.2857142857142857
+      }
+    },
+    "challenge_quality": {
+      "warnings_detected": 0,
+      "flagged_challenges": [],
+      "total_challenges": 7,
+      "success_rates": {
+        "challenge_1_Anthropic:claude-opus-4-1-20250805": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-1-20250805"
+        },
+        "challenge_2_OpenAI:o4-mini-2025-04-16": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "OpenAI:o4-mini-2025-04-16"
+        },
+        "challenge_3_Anthropic:claude-opus-4-20250514": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Anthropic:claude-opus-4-20250514"
+        },
+        "challenge_4_Groq:openai/gpt-oss-120b": {
+          "success_rate": 0.7142857142857143,
+          "successful_attempts": 5,
+          "total_attempts": 7,
+          "creator": "Groq:openai/gpt-oss-120b"
+        },
+        "challenge_5_Mistral:codestral-2501": {
+          "success_rate": 0.5714285714285714,
+          "successful_attempts": 4,
+          "total_attempts": 7,
+          "creator": "Mistral:codestral-2501"
+        },
+        "challenge_6_Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
+          "success_rate": 0.8571428571428571,
+          "successful_attempts": 6,
+          "total_attempts": 7,
+          "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput"
+        },
+        "challenge_7_Mistral:devstral-medium-2507": {
+          "success_rate": 0.42857142857142855,
+          "successful_attempts": 3,
+          "total_attempts": 7,
+          "creator": "Mistral:devstral-medium-2507"
+        }
+      }
+    },
+    "scoring_system": {
+      "correct_solution": "+1 point",
+      "incorrect_solution": "-1 point",
+      "failed_own_challenge": "-2 points (additional penalty)",
+      "solved_others_challenge": "+2 points (bonus)"
+    },
+    "challenges_summary": [
+      {
+        "creator": "Anthropic:claude-opus-4-1-20250805",
+        "expected_answer": 309,
+        "prompt_preview": "**The Recursive Matrix Cipher**\n\nYou've intercepted an encrypted message that can only be decoded by..."
+      },
+      {
+        "creator": "OpenAI:o4-mini-2025-04-16",
+        "expected_answer": 112,
+        "prompt_preview": "Consider all 5-digit palindromic numbers (numbers of the form abcba where a≠0). How many of these nu..."
+      },
+      {
+        "creator": "Anthropic:claude-opus-4-20250514",
+        "expected_answer": 4211,
+        "prompt_preview": "**The Harmonic Prime Cipher**\n\nYou've discovered an ancient mathematical cipher that encodes message..."
+      },
+      {
+        "creator": "Groq:openai/gpt-oss-120b",
+        "expected_answer": 145,
+        "prompt_preview": "Find the smallest positive integer greater than 2 that is equal to the sum of the factorials of its ..."
+      },
+      {
+        "creator": "Mistral:codestral-2501",
+        "expected_answer": 104743,
+        "prompt_preview": "Find the 10001st prime number."
+      },
+      {
+        "creator": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+        "expected_answer": -55,
+        "prompt_preview": "Consider the following recursive string construction process:\n\n- Let S(0) = '0'\n- For each n >= 1:\n ..."
+      },
+      {
+        "creator": "Mistral:devstral-medium-2507",
+        "expected_answer": 13,
+        "prompt_preview": "Given a list of integers, find the smallest positive integer that cannot be represented as the sum o..."
+      }
+    ]
+  }
+}
