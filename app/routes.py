@@ -34,28 +34,12 @@ def history():
     """Game history page showing past games with pagination"""
     from app.models import get_game_history
     
-    # Check if this is for static site generation (needs all games)
-    static_site = request.args.get('static_site', 'false').lower() == 'true'
+    # Get pagination parameters from URL (simplified - no per_page dropdown)
+    page = request.args.get('page', 1, type=int)
+    per_page = 20  # Fixed at 20 games per page
     
-    if static_site:
-        # For static site generation, get ALL games without pagination
-        all_games_data = get_game_history(limit=None, page=1, per_page=999999)
-        # Ensure we get all games by using the total count as per_page
-        if isinstance(all_games_data, dict) and 'total' in all_games_data:
-            total_games = all_games_data['total']
-            pagination_data = get_game_history(page=1, per_page=total_games)
-        else:
-            pagination_data = all_games_data
-    else:
-        # Normal pagination for regular web requests
-        page = request.args.get('page', 1, type=int)
-        per_page = request.args.get('per_page', 20, type=int)
-        
-        # Ensure per_page is within reasonable bounds
-        per_page = max(5, min(per_page, 100))
-        
-        # Get paginated game history
-        pagination_data = get_game_history(page=page, per_page=per_page)
+    # Get paginated game history
+    pagination_data = get_game_history(page=page, per_page=per_page)
     
     # Ensure pagination_data is a dict (not a list for backwards compatibility)
     if isinstance(pagination_data, list):

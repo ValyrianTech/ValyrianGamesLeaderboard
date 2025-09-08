@@ -34,17 +34,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="mb-3">
-                            <label for="per-page-select" class="form-label">Games per page</label>
-                            <select class="form-select" id="per-page-select" onchange="changePerPage()">
-                                <option value="10" {{ 'selected' if pagination and pagination.per_page == 10 else '' }}>10</option>
-                                <option value="20" {{ 'selected' if pagination and pagination.per_page == 20 else '' }}>20</option>
-                                <option value="50" {{ 'selected' if pagination and pagination.per_page == 50 else '' }}>50</option>
-                                <option value="100" {{ 'selected' if pagination and pagination.per_page == 100 else '' }}>100</option>
-                            </select>
-                        </div>
-                    </div>
+                    <!-- Per page dropdown removed - using default 20 games per page -->
                 </div>
                 <button class="btn btn-primary" id="apply-filters">Apply Filters</button>
                 <button class="btn btn-outline-secondary" id="reset-filters">Reset</button>
@@ -111,7 +101,7 @@
                     <!-- Previous button -->
                     <li class="page-item {{ 'disabled' if not pagination.has_prev }}">
                         {% if pagination.has_prev %}
-                            <a class="page-link" href="?page={{ pagination.page-1 }}&per_page={{ pagination.per_page }}">
+                            <a class="page-link" href="?page={{ pagination.page-1 }}">
                                 <span aria-hidden="true">&laquo;</span> Previous
                             </a>
                         {% else %}
@@ -127,7 +117,7 @@
                     
                     {% if start_page > 1 %}
                         <li class="page-item">
-                            <a class="page-link" href="?page=1&per_page={{ pagination.per_page }}">1</a>
+                            <a class="page-link" href="?page=1">1</a>
                         </li>
                         {% if start_page > 2 %}
                             <li class="page-item disabled">
@@ -141,7 +131,7 @@
                             {% if page_num == pagination.page %}
                                 <span class="page-link">{{ page_num }}</span>
                             {% else %}
-                                <a class="page-link" href="?page={{ page_num }}&per_page={{ pagination.per_page }}">{{ page_num }}</a>
+                                <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
                             {% endif %}
                         </li>
                     {% endfor %}
@@ -153,14 +143,14 @@
                             </li>
                         {% endif %}
                         <li class="page-item">
-                            <a class="page-link" href="?page={{ pagination.total_pages }}&per_page={{ pagination.per_page }}">{{ pagination.total_pages }}</a>
+                            <a class="page-link" href="?page={{ pagination.total_pages }}">{{ pagination.total_pages }}</a>
                         </li>
                     {% endif %}
                     
                     <!-- Next button -->
                     <li class="page-item {{ 'disabled' if not pagination.has_next }}">
                         {% if pagination.has_next %}
-                            <a class="page-link" href="?page={{ pagination.page+1 }}&per_page={{ pagination.per_page }}">
+                            <a class="page-link" href="?page={{ pagination.page+1 }}">
                                 Next <span aria-hidden="true">&raquo;</span>
                             </a>
                         {% else %}
@@ -268,28 +258,18 @@
     function getUrlParams() {
         const urlParams = new URLSearchParams(window.location.search);
         return {
-            page: parseInt(urlParams.get('page')) || 1,
-            per_page: parseInt(urlParams.get('per_page')) || 20
+            page: parseInt(urlParams.get('page')) || 1
         };
     }
     
     // Function to update URL without reloading page
-    function updateUrl(page, perPage) {
+    function updateUrl(page) {
         const url = new URL(window.location);
         url.searchParams.set('page', page);
-        url.searchParams.set('per_page', perPage);
         window.history.pushState({}, '', url);
     }
     
-    // Function to change per-page setting
-    function changePerPage() {
-        const perPage = parseInt(document.getElementById('per-page-select').value);
-        currentPerPage = perPage;
-        currentPage = 1; // Reset to first page when changing per_page
-        updateUrl(currentPage, currentPerPage);
-        renderPagination();
-        renderGames();
-    }
+    // Per-page functionality removed - using fixed 20 games per page
     
     // Populate filter dropdowns
     function populateFilters() {
@@ -458,7 +438,7 @@
     function goToPage(page) {
         const totalPages = Math.ceil(filteredGames.length / currentPerPage);
         currentPage = Math.max(1, Math.min(page, totalPages));
-        updateUrl(currentPage, currentPerPage);
+        updateUrl(currentPage);
         renderGames();
         renderPagination();
     }
@@ -477,7 +457,7 @@
         
         // Reset to first page after filtering
         currentPage = 1;
-        updateUrl(currentPage, currentPerPage);
+        updateUrl(currentPage);
         renderGames();
         renderPagination();
     }
@@ -490,7 +470,7 @@
         // Reset filtered games to all games
         filteredGames = [...gamesData];
         currentPage = 1;
-        updateUrl(currentPage, currentPerPage);
+        updateUrl(currentPage);
         renderGames();
         renderPagination();
     }
@@ -510,11 +490,7 @@
     function initializePagination() {
         const urlParams = getUrlParams();
         currentPage = urlParams.page;
-        currentPerPage = urlParams.per_page;
-        
-        // Set the per_page dropdown to match URL parameter
-        const perPageSelect = document.getElementById('per-page-select');
-        perPageSelect.value = currentPerPage;
+        // currentPerPage is fixed at 20 - no dropdown needed
         
         // Initialize filtered games
         filteredGames = [...gamesData];

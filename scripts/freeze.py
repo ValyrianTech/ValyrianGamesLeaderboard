@@ -45,8 +45,8 @@ def main_leaderboard_html():
 
 @freezer.register_generator
 def main_history_html():
-    # Generate history.html with all games for client-side pagination
-    yield 'main.history_html', {'static_site': 'true'}  # Special flag to get all games
+    # Generate history.html with standard pagination
+    yield 'main.history_html', {}
 
 @freezer.register_generator
 def main_index_html():
