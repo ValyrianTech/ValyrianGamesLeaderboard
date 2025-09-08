@@ -1,6 +1,8 @@
 # ValyrianGamesLeaderboard
 Leaderboard for the Valyrian LLM Games
 
+🌐 **[View Live Leaderboard](https://valyriantech.github.io/ValyrianGamesLeaderboard/)** 
+
 ## Overview
 
 The Valyrian Games Leaderboard is a web-based system for displaying the results and rankings of LLM competitions. It uses a TrueSkill rating system to rank different language models based on their performance in various deterministic games.
