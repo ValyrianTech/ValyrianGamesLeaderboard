@@ -76,17 +76,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="mb-3">
-                            <label for="per-page-select" class="form-label">Games per page</label>
-                            <select class="form-select" id="per-page-select" onchange="changePerPage()">
-                                <option value="10" >10</option>
-                                <option value="20" selected>20</option>
-                                <option value="50" >50</option>
-                                <option value="100" >100</option>
-                            </select>
-                        </div>
-                    </div>
+                    <!-- Per page dropdown removed - using default 20 games per page -->
                 </div>
                 <button class="btn btn-primary" id="apply-filters">Apply Filters</button>
                 <button class="btn btn-outline-secondary" id="reset-filters">Reset</button>
@@ -491,13 +481,13 @@
                     
                         <li class="page-item ">
                             
-                                <a class="page-link" href="?page=2&per_page=20">2</a>
+                                <a class="page-link" href="?page=2">2</a>
                             
                         </li>
                     
                         <li class="page-item ">
                             
-                                <a class="page-link" href="?page=3&per_page=20">3</a>
+                                <a class="page-link" href="?page=3">3</a>
                             
                         </li>
                     
@@ -507,7 +497,7 @@
                     <!-- Next button -->
                     <li class="page-item ">
                         
-                            <a class="page-link" href="?page=2&per_page=20">
+                            <a class="page-link" href="?page=2">
                                 Next <span aria-hidden="true">&raquo;</span>
                             </a>
                         
@@ -634,28 +624,18 @@
     function getUrlParams() {
         const urlParams = new URLSearchParams(window.location.search);
         return {
-            page: parseInt(urlParams.get('page')) || 1,
-            per_page: parseInt(urlParams.get('per_page')) || 20
+            page: parseInt(urlParams.get('page')) || 1
         };
     }
     
     // Function to update URL without reloading page
-    function updateUrl(page, perPage) {
+    function updateUrl(page) {
         const url = new URL(window.location);
         url.searchParams.set('page', page);
-        url.searchParams.set('per_page', perPage);
         window.history.pushState({}, '', url);
     }
     
-    // Function to change per-page setting
-    function changePerPage() {
-        const perPage = parseInt(document.getElementById('per-page-select').value);
-        currentPerPage = perPage;
-        currentPage = 1; // Reset to first page when changing per_page
-        updateUrl(currentPage, currentPerPage);
-        renderPagination();
-        renderGames();
-    }
+    // Per-page functionality removed - using fixed 20 games per page
     
     // Populate filter dropdowns
     function populateFilters() {
@@ -824,7 +804,7 @@
     function goToPage(page) {
         const totalPages = Math.ceil(filteredGames.length / currentPerPage);
         currentPage = Math.max(1, Math.min(page, totalPages));
-        updateUrl(currentPage, currentPerPage);
+        updateUrl(currentPage);
         renderGames();
         renderPagination();
     }
@@ -843,7 +823,7 @@
         
         // Reset to first page after filtering
         currentPage = 1;
-        updateUrl(currentPage, currentPerPage);
+        updateUrl(currentPage);
         renderGames();
         renderPagination();
     }
@@ -856,7 +836,7 @@
         // Reset filtered games to all games
         filteredGames = [...gamesData];
         currentPage = 1;
-        updateUrl(currentPage, currentPerPage);
+        updateUrl(currentPage);
         renderGames();
         renderPagination();
     }
@@ -876,11 +856,7 @@
     function initializePagination() {
         const urlParams = getUrlParams();
         currentPage = urlParams.page;
-        currentPerPage = urlParams.per_page;
-        
-        // Set the per_page dropdown to match URL parameter
-        const perPageSelect = document.getElementById('per-page-select');
-        perPageSelect.value = currentPerPage;
+        // currentPerPage is fixed at 20 - no dropdown needed
         
         // Initialize filtered games
         filteredGames = [...gamesData];
