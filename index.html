@@ -212,7 +212,7 @@
     
 <script>
     // Fetch top models for the sidebar
-    fetch('/api/leaderboard.json')
+    fetch('./api/leaderboard.json')
         .then(response => response.json())
         .then(data => {
             const topModelsList = document.getElementById('top-models-list');
@@ -250,7 +250,7 @@
         });
     
     // Fetch recent games for the sidebar
-    fetch('/api/games.json?per_page=5')
+    fetch('./api/games.json?per_page=5')
         .then(response => response.json())
         .then(data => {
             const recentGamesList = document.getElementById('recent-games-list');
@@ -296,7 +296,7 @@
     
     <script>
         // Update the last updated timestamp from the leaderboard data
-        fetch('/api/leaderboard')
+        fetch('./api/leaderboard.json')
             .then(response => response.json())
             .then(data => {
                 const lastUpdated = document.getElementById('last-updated');
