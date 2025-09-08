@@ -57,112 +57,31 @@
                     </tr>
                 </thead>
                 <tbody id="games-table-body">
-                    {% if games %}
-                        {% for game in games %}
-                        <tr data-game-type="{{ game.game_type }}" data-participants="{{ game.participants|join(',') }}">
-                            <td>{{ game.game_id }}</td>
-                            <td>{{ game.date|default('N/A') }}</td>
-                            <td>{{ game.game_type|default('Unknown') }}</td>
-                            <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 400px;" title="{{ game.participants|join(', ') }}">
-                                {{ game.participants|join(', ') }}
-                            </td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-primary view-game-details" 
-                                        data-bs-toggle="modal" 
-                                        data-bs-target="#gameDetailsModal"
-                                        data-game-id="{{ game.game_id }}">
-                                    View
-                                </button>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    {% else %}
-                        <tr>
-                            <td colspan="5" class="text-center py-4">
-                                <p class="mb-0">No games available yet.</p>
-                            </td>
-                        </tr>
-                    {% endif %}
+                    <!-- Games will be loaded via JavaScript from /api/games -->
+                    <tr>
+                        <td colspan="5" class="text-center py-4">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading games...</span>
+                            </div>
+                            <p class="mb-0 mt-2">Loading games...</p>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
         
-        <!-- Pagination Controls -->
-        {% if pagination and pagination.total_pages > 1 %}
-        <div class="d-flex justify-content-between align-items-center mt-4">
-            <div class="text-muted">
-                Showing {{ ((pagination.page - 1) * pagination.per_page + 1) }} to 
-                {{ pagination.page * pagination.per_page if pagination.page * pagination.per_page < pagination.total else pagination.total }} of 
-                {{ pagination.total }} games
+        <!-- Pagination Controls - populated by JavaScript -->
+        <div class="d-flex justify-content-between align-items-center mt-4" id="pagination-container" style="display: none;">
+            <div class="text-muted" id="pagination-info">
+                <!-- Pagination info will be populated by JavaScript -->
             </div>
             
             <nav aria-label="Game history pagination">
-                <ul class="pagination mb-0">
-                    <!-- Previous button -->
-                    <li class="page-item {{ 'disabled' if not pagination.has_prev }}">
-                        {% if pagination.has_prev %}
-                            <a class="page-link" href="?page={{ pagination.page-1 }}">
-                                <span aria-hidden="true">&laquo;</span> Previous
-                            </a>
-                        {% else %}
-                            <span class="page-link">
-                                <span aria-hidden="true">&laquo;</span> Previous
-                            </span>
-                        {% endif %}
-                    </li>
-                    
-                    <!-- Page numbers -->
-                    {% set start_page = 1 if pagination.page - 2 < 1 else pagination.page - 2 %}
-                    {% set end_page = pagination.total_pages if pagination.page + 2 > pagination.total_pages else pagination.page + 2 %}
-                    
-                    {% if start_page > 1 %}
-                        <li class="page-item">
-                            <a class="page-link" href="?page=1">1</a>
-                        </li>
-                        {% if start_page > 2 %}
-                            <li class="page-item disabled">
-                                <span class="page-link">...</span>
-                            </li>
-                        {% endif %}
-                    {% endif %}
-                    
-                    {% for page_num in range(start_page, end_page + 1) %}
-                        <li class="page-item {{ 'active' if page_num == pagination.page }}">
-                            {% if page_num == pagination.page %}
-                                <span class="page-link">{{ page_num }}</span>
-                            {% else %}
-                                <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                    
-                    {% if end_page < pagination.total_pages %}
-                        {% if end_page < pagination.total_pages - 1 %}
-                            <li class="page-item disabled">
-                                <span class="page-link">...</span>
-                            </li>
-                        {% endif %}
-                        <li class="page-item">
-                            <a class="page-link" href="?page={{ pagination.total_pages }}">{{ pagination.total_pages }}</a>
-                        </li>
-                    {% endif %}
-                    
-                    <!-- Next button -->
-                    <li class="page-item {{ 'disabled' if not pagination.has_next }}">
-                        {% if pagination.has_next %}
-                            <a class="page-link" href="?page={{ pagination.page+1 }}">
-                                Next <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        {% else %}
-                            <span class="page-link">
-                                Next <span aria-hidden="true">&raquo;</span>
-                            </span>
-                        {% endif %}
-                    </li>
+                <ul class="pagination mb-0" id="pagination-controls">
+                    <!-- Pagination controls will be populated by JavaScript -->
                 </ul>
             </nav>
         </div>
-        {% endif %}
     </div>
 </div>
 
@@ -246,23 +165,11 @@
 
 {% block extra_scripts %}
 <script>
-    // Get all games data
-    const gamesData = {{ games|tojson }};
-    
-    // Global pagination state
-    let currentPage = 1;
-    let currentPerPage = 20;
-    
-    // Initialize games data for hybrid pagination
-    {% if pagination.all_games_for_client %}
-    // Static site: include all games data for client-side pagination
-    window.allGamesData = {{ pagination.all_games_for_client | tojson }};
-    let filteredGames = [...window.allGamesData];
-    {% else %}
-    // Dynamic site: no client-side games data needed
-    window.allGamesData = [];
+    // Pure client-side pagination - fetches ALL games from API
+    let allGames = [];
     let filteredGames = [];
-    {% endif %}
+    let currentPage = 1;
+    const currentPerPage = 20;
     
     // Function to get URL parameters
     function getUrlParams() {
@@ -275,27 +182,75 @@
     // Function to update URL without reloading page
     function updateUrl(page) {
         const url = new URL(window.location);
-        url.searchParams.set('page', page);
+        if (page === 1) {
+            url.searchParams.delete('page');
+        } else {
+            url.searchParams.set('page', page);
+        }
         window.history.pushState({}, '', url);
     }
     
-    // Per-page functionality removed - using fixed 20 games per page
+    // Fetch all games from API
+    async function fetchAllGames() {
+        try {
+            const response = await fetch('/api/games.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            
+            // Handle both direct array and pagination object formats
+            if (Array.isArray(data)) {
+                allGames = data;
+            } else if (data.games && Array.isArray(data.games)) {
+                allGames = data.games;
+            } else {
+                throw new Error('Invalid API response format');
+            }
+            
+            filteredGames = [...allGames];
+            return true;
+        } catch (error) {
+            console.error('Error fetching games:', error);
+            showError('Failed to load games. Please try refreshing the page.');
+            return false;
+        }
+    }
+    
+    // Show error message in table
+    function showError(message) {
+        const tableBody = document.getElementById('games-table-body');
+        tableBody.innerHTML = `
+            <tr>
+                <td colspan="5" class="text-center py-4">
+                    <div class="alert alert-danger mb-0">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        ${message}
+                    </div>
+                </td>
+            </tr>
+        `;
+    }
     
     // Populate filter dropdowns
     function populateFilters() {
         const gameTypeFilter = document.getElementById('game-type-filter');
         const modelFilter = document.getElementById('model-filter');
         
+        // Clear existing options (except "All")
+        gameTypeFilter.innerHTML = '<option value="all">All Game Types</option>';
+        modelFilter.innerHTML = '<option value="all">All Models</option>';
+        
         // Extract unique game types and models
         const gameTypes = new Set();
         const models = new Set();
         
-        gamesData.forEach(game => {
+        allGames.forEach(game => {
             if (game.game_type) {
                 gameTypes.add(game.game_type);
             }
             
-            if (game.participants) {
+            if (game.participants && Array.isArray(game.participants)) {
                 game.participants.forEach(model => {
                     models.add(model);
                 });
@@ -303,7 +258,7 @@
         });
         
         // Add game types to filter
-        gameTypes.forEach(type => {
+        Array.from(gameTypes).sort().forEach(type => {
             const option = document.createElement('option');
             option.value = type;
             option.textContent = type;
@@ -319,13 +274,8 @@
         });
     }
     
-    // Hybrid pagination: client-side for static sites, server-side for local development
+    // Render games table
     function renderGames() {
-        // Only render games client-side if we have all games data (static site)
-        if (!window.allGamesData || window.allGamesData.length === 0) {
-            return; // Let server-side rendering handle it
-        }
-        
         const startIndex = (currentPage - 1) * currentPerPage;
         const endIndex = startIndex + currentPerPage;
         const pageGames = filteredGames.slice(startIndex, endIndex);
@@ -336,7 +286,7 @@
             tableBody.innerHTML = `
                 <tr>
                     <td colspan="5" class="text-center py-4">
-                        <p class="mb-0">No games available for this page.</p>
+                        <p class="mb-0">No games match the current filters.</p>
                     </td>
                 </tr>
             `;
@@ -344,12 +294,12 @@
         }
         
         tableBody.innerHTML = pageGames.map(game => `
-            <tr data-game-type="${game.game_type}" data-participants="${game.participants.join(',')}">
-                <td>${game.game_id}</td>
+            <tr data-game-type="${game.game_type || ''}" data-participants="${(game.participants || []).join(',')}">
+                <td>${game.game_id || 'N/A'}</td>
                 <td>${game.date || 'N/A'}</td>
                 <td>${game.game_type || 'Unknown'}</td>
-                <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 400px;" title="${game.participants.join(', ')}">
-                    ${game.participants.join(', ')}
+                <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 400px;" title="${(game.participants || []).join(', ')}">
+                    ${(game.participants || []).join(', ')}
                 </td>
                 <td>
                     <button class="btn btn-sm btn-outline-primary view-game-details" 
@@ -369,19 +319,20 @@
     // Function to render pagination controls
     function renderPagination() {
         const totalPages = Math.ceil(filteredGames.length / currentPerPage);
-        const paginationContainer = document.querySelector('.pagination');
+        const paginationContainer = document.getElementById('pagination-container');
+        const paginationInfo = document.getElementById('pagination-info');
+        const paginationControls = document.getElementById('pagination-controls');
         
         if (totalPages <= 1) {
-            paginationContainer.parentElement.parentElement.style.display = 'none';
+            paginationContainer.style.display = 'none';
             return;
         }
         
-        paginationContainer.parentElement.parentElement.style.display = 'flex';
+        paginationContainer.style.display = 'flex';
         
         // Update pagination info
         const startItem = (currentPage - 1) * currentPerPage + 1;
         const endItem = Math.min(currentPage * currentPerPage, filteredGames.length);
-        const paginationInfo = document.querySelector('.text-muted');
         paginationInfo.textContent = `Showing ${startItem} to ${endItem} of ${filteredGames.length} games`;
         
         // Generate pagination HTML
@@ -446,22 +397,19 @@
             </li>
         `;
         
-        paginationContainer.innerHTML = paginationHTML;
+        paginationControls.innerHTML = paginationHTML;
     }
     
     // Function to go to specific page
     function goToPage(page) {
-        if (window.allGamesData && window.allGamesData.length > 0) {
-            // Static site: use client-side pagination
-            const totalPages = Math.ceil(filteredGames.length / currentPerPage);
-            currentPage = Math.max(1, Math.min(page, totalPages));
-            updateUrl(currentPage);
-            renderGames();
-            renderPagination();
-        } else {
-            // Dynamic site: navigate to server-side page
-            window.location.href = `?page=${page}`;
-        }
+        const totalPages = Math.ceil(filteredGames.length / currentPerPage);
+        currentPage = Math.max(1, Math.min(page, totalPages));
+        updateUrl(currentPage);
+        renderGames();
+        renderPagination();
+        
+        // Scroll to top of games table
+        document.getElementById('games-table-body').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     
     // Apply filters to the games table
@@ -470,9 +418,9 @@
         const modelFilter = document.getElementById('model-filter').value;
         
         // Filter games based on selected criteria
-        filteredGames = gamesData.filter(game => {
+        filteredGames = allGames.filter(game => {
             const gameTypeMatch = gameTypeFilter === 'all' || game.game_type === gameTypeFilter;
-            const modelMatch = modelFilter === 'all' || game.participants.includes(modelFilter);
+            const modelMatch = modelFilter === 'all' || (game.participants && game.participants.includes(modelFilter));
             return gameTypeMatch && modelMatch;
         });
         
@@ -489,7 +437,7 @@
         document.getElementById('model-filter').value = 'all';
         
         // Reset filtered games to all games
-        filteredGames = [...gamesData];
+        filteredGames = [...allGames];
         currentPage = 1;
         updateUrl(currentPage);
         renderGames();
@@ -507,20 +455,6 @@
         });
     }
     
-    // Function to initialize pagination from URL parameters
-    function initializePagination() {
-        const urlParams = getUrlParams();
-        currentPage = urlParams.page;
-        // currentPerPage is fixed at 20 - no dropdown needed
-        
-        // Initialize filtered games
-        filteredGames = [...gamesData];
-        
-        // Render initial state
-        renderGames();
-        renderPagination();
-    }
-    
     // Show game details in modal
     function showGameDetails(gameId) {
         // Show loading spinner
@@ -528,7 +462,7 @@
         document.getElementById('game-details-content').classList.add('d-none');
         
         // Find the game in our data
-        const game = gamesData.find(g => g.game_id === gameId);
+        const game = allGames.find(g => g.game_id === gameId);
         
         if (!game) {
             document.getElementById('game-details-loading').innerHTML = 
@@ -537,8 +471,8 @@
         }
         
         // Populate game details
-        document.getElementById('detail-game-id').textContent = game.game_id;
-        document.getElementById('detail-date').textContent = new Date(game.date).toLocaleString();
+        document.getElementById('detail-game-id').textContent = game.game_id || 'N/A';
+        document.getElementById('detail-date').textContent = game.date ? new Date(game.date).toLocaleString() : 'N/A';
         document.getElementById('detail-game-type').textContent = game.game_type || 'Unknown';
         
         // Populate results table
@@ -607,35 +541,31 @@
         document.getElementById('game-details-content').classList.remove('d-none');
     }
     
-    // Initialize page
-    // Hybrid initialization function
-    function initializePagination() {
+    // Initialize the page
+    async function initializePage() {
+        // Get initial page from URL
         const urlParams = getUrlParams();
         currentPage = urlParams.page;
         
-        // Only initialize client-side pagination if we have all games data (static site)
-        if (window.allGamesData && window.allGamesData.length > 0) {
-            // Static site: initialize client-side pagination
-            filteredGames = [...window.allGamesData];
-            renderGames();
-            renderPagination();
-        } else {
-            // Dynamic site: server-side pagination is already rendered
-            // Just attach event listeners to existing content
-            attachViewButtonListeners();
+        // Fetch all games from API
+        const success = await fetchAllGames();
+        if (!success) {
+            return; // Error already shown
         }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initialize hybrid pagination system
-        initializePagination();
         
         // Populate filters
         populateFilters();
         
+        // Render initial state
+        renderGames();
+        renderPagination();
+        
         // Set up event listeners
         document.getElementById('apply-filters').addEventListener('click', applyFilters);
         document.getElementById('reset-filters').addEventListener('click', resetFilters);
-    });
+    }
+
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', initializePage);
 </script>
 {% endblock %}

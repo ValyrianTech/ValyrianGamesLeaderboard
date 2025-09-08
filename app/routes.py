@@ -31,53 +31,9 @@ def leaderboard_html():
 
 @main_bp.route('/history')
 def history():
-    """Game history page showing past games with pagination"""
-    from app.models import get_game_history
-    
-    # Check if this is for static site generation (Frozen-Flask sets this)
-    is_static_generation = hasattr(request, 'frozen') or 'frozen' in str(request.environ.get('SERVER_SOFTWARE', ''))
-    
-    if is_static_generation:
-        # For static site generation, get ALL games for client-side pagination
-        all_games = get_game_history(limit=None)
-        if isinstance(all_games, list):
-            # Convert to pagination format with all games
-            pagination_data = {
-                'games': all_games,
-                'total': len(all_games),
-                'page': 1,
-                'per_page': len(all_games),
-                'total_pages': 1,
-                'has_prev': False,
-                'has_next': False,
-                'all_games_for_client': all_games  # Special flag for client-side pagination
-            }
-        else:
-            pagination_data = all_games
-            pagination_data['all_games_for_client'] = all_games.get('games', [])
-    else:
-        # For local development, use server-side pagination
-        page = request.args.get('page', 1, type=int)
-        per_page = 20  # Fixed at 20 games per page
-        pagination_data = get_game_history(page=page, per_page=per_page)
-    
-    # Ensure pagination_data is a dict (not a list for backwards compatibility)
-    if isinstance(pagination_data, list):
-        # Handle backwards compatibility case
-        pagination_data = {
-            'games': pagination_data,
-            'total': len(pagination_data),
-            'page': 1,
-            'per_page': len(pagination_data),
-            'total_pages': 1,
-            'has_prev': False,
-            'has_next': False
-        }
-    
-    return render_template('game_history.html', 
-                          title="Game History", 
-                          games=pagination_data['games'],
-                          pagination=pagination_data)
+    """Game history page - uses pure client-side pagination via API"""
+    # No server-side pagination - everything handled by JavaScript via /api/games
+    return render_template('game_history.html', title="Game History")
 
 @main_bp.route('/history.html')
 def history_html():
@@ -97,16 +53,33 @@ def api_leaderboard_json():
 
 @main_bp.route('/api/games')
 def api_games():
-    """API endpoint for game history data with pagination support"""
-    # Get pagination parameters from URL
-    page = request.args.get('page', 1, type=int)
-    per_page = request.args.get('per_page', 20, type=int)
+    """API endpoint for game history data - returns ALL games for client-side pagination"""
+    import json
+    from pathlib import Path
     
-    # Ensure per_page is within reasonable bounds
-    per_page = max(5, min(per_page, 100))
+    # Read ALL games directly from the games directory
+    games = []
+    games_dir = Path(__file__).parent.parent / 'data' / 'games'
     
-    # Get paginated game history
-    pagination_data = get_game_history(page=page, per_page=per_page)
+    if games_dir.exists():
+        for game_file in games_dir.glob('*.json'):
+            with open(game_file, 'r') as f:
+                game_data = json.load(f)
+                games.append(game_data)
+    
+    # Sort games by date (newest first)
+    games.sort(key=lambda x: x.get('date', ''), reverse=True)
+    
+    # Return all games in the expected format
+    pagination_data = {
+        'games': games,
+        'total': len(games),
+        'page': 1,
+        'per_page': len(games),
+        'total_pages': 1,
+        'has_prev': False,
+        'has_next': False
+    }
     
     # Ensure pagination_data is a dict (not a list for backwards compatibility)
     if isinstance(pagination_data, list):
