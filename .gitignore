@@ -34,6 +34,7 @@ wheels/
 
 # Flask static site output
 build/
+temp_build/
 
 # Local environment variables
 .env
