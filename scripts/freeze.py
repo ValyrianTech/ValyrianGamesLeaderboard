@@ -2,6 +2,7 @@
 """
 Script to freeze the Flask app into static files for GitHub Pages deployment.
 This script uses Frozen-Flask to generate a static version of the site.
+Updated: Force trigger GitHub Actions deployment with robust dynamic solution.
 """
 
 import os
