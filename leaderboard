@@ -35,6 +35,14 @@
         width: 100px;
         text-align: center;
     }
+    .model-cost {
+        width: 100px;
+        text-align: center;
+    }
+    .model-speed {
+        width: 120px;
+        text-align: center;
+    }
     .rating-bar {
         height: 8px;
         border-radius: 4px;
@@ -46,16 +54,12 @@
         background-color: #0d6efd;
     }
     .uncertainty-indicator {
-        display: inline-block;
-        width: 100%;
-        height: 6px;
+        height: 8px;
+        border-radius: 4px;
         background-color: #e9ecef;
-        position: relative;
+        overflow: hidden;
     }
     .uncertainty-value {
-        position: absolute;
-        top: 0;
-        left: 0;
         height: 100%;
         background-color: #ffc107;
     }
@@ -105,9 +109,8 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Understanding the Ratings</h5>
-                <p class="mb-1"><strong>Rating (μ):</strong> The estimated skill level of the model</p>
-                <p class="mb-1"><strong>Uncertainty (σ):</strong> How confident we are in the rating</p>
-                <p class="mb-0"><strong>Conservative Rating:</strong> μ - 3σ (used for ranking)</p>
+                <p class="mb-1"><strong>Rating (μ):</strong> The estimated skill level of the model (used for ranking)</p>
+                <p class="mb-0"><strong>Uncertainty (σ):</strong> How confident we are in the rating</p>
             </div>
         </div>
     </div>
@@ -119,22 +122,522 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th class="model-rank">#</th>
-                        <th class="model-name">Model</th>
-                        <th class="model-rating">Rating (μ)</th>
-                        <th class="model-uncertainty">Uncertainty (σ)</th>
-                        <th>Rating Distribution</th>
-                        <th class="model-games">Games</th>
+                        <th class="model-rank" style="white-space: nowrap;">#</th>
+                        <th class="model-name" style="white-space: nowrap;">Model</th>
+                        <th class="model-rating" style="white-space: nowrap;">Rating (μ)</th>
+                        <th class="model-uncertainty" style="white-space: nowrap;">Uncertainty (σ)</th>
+                        <th class="model-cost" style="white-space: nowrap;">Avg Cost</th>
+                        <th class="model-speed" style="white-space: nowrap;">Speed (tok/s)</th>
+                        <th class="model-games" style="white-space: nowrap;">Games</th>
                     </tr>
                 </thead>
                 <tbody id="leaderboard-body">
                     
+                        
                         <tr>
-                            <td colspan="6" class="text-center py-4">
-                                <p class="mb-0">No models available yet.</p>
-                                <p class="text-muted">Check back after some games have been played.</p>
+                            <td class="model-rank">1</td>
+                            <td class="model-name">OpenAI:gpt-5-mini</td>
+                            <td class="model-rating">
+                                29.5
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 59.05486786094068%;"></div>
+                                </div>
                             </td>
+                            <td class="model-uncertainty">
+                                1.11
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 13.356462122277964%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.055
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    60.1
+                                
+                            </td>
+                            <td class="model-games">21</td>
                         </tr>
+                        
+                        <tr>
+                            <td class="model-rank">2</td>
+                            <td class="model-name">OpenAI:o4-mini-2025-04-16</td>
+                            <td class="model-rating">
+                                28.8
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 57.61344062902284%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.18
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 14.220129992682612%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.126
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    80.7
+                                
+                            </td>
+                            <td class="model-games">18</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">3</td>
+                            <td class="model-name">OpenAI:gpt-4.1-2025-04-14</td>
+                            <td class="model-rating">
+                                28.6
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 57.29904716554969%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.18
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 14.133113945489084%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.126
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    53.0
+                                
+                            </td>
+                            <td class="model-games">18</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">4</td>
+                            <td class="model-name">OpenAI:o1-2024-12-17</td>
+                            <td class="model-rating">
+                                28.6
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 57.20781853196299%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.09
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 13.03984190164112%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $2.241
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    103.7
+                                
+                            </td>
+                            <td class="model-games">22</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">5</td>
+                            <td class="model-name">DeepSeek:deepseek-chat</td>
+                            <td class="model-rating">
+                                28.5
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 57.05329824299188%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.34
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 16.08194797827874%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.019
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    15.5
+                                
+                            </td>
+                            <td class="model-games">15</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">6</td>
+                            <td class="model-name">Anthropic:claude-opus-4-1-20250805</td>
+                            <td class="model-rating">
+                                28.4
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 56.81862147636845%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.16
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 13.874531210218722%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $2.078
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    41.1
+                                
+                            </td>
+                            <td class="model-games">19</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">7</td>
+                            <td class="model-name">Anthropic:claude-sonnet-4-20250514</td>
+                            <td class="model-rating">
+                                28.4
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 56.753487194162446%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.24
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 14.928325794682262%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.985
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    67.4
+                                
+                            </td>
+                            <td class="model-games">16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">8</td>
+                            <td class="model-name">Anthropic:claude-opus-4-20250514</td>
+                            <td class="model-rating">
+                                28.3
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 56.60271900087589%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.13
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 13.544455312377867%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $2.406
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    49.7
+                                
+                            </td>
+                            <td class="model-games">20</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">9</td>
+                            <td class="model-name">Groq:openai/gpt-oss-120b</td>
+                            <td class="model-rating">
+                                27.6
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 55.21010746790844%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.08
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 12.966964883757973%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.020
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    247.6
+                                
+                            </td>
+                            <td class="model-games">23</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">10</td>
+                            <td class="model-name">Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput</td>
+                            <td class="model-rating">
+                                27.6
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 55.10288407973697%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.13
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 13.610733713548104%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.013
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    36.4
+                                
+                            </td>
+                            <td class="model-games">20</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">11</td>
+                            <td class="model-name">Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8</td>
+                            <td class="model-rating">
+                                27.6
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 55.10103508427346%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.09
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 13.118595994661982%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.114
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    41.3
+                                
+                            </td>
+                            <td class="model-games">22</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">12</td>
+                            <td class="model-name">Mistral:codestral-2501</td>
+                            <td class="model-rating">
+                                27.5
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 54.971345633711074%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.32
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 15.895343985345821%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.017
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    123.7
+                                
+                            </td>
+                            <td class="model-games">15</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">13</td>
+                            <td class="model-name">OpenAI:gpt-4o-2024-08-06</td>
+                            <td class="model-rating">
+                                26.3
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 52.57660864896964%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.18
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 14.126040902299907%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.204
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    66.8
+                                
+                            </td>
+                            <td class="model-games">19</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">14</td>
+                            <td class="model-name">OpenAI:o3-mini-2025-01-31</td>
+                            <td class="model-rating">
+                                23.5
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 46.93524491600269%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.37
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 16.423173972199226%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.083
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    93.3
+                                
+                            </td>
+                            <td class="model-games">17</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">15</td>
+                            <td class="model-name">Mistral:pixtral-large-2411</td>
+                            <td class="model-rating">
+                                23.4
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 46.70733754958747%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.33
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 15.925008166557753%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.217
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    43.1
+                                
+                            </td>
+                            <td class="model-games">17</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">16</td>
+                            <td class="model-name">Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507</td>
+                            <td class="model-rating">
+                                17.2
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 34.49335582809103%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.68
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 20.210246825177464%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.131
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    42.2
+                                
+                            </td>
+                            <td class="model-games">16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">17</td>
+                            <td class="model-name">Mistral:magistral-medium-2506</td>
+                            <td class="model-rating">
+                                12.9
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 25.763688375790174%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.70
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 20.400970270371204%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.689
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    111.0
+                                
+                            </td>
+                            <td class="model-games">21</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="model-rank">18</td>
+                            <td class="model-name">Mistral:devstral-medium-2507</td>
+                            <td class="model-rating">
+                                12.8
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 25.69316200988775%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-uncertainty">
+                                1.64
+                                <div class="uncertainty-indicator">
+                                    <div class="uncertainty-value" style="width: 19.737593818089394%;"></div>
+                                </div>
+                            </td>
+                            <td class="model-cost">
+                                
+                                    $0.009
+                                
+                            </td>
+                            <td class="model-speed">
+                                
+                                    67.4
+                                
+                            </td>
+                            <td class="model-games">26</td>
+                        </tr>
+                        
                     
                 </tbody>
             </table>
@@ -192,7 +695,7 @@
     
 <script>
     // Get leaderboard data
-    const leaderboardData = {"last_updated": "2025-07-13T13:09:47.243460", "models": []};
+    const leaderboardData = {"last_updated": "2025-09-06T16:17:59.396363", "models": [{"avg_tokens_per_second": 60.09292203414864, "avg_total_cost": 0.05506172727272727, "conservative_rating": 26.188451964522073, "draws": 45, "games_played": 21, "losses": 10, "mu": 29.52743393047034, "name": "OpenAI:gpt-5-mini", "sigma": 1.112993988649423, "wins": 75}, {"avg_tokens_per_second": 80.69553721061197, "avg_total_cost": 0.1256418842105263, "conservative_rating": 25.251830017640692, "draws": 32, "games_played": 18, "losses": 17, "mu": 28.80672031451142, "name": "OpenAI:o4-mini-2025-04-16", "sigma": 1.184963432290242, "wins": 54}, {"avg_tokens_per_second": 52.982769940394334, "avg_total_cost": 0.12636221052631574, "conservative_rating": 25.11638642754203, "draws": 44, "games_played": 18, "losses": 13, "mu": 28.649523582774844, "name": "OpenAI:gpt-4.1-2025-04-14", "sigma": 1.1777123850776055, "wins": 53}, {"avg_tokens_per_second": 103.6562397308262, "avg_total_cost": 2.240921739130435, "conservative_rating": 25.344079188990232, "draws": 48, "games_played": 22, "losses": 26, "mu": 28.603909265981496, "name": "OpenAI:o1-2024-12-17", "sigma": 1.0866100256637545, "wins": 61}, {"avg_tokens_per_second": 15.526571571877692, "avg_total_cost": 0.018505591249999998, "conservative_rating": 24.506322946406037, "draws": 29, "games_played": 15, "losses": 16, "mu": 28.52664912149594, "name": "DeepSeek:deepseek-chat", "sigma": 1.3401087250299675, "wins": 47}, {"avg_tokens_per_second": 41.105036901952595, "avg_total_cost": 2.07832125, "conservative_rating": 24.940816680941644, "draws": 36, "games_played": 19, "losses": 20, "mu": 28.409310738184224, "name": "Anthropic:claude-opus-4-1-20250805", "sigma": 1.156164685747526, "wins": 62}, {"avg_tokens_per_second": 67.38393145093762, "avg_total_cost": 0.9845641764705884, "conservative_rating": 24.6448114316686, "draws": 17, "games_played": 16, "losses": 20, "mu": 28.37674359708122, "name": "Anthropic:claude-sonnet-4-20250514", "sigma": 1.243977388470873, "wins": 53}, {"avg_tokens_per_second": 49.71184071211884, "avg_total_cost": 2.406168571428571, "conservative_rating": 24.915381116896604, "draws": 36, "games_played": 20, "losses": 21, "mu": 28.301359500437947, "name": "Anthropic:claude-opus-4-20250514", "sigma": 1.1286594611804477, "wins": 63}, {"avg_tokens_per_second": 247.6271064596979, "avg_total_cost": 0.01959781875, "conservative_rating": 24.363442182663565, "draws": 41, "games_played": 23, "losses": 38, "mu": 27.60505373395422, "name": "Groq:openai/gpt-oss-120b", "sigma": 1.0805371837635518, "wins": 63}, {"avg_tokens_per_second": 36.41586914872231, "avg_total_cost": 0.012817495238095241, "conservative_rating": 24.148894718818593, "draws": 31, "games_played": 20, "losses": 33, "mu": 27.551442039868483, "name": "Together-ai:Qwen/Qwen3-235B-A22B-Instruct-2507-tput", "sigma": 1.1341824403499636, "wins": 48}, {"avg_tokens_per_second": 41.292502861307696, "avg_total_cost": 0.11366000000000002, "conservative_rating": 24.270999729431182, "draws": 48, "games_played": 22, "losses": 30, "mu": 27.55051754213673, "name": "Together-ai:Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8", "sigma": 1.093172604235183, "wins": 49}, {"avg_tokens_per_second": 123.72876440981453, "avg_total_cost": 0.017012475, "conservative_rating": 23.511995773958937, "draws": 12, "games_played": 15, "losses": 33, "mu": 27.485672816855537, "name": "Mistral:codestral-2501", "sigma": 1.3245590142988675, "wins": 40}, {"avg_tokens_per_second": 66.78585655575696, "avg_total_cost": 0.20435849999999997, "conservative_rating": 22.756935359318863, "draws": 20, "games_played": 19, "losses": 48, "mu": 26.288304324484816, "name": "OpenAI:gpt-4o-2024-08-06", "sigma": 1.1771229883886514, "wins": 44}, {"avg_tokens_per_second": 93.25770895356257, "avg_total_cost": 0.0831105611111111, "conservative_rating": 19.36199319669126, "draws": 4, "games_played": 17, "losses": 61, "mu": 23.467622458001344, "name": "OpenAI:o3-mini-2025-01-31", "sigma": 1.3685430871033615, "wins": 37}, {"avg_tokens_per_second": 43.05312249840641, "avg_total_cost": 0.21714455555555556, "conservative_rating": 19.37257598323596, "draws": 19, "games_played": 17, "losses": 60, "mu": 23.353668774793736, "name": "Mistral:pixtral-large-2411", "sigma": 1.3270309305192576, "wins": 25}, {"avg_tokens_per_second": 42.15892443148341, "avg_total_cost": 0.1308613323529412, "conservative_rating": 12.194318310219401, "draws": 2, "games_played": 16, "losses": 81, "mu": 17.246677914045517, "name": "Together-ai:Qwen/Qwen3-235B-A22B-Thinking-2507", "sigma": 1.6841198679420382, "wins": 11}, {"avg_tokens_per_second": 110.96349330035947, "avg_total_cost": 0.6890623636363639, "conservative_rating": 7.781805630004988, "draws": 2, "games_played": 21, "losses": 118, "mu": 12.881844187895085, "name": "Mistral:magistral-medium-2506", "sigma": 1.7000128526300324, "wins": 5}, {"avg_tokens_per_second": 67.4127692104801, "avg_total_cost": 0.008633303703703707, "conservative_rating": 7.912379926359708, "draws": 8, "games_played": 26, "losses": 148, "mu": 12.846581004943875, "name": "Mistral:devstral-medium-2507", "sigma": 1.6447336928613892, "wins": 3}]};
     const models = leaderboardData.models || [];
     
     // Only create charts if we have models
