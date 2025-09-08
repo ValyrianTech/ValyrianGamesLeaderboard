@@ -675,47 +675,7 @@
         });
     }
     
-    // Function to render games for current page
-    function renderGames() {
-        const startIndex = (currentPage - 1) * currentPerPage;
-        const endIndex = startIndex + currentPerPage;
-        const pageGames = filteredGames.slice(startIndex, endIndex);
-        
-        const tableBody = document.getElementById('games-table-body');
-        
-        if (pageGames.length === 0) {
-            tableBody.innerHTML = `
-                <tr>
-                    <td colspan="5" class="text-center py-4">
-                        <p class="mb-0">No games available for this page.</p>
-                    </td>
-                </tr>
-            `;
-            return;
-        }
-        
-        tableBody.innerHTML = pageGames.map(game => `
-            <tr data-game-type="${game.game_type}" data-participants="${game.participants.join(',')}">
-                <td>${game.game_id}</td>
-                <td>${game.date || 'N/A'}</td>
-                <td>${game.game_type || 'Unknown'}</td>
-                <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 400px;" title="${game.participants.join(', ')}">
-                    ${game.participants.join(', ')}
-                </td>
-                <td>
-                    <button class="btn btn-sm btn-outline-primary view-game-details" 
-                            data-bs-toggle="modal" 
-                            data-bs-target="#gameDetailsModal"
-                            data-game-id="${game.game_id}">
-                        View
-                    </button>
-                </td>
-            </tr>
-        `).join('');
-        
-        // Re-attach event listeners for view buttons
-        attachViewButtonListeners();
-    }
+    // Client-side game rendering removed - using server-side pagination instead
     
     // Function to render pagination controls
     function renderPagination() {
@@ -954,8 +914,7 @@
     
     // Initialize page
     document.addEventListener('DOMContentLoaded', function() {
-        // Initialize pagination from URL parameters
-        initializePagination();
+        // Client-side pagination initialization removed - using server-side pagination
         
         // Populate filters
         populateFilters();
@@ -964,7 +923,8 @@
         document.getElementById('apply-filters').addEventListener('click', applyFilters);
         document.getElementById('reset-filters').addEventListener('click', resetFilters);
         
-        // Initial view button listeners are attached by renderGames()
+        // Attach view button listeners to server-rendered content
+        attachViewButtonListeners();
     });
 </script>
 
