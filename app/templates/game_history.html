@@ -5,11 +5,6 @@
 {% block page_title %}Game History{% endblock %}
 
 {% block content %}
-<!-- Environment Detection Message -->
-<div class="alert alert-info mb-4" id="environment-alert">
-    <strong>Environment:</strong> <span id="environment-status">Detecting...</span>
-</div>
-
 <div class="row mb-4">
     <div class="col-md-6">
         <p class="lead">
@@ -170,37 +165,15 @@
 
 {% block extra_scripts %}
 <script>
-    // Environment detection function
+    // Environment detection function (simplified - only for API path resolution)
     function detectEnvironment() {
         const hostname = window.location.hostname;
-        const protocol = window.location.protocol;
-        const port = window.location.port;
         
         if (hostname.includes('github')) {
-            return {
-                type: 'github-pages',
-                message: `Running on GitHub Pages (${protocol}//${hostname})`
-            };
+            return { type: 'github-pages' };
         } else {
-            return {
-                type: 'local',
-                message: `Running locally (${protocol}//${hostname}${port ? ':' + port : ''})`
-            };
+            return { type: 'local' };
         }
-    }
-    
-    // Update environment status message
-    function updateEnvironmentStatus() {
-        const env = detectEnvironment();
-        const statusElement = document.getElementById('environment-status');
-        const alertElement = document.getElementById('environment-alert');
-        
-        statusElement.textContent = env.message;
-        
-        // Change alert style based on environment
-        alertElement.className = 'alert mb-4 ' + (env.type === 'local' ? 'alert-success' : 
-                                                  env.type === 'github-pages' ? 'alert-warning' : 
-                                                  'alert-danger');
     }
 
     // Pure client-side pagination - fetches ALL games from API
@@ -595,9 +568,6 @@
     
     // Initialize the page
     async function initializePage() {
-        // Update environment status first
-        updateEnvironmentStatus();
-        
         // Get initial page from URL
         const urlParams = getUrlParams();
         currentPage = urlParams.page;
