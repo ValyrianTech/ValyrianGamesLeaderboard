@@ -296,9 +296,23 @@
     // Fetch all games from API
     async function fetchAllGames() {
         try {
-            const response = await fetch('/api/games.json');
+            // Determine the correct API URL based on environment
+            const env = detectEnvironment();
+            let apiUrl;
+            
+            if (env.type === 'github-pages') {
+                // On GitHub Pages, use relative path to static JSON file
+                apiUrl = './api/games.json';
+            } else {
+                // Local development, use absolute path to Flask endpoint
+                apiUrl = '/api/games.json';
+            }
+            
+            console.log(`Fetching games from: ${apiUrl} (Environment: ${env.type})`);
+            
+            const response = await fetch(apiUrl);
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                throw new Error(`HTTP error! status: ${response.status} - URL: ${apiUrl}`);
             }
             const data = await response.json();
             
