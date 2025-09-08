@@ -75,7 +75,7 @@
     
     <script>
         // Update the last updated timestamp from the leaderboard data
-        fetch('/api/leaderboard')
+        fetch('./api/leaderboard.json')
             .then(response => response.json())
             .then(data => {
                 const lastUpdated = document.getElementById('last-updated');
