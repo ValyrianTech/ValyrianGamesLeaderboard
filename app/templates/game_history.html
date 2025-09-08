@@ -252,7 +252,17 @@
     // Global pagination state
     let currentPage = 1;
     let currentPerPage = 20;
-    let filteredGames = [...gamesData];
+    
+    // Initialize games data for hybrid pagination
+    {% if pagination.all_games_for_client %}
+    // Static site: include all games data for client-side pagination
+    window.allGamesData = {{ pagination.all_games_for_client | tojson }};
+    let filteredGames = [...window.allGamesData];
+    {% else %}
+    // Dynamic site: no client-side games data needed
+    window.allGamesData = [];
+    let filteredGames = [];
+    {% endif %}
     
     // Function to get URL parameters
     function getUrlParams() {
@@ -309,7 +319,52 @@
         });
     }
     
-    // Client-side game rendering removed - using server-side pagination instead
+    // Hybrid pagination: client-side for static sites, server-side for local development
+    function renderGames() {
+        // Only render games client-side if we have all games data (static site)
+        if (!window.allGamesData || window.allGamesData.length === 0) {
+            return; // Let server-side rendering handle it
+        }
+        
+        const startIndex = (currentPage - 1) * currentPerPage;
+        const endIndex = startIndex + currentPerPage;
+        const pageGames = filteredGames.slice(startIndex, endIndex);
+        
+        const tableBody = document.getElementById('games-table-body');
+        
+        if (pageGames.length === 0) {
+            tableBody.innerHTML = `
+                <tr>
+                    <td colspan="5" class="text-center py-4">
+                        <p class="mb-0">No games available for this page.</p>
+                    </td>
+                </tr>
+            `;
+            return;
+        }
+        
+        tableBody.innerHTML = pageGames.map(game => `
+            <tr data-game-type="${game.game_type}" data-participants="${game.participants.join(',')}">
+                <td>${game.game_id}</td>
+                <td>${game.date || 'N/A'}</td>
+                <td>${game.game_type || 'Unknown'}</td>
+                <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 400px;" title="${game.participants.join(', ')}">
+                    ${game.participants.join(', ')}
+                </td>
+                <td>
+                    <button class="btn btn-sm btn-outline-primary view-game-details" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#gameDetailsModal"
+                            data-game-id="${game.game_id}">
+                        View
+                    </button>
+                </td>
+            </tr>
+        `).join('');
+        
+        // Re-attach event listeners for view buttons
+        attachViewButtonListeners();
+    }
     
     // Function to render pagination controls
     function renderPagination() {
@@ -396,11 +451,17 @@
     
     // Function to go to specific page
     function goToPage(page) {
-        const totalPages = Math.ceil(filteredGames.length / currentPerPage);
-        currentPage = Math.max(1, Math.min(page, totalPages));
-        updateUrl(currentPage);
-        renderGames();
-        renderPagination();
+        if (window.allGamesData && window.allGamesData.length > 0) {
+            // Static site: use client-side pagination
+            const totalPages = Math.ceil(filteredGames.length / currentPerPage);
+            currentPage = Math.max(1, Math.min(page, totalPages));
+            updateUrl(currentPage);
+            renderGames();
+            renderPagination();
+        } else {
+            // Dynamic site: navigate to server-side page
+            window.location.href = `?page=${page}`;
+        }
     }
     
     // Apply filters to the games table
@@ -547,8 +608,27 @@
     }
     
     // Initialize page
+    // Hybrid initialization function
+    function initializePagination() {
+        const urlParams = getUrlParams();
+        currentPage = urlParams.page;
+        
+        // Only initialize client-side pagination if we have all games data (static site)
+        if (window.allGamesData && window.allGamesData.length > 0) {
+            // Static site: initialize client-side pagination
+            filteredGames = [...window.allGamesData];
+            renderGames();
+            renderPagination();
+        } else {
+            // Dynamic site: server-side pagination is already rendered
+            // Just attach event listeners to existing content
+            attachViewButtonListeners();
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        // Client-side pagination initialization removed - using server-side pagination
+        // Initialize hybrid pagination system
+        initializePagination();
         
         // Populate filters
         populateFilters();
@@ -556,9 +636,6 @@
         // Set up event listeners
         document.getElementById('apply-filters').addEventListener('click', applyFilters);
         document.getElementById('reset-filters').addEventListener('click', resetFilters);
-        
-        // Attach view button listeners to server-rendered content
-        attachViewButtonListeners();
     });
 </script>
 {% endblock %}

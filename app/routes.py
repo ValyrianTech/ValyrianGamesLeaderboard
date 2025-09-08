@@ -34,12 +34,32 @@ def history():
     """Game history page showing past games with pagination"""
     from app.models import get_game_history
     
-    # Get pagination parameters from URL (simplified - no per_page dropdown)
-    page = request.args.get('page', 1, type=int)
-    per_page = 20  # Fixed at 20 games per page
+    # Check if this is for static site generation (Frozen-Flask sets this)
+    is_static_generation = hasattr(request, 'frozen') or 'frozen' in str(request.environ.get('SERVER_SOFTWARE', ''))
     
-    # Get paginated game history
-    pagination_data = get_game_history(page=page, per_page=per_page)
+    if is_static_generation:
+        # For static site generation, get ALL games for client-side pagination
+        all_games = get_game_history(limit=None)
+        if isinstance(all_games, list):
+            # Convert to pagination format with all games
+            pagination_data = {
+                'games': all_games,
+                'total': len(all_games),
+                'page': 1,
+                'per_page': len(all_games),
+                'total_pages': 1,
+                'has_prev': False,
+                'has_next': False,
+                'all_games_for_client': all_games  # Special flag for client-side pagination
+            }
+        else:
+            pagination_data = all_games
+            pagination_data['all_games_for_client'] = all_games.get('games', [])
+    else:
+        # For local development, use server-side pagination
+        page = request.args.get('page', 1, type=int)
+        per_page = 20  # Fixed at 20 games per page
+        pagination_data = get_game_history(page=page, per_page=per_page)
     
     # Ensure pagination_data is a dict (not a list for backwards compatibility)
     if isinstance(pagination_data, list):
